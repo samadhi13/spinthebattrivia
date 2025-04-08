@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Discover fun baseball trivia with Baseball Fact Bat! Spin for random facts about MLB history, legendary players, and quirky moments. Free, interactive, and perfect for fans!">
+    <meta name="description" content="Discover fun baseball trivia with Spin the Bat Trivia! Spin for random facts about MLB history, legendary players, and quirky moments. Free, interactive, and perfect for fans!">
     <meta name="keywords" content="baseball trivia, baseball facts, MLB history, baseball fun facts, sports trivia, baseball quiz, baseball fans">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baseball Fact Bat: Spin for Fun MLB Trivia & Facts</title>
+    <title>Spin the Bat Trivia: Spin for Fun MLB Trivia & Facts</title>
     <link rel="icon" type="image/png" href="baseball_favicon.png">
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Baseball Fact Bat: Spin for MLB Trivia">
+    <meta name="twitter:title" content="Spin the Bat Trivia: Spin for MLB Trivia">
     <meta name="twitter:description" content="Spin the bat for fun MLB facts!">
     <meta name="twitter:image" content="https://spinthebattrivia.com/baseball_favicon.png">
     <!-- Google tag (gtag.js) -->
@@ -83,8 +83,8 @@
             </div>
         </div>
         <main>
-            <div class="intro">Get ready for a home run with Baseball Fact Bat! Spin the bat to uncover fun MLB trivia—from iconic players to wild game moments. Click now to test your baseball knowledge!</div>
-            <h1>Baseball Fact Bat</h1>
+            <div class="intro">Get ready for a home run with Spin the Bat Trivia! Spin the bat to uncover fun MLB trivia—from iconic players to wild game moments. Click now to test your baseball knowledge!</div>
+            <h1>Spin the Bat Trivia</h1>
             <div class="prompt">Hit a Fact Out of the Park—Spin Now!</div>
             <div class="bat-container" id="batContainer" tabindex="0">
                 <div class="plate" role="img" aria-label="Home plate"></div>
@@ -97,10 +97,10 @@
             </div>
             <button id="share-button" onclick="shareOnTwitter()">Share on Twitter</button>
             <section>
-                <h2>About Baseball Fact Bat</h2>
-                <p>Welcome to Baseball Fact Bat, your ultimate destination for exploring the rich tapestry of Major League Baseball history through interactive trivia! Whether you’re a lifelong fan who lives for the crack of the bat or a newcomer curious about America’s pastime, our site offers a unique way to dive into baseball’s most fascinating moments. Spin the bat over home plate and uncover meticulously sourced facts that span legendary players, unforgettable games, and quirky statistics—each delivered with a professional touch and a nod to the sport’s storied legacy.</p>
-                <p>Baseball Fact Bat was born from a passion for the game and a desire to share its hidden gems with fans worldwide. Our carefully curated trivia collection celebrates the heroes of the diamond, from Jackie Robinson’s groundbreaking debut to Cal Ripken Jr.’s ironman streak, while shedding light on lesser-known tales—like the marathon 25-inning game that tested endurance like no other. Every spin brings a fresh fact, complete with a reliable source, ensuring you can trust the history you’re discovering. We aim to make learning about baseball as thrilling as a ninth-inning comeback, blending education with entertainment in a way that keeps you coming back for more.</p>
-                <p>Perfect for fans of all ages, Baseball Fact Bat invites you to test your knowledge, impress your friends, or simply enjoy a moment of baseball nostalgia. Our interactive design—featuring a spinning bat and home plate—adds a playful twist to trivia, making it more than just a list of facts. Share your favorite finds on Twitter with a single click and join a community of enthusiasts celebrating MLB’s past and present. Step up to the plate, spin the bat, and let Baseball Fact Bat bring the excitement of baseball history straight to your screen!</p>
+                <h2>About Spin the Bat Trivia</h2>
+                <p>Welcome to Spin the Bat Trivia, your ultimate destination for exploring the rich tapestry of Major League Baseball history through interactive trivia! Whether you’re a lifelong fan who lives for the crack of the bat or a newcomer curious about America’s pastime, our site offers a unique way to dive into baseball’s most fascinating moments. Spin the bat over home plate and uncover meticulously sourced facts that span legendary players, unforgettable games, and quirky statistics—each delivered with a professional touch and a nod to the sport’s storied legacy.</p>
+                <p>Spin the Bat Trivia was born from a passion for the game and a desire to share its hidden gems with fans worldwide. Our carefully curated trivia collection celebrates the heroes of the diamond, from Jackie Robinson’s groundbreaking debut to Cal Ripken Jr.’s ironman streak, while shedding light on lesser-known tales—like the marathon 25-inning game that tested endurance like no other. Every spin brings a fresh fact, complete with a reliable source, ensuring you can trust the history you’re discovering. We aim to make learning about baseball as thrilling as a ninth-inning comeback, blending education with entertainment in a way that keeps you coming back for more.</p>
+                <p>Perfect for fans of all ages, Spin the Bat Trivia invites you to test your knowledge, impress your friends, or simply enjoy a moment of baseball nostalgia. Our interactive design—featuring a spinning bat and home plate—adds a playful twist to trivia, making it more than just a list of facts. Share your favorite finds on Twitter with a single click and join a community of enthusiasts celebrating MLB’s past and present. Step up to the plate, spin the bat, and let Spin the Bat Trivia bring the excitement of baseball history straight to your screen!</p>
             </section>
         </main>
         <div class="right-sidebar">
@@ -120,7 +120,6 @@
         </div>
     </div>
     <footer id="footer"></footer>
-</body>
     <script>
         const baseballFacts = [
             { text: "The Cincinnati Red Stockings, established in 1869, became the first professional baseball team in history and went undefeated in their inaugural season.", source: "https://www.baseball-reference.com/teams/CIN/" },
@@ -223,56 +222,56 @@
             { text: "A game in 1920 featured both teams combining for just one hit, a rare pitching duel.", source: "https://www.baseball-reference.com/boxes/CHA/CHA192005020.shtml" },
             { text: "A player stole second, third, and home on the same pitch in a 1989 minor league game.", source: "https://www.milb.com/news/rare-triple-steal" },
             { text: "A game was played with zero fans in 2015 due to civil unrest in Baltimore.", source: "https://www.mlb.com/news/orioles-play-with-no-fans-2015" },
-			{ text: "In 1974, Cleveland’s Ten Cent Beer Night promotion led to a fan riot, forcing the Indians to forfeit the game.", source: "https://www.mlb.com/news/ten-cent-beer-night" },
-			{ text: "Dock Ellis claimed he pitched a no-hitter on June 12, 1970, while under the influence of LSD.", source: "https://www.baseballhall.org/discover/dock-ellis-no-hitter" },
-			{ text: "A goat cursed the Chicago Cubs in 1945 when its owner was ejected from Wrigley Field during the World Series.", source: "https://www.mlb.com/news/cubs-curse-of-the-billy-goat" },
-			{ text: "Bill Veeck sent 3-foot-7-inch Eddie Gaedel to bat in a 1951 game as a promotional stunt for the St. Louis Browns.", source: "https://www.mlb.com/news/eddie-gaedel-shortest-player" },
-			{ text: "A game on August 19, 1951, was delayed when a fan parachuted onto the field at Shibe Park.", source: "https://www.baseball-almanac.com/boxscore/08191951.shtml" },
-			{ text: "In 1987, a seagull was killed by a Dave Winfield throw during a game, leading to animal cruelty charges.", source: "https://www.mlb.com/news/dave-winfield-seagull-incident" },
-			{ text: "The shortest war in history lasted 38 minutes, but a 1981 MLB game was shorter at 32 minutes due to rain.", source: "https://www.baseball-reference.com/boxes/CLE/CLE198108240.shtml" },
-			{ text: "A fan named Zack Hample has caught over 12,000 baseballs at MLB games, including A-Rod’s 3,000th hit.", source: "https://www.mlb.com/news/zack-hample-ballhawk" },
-			{ text: "In 1990, Ken Griffey Sr. and Jr. hit back-to-back home runs in the same game for the Mariners.", source: "https://www.mlb.com/news/griffey-father-son-home-runs" },
-			{ text: "A squirrel ran across the field during Game 4 of the 2019 NLDS, becoming a Cardinals rally symbol.", source: "https://www.mlb.com/news/rally-squirrel-2019-nlds" },
-			{ text: "On April 25, 1981, a Mariners game was delayed by a streaker who slid into second base naked.", source: "https://www.baseball-almanac.com/boxscore/04251981.shtml" },
-			{ text: "Moe Berg, a mediocre catcher, was also a WWII spy who spoke seven languages fluently.", source: "https://www.baseballhall.org/discover/moe-berg-spy" },
-			{ text: "In 2007, Joel Zumaya missed playoff games after injuring his arm playing Guitar Hero.", source: "https://www.espn.com/mlb/news/story?id=3047892" },
-			{ text: "A 1910 game featured a player, Fred Snodgrass, dropping a live pigeon instead of a ball in the outfield.", source: "https://www.baseball-almanac.com/players/player.php?p=snodgfr01" },
-			{ text: "The Padres once played a game in 1984 with a live chicken loose on the field.", source: "https://www.mlb.com/news/padres-chicken-incident" },
-			{ text: "In 1995, a fan stole home plate from Shea Stadium during a Mets game and escaped into the stands.", source: "https://www.nytimes.com/1995/08/25/sports/fan-steals-home-plate.html" },
-			{ text: "A 1970 Pirates game was halted when a drunk fan wrestled an umpire over a call.", source: "https://www.baseball-almanac.com/boxscore/07171970.shtml" },
-			{ text: "Vince Coleman missed the 1985 World Series after getting tangled in a tarp-rolling machine.", source: "https://www.mlb.com/news/vince-coleman-tarp-incident" },
-			{ text: "In 2001, a Reds game featured a fan tossing a rubber chicken onto the field during a pitching change.", source: "https://www.baseball-reference.com/boxes/CIN/CIN200106230.shtml" },
-			{ text: "A 1957 game saw a player, Richie Ashburn, hit a fan with a foul ball—twice in the same at-bat.", source: "https://www.mlb.com/news/richie-ashburn-foul-ball-fan" },
-			{ text: "The Astros once lost a game in 1968 because a moth flew into pitcher Don Wilson’s eye.", source: "https://www.baseball-almanac.com/boxscore/07131968.shtml" },
-			{ text: "In 1998, a Braves game was paused when a fan released a live possum onto the outfield grass.", source: "https://www.ajc.com/sports/braves-possum-incident-1998/" },
-			{ text: "A 1903 game had a player, Rube Waddell, distracted by a fire truck, leading to a loss.", source: "https://www.baseballhall.org/discover/rube-waddell-fire-truck" },
-			{ text: "In 2011, a fan caught a foul ball with his popcorn bucket and ate the popcorn afterward.", source: "https://www.mlb.com/video/fan-catches-foul-in-popcorn" },
-			{ text: "A 1986 Mets game featured a parachutist landing on the field mid-play as a prank.", source: "https://www.nytimes.com/1986/07/23/sports/parachutist-lands-on-mets-field.html" },
-			{ text: "Clint Courtney wore glasses in 1953 games because he kept losing fights without them.", source: "https://www.baseball-reference.com/players/c/courtcl01.shtml" },
-			{ text: "In 1997, a Marlins game was delayed by a fish—yes, a real fish—thrown onto the field.", source: "https://www.mlb.com/news/marlins-fish-incident-1997" },
-			{ text: "A 1916 game saw Ty Cobb throw his bat into the stands, accidentally hitting a fan’s hot dog.", source: "https://www.baseball-almanac.com/players/player.php?p=cobbty01" },
-			{ text: "In 2004, a Royals fan ran onto the field and mooned the crowd before being tackled.", source: "https://www.kansascity.com/sports/mlb/kansas-city-royals/article276543.html" },
-			{ text: "A 1979 White Sox game gave away live piranhas as a promotion—fans kept them in cups.", source: "https://www.mlb.com/news/white-sox-piranha-night" },
-			{ text: "In 1989, a Giants game was interrupted by a fan tossing a live crab onto the infield.", source: "https://www.sfchronicle.com/sports/giants-crab-incident-1989/" },
-			{ text: "A 1929 game had Babe Ruth hit a home run that broke a fan’s umbrella in the stands.", source: "https://www.mlb.com/news/babe-ruth-umbrella-homer" },
-			{ text: "In 1993, Jose Canseco famously let a fly ball bounce off his head for a home run.", source: "https://www.mlb.com/video/canseco-s-head-homer" },
-			{ text: "A 1961 Twins game was delayed by a fan releasing a flock of pigeons from the bleachers.", source: "https://www.baseball-almanac.com/boxscore/06231961.shtml" },
-			{ text: "In 2008, a Reds pitcher missed a start after slipping on a wet dugout step chasing a foul ball.", source: "https://www.espn.com/mlb/news/story?id=3478921" },
-			{ text: "A 1982 Padres game featured a fan throwing a live snake onto the field, startling players.", source: "https://www.sandiegouniontribune.com/sports/padres-snake-1982/" },
-			{ text: "In 1971, a Senators game ended early when fans stormed the field and stole bases—literally.", source: "https://www.mlb.com/news/senators-final-game-1971" },
-			{ text: "A 1996 Expos game had a fan drop a rubber duck from the upper deck onto the field.", source: "https://www.baseball-reference.com/boxes/MON/MON199607140.shtml" },
-			{ text: "In 2000, a Dodgers fan threw a beach ball that hit an umpire, causing a 10-minute delay.", source: "https://www.latimes.com/archives/la-xpm-2000-jun-14-sp-40787-story.html" },
-			{ text: "A 1954 Indians game saw a player, Al Rosen, trip over a fan’s picnic basket in the outfield.", source: "https://www.baseball-almanac.com/players/player.php?p=rosenal01" },
-			{ text: "In 1985, a Brewers game was paused when a fan tossed a live frog onto the pitcher’s mound.", source: "https://www.milwaukeejournal.com/sports/brewers-frog-1985/" },
-			{ text: "A 1920 Red Sox game had a fan throw a pie that hit the umpire in the face mid-inning.", source: "https://www.baseball-reference.com/boxes/BOS/BOS192007140.shtml" },
-			{ text: "In 1999, a Braves fan ran onto the field with a giant inflatable shark during a rain delay.", source: "https://www.ajc.com/sports/braves-shark-incident-1999/" },
-			{ text: "A 1976 Phillies game featured a fan dropping a bowling ball from the stands onto the field.", source: "https://www.philly.com/phillies-bowling-ball-1976/" },
-			{ text: "In 2003, a Cubs fan threw a pizza box that landed on the pitcher’s mound during a game.", source: "https://www.chicagotribune.com/sports/cubs-pizza-box-2003/" },
-			{ text: "A 1980 Astros game was delayed by a fan releasing a swarm of balloons onto the field.", source: "https://www.baseball-almanac.com/boxscore/05231980.shtml" },
-			{ text: "In 1994, a Rangers fan tossed a bucket of fried chicken over the outfield wall.", source: "https://www.dallasnews.com/sports/rangers-chicken-1994/" },
-			{ text: "A 1969 Mets game had a black cat cross the dugout, later tied to their miracle championship.", source: "https://www.mlb.com/news/mets-1969-black-cat" },
-			{ text: "In 2006, a Giants player missed a game after burning his hand microwaving a burrito.", source: "https://www.espn.com/mlb/news/story?id=2619872" },
-			{ text: "A 1983 Royals game saw a fan throw a live goldfish onto the field, confusing everyone.", source: "https://www.kansascity.com/sports/mlb/kansas-city-royals/article276543.html" }
+            { text: "In 1974, Cleveland’s Ten Cent Beer Night promotion led to a fan riot, forcing the Indians to forfeit the game.", source: "https://www.mlb.com/news/ten-cent-beer-night" },
+            { text: "Dock Ellis claimed he pitched a no-hitter on June 12, 1970, while under the influence of LSD.", source: "https://www.baseballhall.org/discover/dock-ellis-no-hitter" },
+            { text: "A goat cursed the Chicago Cubs in 1945 when its owner was ejected from Wrigley Field during the World Series.", source: "https://www.mlb.com/news/cubs-curse-of-the-billy-goat" },
+            { text: "Bill Veeck sent 3-foot-7-inch Eddie Gaedel to bat in a 1951 game as a promotional stunt for the St. Louis Browns.", source: "https://www.mlb.com/news/eddie-gaedel-shortest-player" },
+            { text: "A game on August 19, 1951, was delayed when a fan parachuted onto the field at Shibe Park.", source: "https://www.baseball-almanac.com/boxscore/08191951.shtml" },
+            { text: "In 1987, a seagull was killed by a Dave Winfield throw during a game, leading to animal cruelty charges.", source: "https://www.mlb.com/news/dave-winfield-seagull-incident" },
+            { text: "The shortest war in history lasted 38 minutes, but a 1981 MLB game was shorter at 32 minutes due to rain.", source: "https://www.baseball-reference.com/boxes/CLE/CLE198108240.shtml" },
+            { text: "A fan named Zack Hample has caught over 12,000 baseballs at MLB games, including A-Rod’s 3,000th hit.", source: "https://www.mlb.com/news/zack-hample-ballhawk" },
+            { text: "In 1990, Ken Griffey Sr. and Jr. hit back-to-back home runs in the same game for the Mariners.", source: "https://www.mlb.com/news/griffey-father-son-home-runs" },
+            { text: "A squirrel ran across the field during Game 4 of the 2019 NLDS, becoming a Cardinals rally symbol.", source: "https://www.mlb.com/news/rally-squirrel-2019-nlds" },
+            { text: "On April 25, 1981, a Mariners game was delayed by a streaker who slid into second base naked.", source: "https://www.baseball-almanac.com/boxscore/04251981.shtml" },
+            { text: "Moe Berg, a mediocre catcher, was also a WWII spy who spoke seven languages fluently.", source: "https://www.baseballhall.org/discover/moe-berg-spy" },
+            { text: "In 2007, Joel Zumaya missed playoff games after injuring his arm playing Guitar Hero.", source: "https://www.espn.com/mlb/news/story?id=3047892" },
+            { text: "A 1910 game featured a player, Fred Snodgrass, dropping a live pigeon instead of a ball in the outfield.", source: "https://www.baseball-almanac.com/players/player.php?p=snodgfr01" },
+            { text: "The Padres once played a game in 1984 with a live chicken loose on the field.", source: "https://www.mlb.com/news/padres-chicken-incident" },
+            { text: "In 1995, a fan stole home plate from Shea Stadium during a Mets game and escaped into the stands.", source: "https://www.nytimes.com/1995/08/25/sports/fan-steals-home-plate.html" },
+            { text: "A 1970 Pirates game was halted when a drunk fan wrestled an umpire over a call.", source: "https://www.baseball-almanac.com/boxscore/07171970.shtml" },
+            { text: "Vince Coleman missed the 1985 World Series after getting tangled in a tarp-rolling machine.", source: "https://www.mlb.com/news/vince-coleman-tarp-incident" },
+            { text: "In 2001, a Reds game featured a fan tossing a rubber chicken onto the field during a pitching change.", source: "https://www.baseball-reference.com/boxes/CIN/CIN200106230.shtml" },
+            { text: "A 1957 game saw a player, Richie Ashburn, hit a fan with a foul ball—twice in the same at-bat.", source: "https://www.mlb.com/news/richie-ashburn-foul-ball-fan" },
+            { text: "The Astros once lost a game in 1968 because a moth flew into pitcher Don Wilson’s eye.", source: "https://www.baseball-almanac.com/boxscore/07131968.shtml" },
+            { text: "In 1998, a Braves game was paused when a fan released a live possum onto the outfield grass.", source: "https://www.ajc.com/sports/braves-possum-incident-1998/" },
+            { text: "A 1903 game had a player, Rube Waddell, distracted by a fire truck, leading to a loss.", source: "https://www.baseballhall.org/discover/rube-waddell-fire-truck" },
+            { text: "In 2011, a fan caught a foul ball with his popcorn bucket and ate the popcorn afterward.", source: "https://www.mlb.com/video/fan-catches-foul-in-popcorn" },
+            { text: "A 1986 Mets game featured a parachutist landing on the field mid-play as a prank.", source: "https://www.nytimes.com/1986/07/23/sports/parachutist-lands-on-mets-field.html" },
+            { text: "Clint Courtney wore glasses in 1953 games because he kept losing fights without them.", source: "https://www.baseball-reference.com/players/c/courtcl01.shtml" },
+            { text: "In 1997, a Marlins game was delayed by a fish—yes, a real fish—thrown onto the field.", source: "https://www.mlb.com/news/marlins-fish-incident-1997" },
+            { text: "A 1916 game saw Ty Cobb throw his bat into the stands, accidentally hitting a fan’s hot dog.", source: "https://www.baseball-almanac.com/players/player.php?p=cobbty01" },
+            { text: "In 2004, a Royals fan ran onto the field and mooned the crowd before being tackled.", source: "https://www.kansascity.com/sports/mlb/kansas-city-royals/article276543.html" },
+            { text: "A 1979 White Sox game gave away live piranhas as a promotion—fans kept them in cups.", source: "https://www.mlb.com/news/white-sox-piranha-night" },
+            { text: "In 1989, a Giants game was interrupted by a fan tossing a live crab onto the infield.", source: "https://www.sfchronicle.com/sports/giants-crab-incident-1989/" },
+            { text: "A 1929 game had Babe Ruth hit a home run that broke a fan’s umbrella in the stands.", source: "https://www.mlb.com/news/babe-ruth-umbrella-homer" },
+            { text: "In 1993, Jose Canseco famously let a fly ball bounce off his head for a home run.", source: "https://www.mlb.com/video/canseco-s-head-homer" },
+            { text: "A 1961 Twins game was delayed by a fan releasing a flock of pigeons from the bleachers.", source: "https://www.baseball-almanac.com/boxscore/06231961.shtml" },
+            { text: "In 2008, a Reds pitcher missed a start after slipping on a wet dugout step chasing a foul ball.", source: "https://www.espn.com/mlb/news/story?id=3478921" },
+            { text: "A 1982 Padres game featured a fan throwing a live snake onto the field, startling players.", source: "https://www.sandiegouniontribune.com/sports/padres-snake-1982/" },
+            { text: "In 1971, a Senators game ended early when fans stormed the field and stole bases—literally.", source: "https://www.mlb.com/news/senators-final-game-1971" },
+            { text: "A 1996 Expos game had a fan drop a rubber duck from the upper deck onto the field.", source: "https://www.baseball-reference.com/boxes/MON/MON199607140.shtml" },
+            { text: "In 2000, a Dodgers fan threw a beach ball that hit an umpire, causing a 10-minute delay.", source: "https://www.latimes.com/archives/la-xpm-2000-jun-14-sp-40787-story.html" },
+            { text: "A 1954 Indians game saw a player, Al Rosen, trip over a fan’s picnic basket in the outfield.", source: "https://www.baseball-almanac.com/players/player.php?p=rosenal01" },
+            { text: "In 1985, a Brewers game was paused when a fan tossed a live frog onto the pitcher’s mound.", source: "https://www.milwaukeejournal.com/sports/brewers-frog-1985/" },
+            { text: "A 1920 Red Sox game had a fan throw a pie that hit the umpire in the face mid-inning.", source: "https://www.baseball-reference.com/boxes/BOS/BOS192007140.shtml" },
+            { text: "In 1999, a Braves fan ran onto the field with a giant inflatable shark during a rain delay.", source: "https://www.ajc.com/sports/braves-shark-incident-1999/" },
+            { text: "A 1976 Phillies game featured a fan dropping a bowling ball from the stands onto the field.", source: "https://www.philly.com/phillies-bowling-ball-1976/" },
+            { text: "In 2003, a Cubs fan threw a pizza box that landed on the pitcher’s mound during a game.", source: "https://www.chicagotribune.com/sports/cubs-pizza-box-2003/" },
+            { text: "A 1980 Astros game was delayed by a fan releasing a swarm of balloons onto the field.", source: "https://www.baseball-almanac.com/boxscore/05231980.shtml" },
+            { text: "In 1994, a Rangers fan tossed a bucket of fried chicken over the outfield wall.", source: "https://www.dallasnews.com/sports/rangers-chicken-1994/" },
+            { text: "A 1969 Mets game had a black cat cross the dugout, later tied to their miracle championship.", source: "https://www.mlb.com/news/mets-1969-black-cat" },
+            { text: "In 2006, a Giants player missed a game after burning his hand microwaving a burrito.", source: "https://www.espn.com/mlb/news/story?id=2619872" },
+            { text: "A 1983 Royals game saw a fan throw a live goldfish onto the field, confusing everyone.", source: "https://www.kansascity.com/sports/mlb/kansas-city-royals/article276543.html" }
         ];
         let facts = [...baseballFacts];
         let usedFacts = [];
@@ -339,21 +338,21 @@
             }, 3000);
         }
 
-		function shareOnTwitter() {
-    const factWithSup = factElement.innerHTML;
-    const fact = factWithSup.replace(/<sup>1<\/sup>/g, "");
-    const maxFactLength = 200;
-    const truncatedFact = fact.length > maxFactLength ? fact.substring(0, maxFactLength - 3) + "..." : fact;
-    const url = "https://spinthebattrivia.com";
-    const tweetText = `${truncatedFact}\nExplore more MLB trivia facts at Spin the Bat Trivia! ${url}`;
-    window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweetText), '_blank');
-}
+        function shareOnTwitter() {
+            const factWithSup = factElement.innerHTML;
+            const fact = factWithSup.replace(/<sup>1<\/sup>/g, "");
+            const maxFactLength = 200;
+            const truncatedFact = fact.length > maxFactLength ? fact.substring(0, maxFactLength - 3) + "..." : fact;
+            const url = "https://spinthebattrivia.com";
+            const tweetText = `${truncatedFact}\nExplore more MLB trivia facts at Spin the Bat Trivia! ${url}`;
+            window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweetText), '_blank');
+        }
 
         batContainer.addEventListener("click", spinBat);
         batContainer.addEventListener("keypress", (e) => { if (e.key === "Enter") spinBat(); });
         spinButton.addEventListener("click", spinBat);
 
-        document.getElementById("footer").innerHTML = `© ${new Date().getFullYear()} Baseball Fact Bat. All rights reserved. Questions? Contact Us: <a href="mailto:musiknote@yahoo.com">musiknote@yahoo.com</a>`;
+        document.getElementById("footer").innerHTML = `© ${new Date().getFullYear()} Spin the Bat Trivia. All rights reserved. Questions? Contact Us: <a href="mailto:musiknote@yahoo.com">musiknote@yahoo.com</a>`;
     </script>
 </body>
 </html>
