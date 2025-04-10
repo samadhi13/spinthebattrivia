@@ -1,72 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Discover fun baseball trivia with Spin the Bat Trivia! Spin for random facts about MLB history, legendary players, and quirky moments. Free, interactive, and perfect for fans!">
-    <meta name="keywords" content="baseball trivia, baseball facts, MLB history, baseball fun facts, sports trivia, baseball quiz, baseball fans">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spin the Bat Trivia: Spin for Fun MLB Trivia & Facts</title>
-    <link rel="icon" type="image/png" href="baseball_favicon.png">
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Spin the Bat Trivia: Spin for MLB Trivia">
-    <meta name="twitter:description" content="Spin the bat for fun MLB facts!">
-    <meta name="twitter:image" content="https://spinthebattrivia.com/baseball_favicon.png">
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MRKV8KGMER"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFCDGN0KCE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-MRKV8KGMER');
+      gtag('config', 'G-EFCDGN0KCE');
     </script>
-    <!-- Google AdSense -->
+    <!-- Google AdSense Verification -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8494086888842655" crossorigin="anonymous"></script>
-    <style>
-        body{margin:0;padding:0;padding-bottom:60px;font-family:Arial,sans-serif;background:linear-gradient(135deg,#006400,#fff);min-height:100vh;display:flex;flex-direction:column;align-items:center;overflow-y:auto}
-        .wrapper{max-width:1200px;width:100%;padding:20px;display:flex;justify-content:center;flex-wrap:nowrap;box-sizing:border-box}
-        .left-sidebar,.right-sidebar{flex:1;padding:20px}
-        .ad-space{background:#f9f9f9;border-radius:10px;padding:15px;margin-bottom:20px;text-align:center;width:180px;height:250px;box-sizing:border-box;overflow:hidden}
-        .ad-space img{max-width:100%;max-height:120px;height:auto}
-        .ad-space p{font-size:13px;margin:8px 0;line-height:1.2;max-height:50px;overflow:hidden}
-        .ad-space a{text-decoration:none;color:#2f3542}
-        .ad-space a:hover{color:#f00}
-        main{flex:3;text-align:center;background:rgba(255,255,255,.9);padding:40px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.2);animation:fadeIn 1s ease-in}
-        h1{font-size:48px;background:linear-gradient(90deg,#f00,#fff,#00f);-webkit-background-clip:text;-moz-background-clip:text;background-clip:text;color:transparent;text-shadow:3px 3px 6px rgba(0,0,0,.3);margin-bottom:15px}
-        .intro,.prompt{font-size:20px;color:#2f3542;margin-bottom:20px}
-        .bat-container{width:400px;height:400px;position:relative;margin:0 auto 20px;cursor:pointer}
-        .plate{width:300px;height:300px;background:url(home_plate.png) no-repeat center;background-size:contain;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1}
-        .bat{width:360px;height:175px;background:url(baseball_bat.png) no-repeat center;background-size:contain;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);transform-origin:center;z-index:2;will-change:transform}
-        .spin-button{padding:15px 30px;font-size:20px;color:#fff;background:#f00;border:none;border-radius:50px;cursor:pointer;transition:transform .3s,background .3s}
-        .spin-button:hover{transform:scale(1.1);background:#00f}
-        .spin-button:disabled{background:#ccc;cursor:not-allowed;transform:none}
-        #fact-container{font-size:24px;color:#2f3542;margin:30px 0 10px;padding:20px;background:#f1f2f6;border-radius:15px;opacity:0;animation:slideUp .5s ease forwards}
-        #fact sup{font-size:14px}
-        .footnote{font-size:14px;color:#555;margin-top:10px}
-        .footnote a{color:#00f;text-decoration:underline}
-        .footnote a:hover{color:#f00}
-        #share-button{margin:10px 0;padding:10px 20px;font-size:16px;color:#fff;background:#1DA1F2;border:none;border-radius:50px;cursor:pointer;display:none}
-        #share-button:hover{background:#0d8bec}
-        section{font-size:18px;color:#2f3542;margin-top:20px;padding:15px;background:#f1f2f6;border-radius:10px}
-        section h2{font-size:24px;color:#f00;margin-bottom:10px}
-        footer{text-align:center;font-size:14px;color:#fff;padding:10px;background:rgba(0,0,0,.4);width:100%;position:fixed;bottom:0;left:0;box-sizing:border-box}
-        footer a{text-decoration:underline;color:#fff}
-        footer a:hover{color:#ccc}
-        .ad-button{display:block;margin:8px auto 0;padding:10px 20px;font-size:13px;text-decoration:none}
-        @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-        @keyframes slideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
-        @media (max-width:768px){
-            .wrapper{flex-direction:column;padding:10px}
-            .left-sidebar{order:2;display:flex;flex-direction:column;align-items:center}
-            main{order:1}
-            .right-sidebar{order:3;display:flex;flex-direction:column;align-items:center}
-            .bat-container{width:350px;height:350px}
-            .plate{width:260px;height:260px}
-            .bat{width:310px;height:80px}
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://complimentwheel.com/wheel.png">
+    <meta name="twitter:title" content="Compliment Wheel">
+    <!-- Open Graph Metadata for Facebook -->
+    <meta property="og:title" content="Compliment Wheel - Spin for Positivity">
+    <meta property="og:description" content="Spin for a unique compliment and spread the good vibes!">
+    <meta property="og:image" content="https://complimentwheel.com/wheel.png">
+    <meta property="og:url" content="https://complimentwheel.com">
+    <meta charset="UTF-8">
+    <meta name="description" content="Spin the Compliment Wheel for a fun, unique compliment! Brighten your day and share the positivity.">
+    <meta name="keywords" content="compliment wheel, spin for compliments, positive quotes, fun game, compliment generator">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliment Wheel - Spin for a Compliment</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        padding-bottom: 60px;
+        font-family: 'Comic Sans MS', 'Arial', sans-serif;
+        background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-y: auto;
+    }
+    .wrapper {
+        display: flex;
+        max-width: 1200px;
+        width: 100%;
+        padding: 20px;
+        flex-wrap: nowrap;
+    }
+    .left-sidebar {
+        flex: 1;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .generator {
+        flex: 2;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 1s ease-in;
+    }
+    .right-sidebar {
+        flex: 1;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    h1 {
+        font-size: 48px;
+        background: linear-gradient(90deg, #ff4757, #ff1493, #1e90ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 3px 3px 6px rgba(255, 105, 180, 0.5);
+        margin-bottom: 15px;
+        animation: bounceIn 1.5s ease infinite alternate;
+    }
+    .intro, .prompt, .samples {
+        font-size: 20px;
+        color: #2f3542;
+        margin-bottom: 20px;
+    }
+    .samples ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .samples li {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+    .wheel {
+        width: 200px;
+        height: 200px;
+        background: url('wheel.png') no-repeat center;
+        background-size: cover;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+    }
+    .spin-button {
+        padding: 15px 30px;
+        font-size: 20px;
+        color: white;
+        background: #1e90ff;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: transform 0.3s, background 0.3s;
+    }
+    .spin-button:hover {
+        transform: scale(1.1);
+        background: #ff1493;
+    }
+    .spin-button:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+        transform: none;
+    }
+    #compliment {
+        font-size: 28px;
+        color: #2f3542;
+        margin: 30px 0 20px;
+        padding: 20px;
+        background: #f1f2f6;
+        border-radius: 15px;
+        opacity: 0;
+        animation: slideUp 0.5s ease forwards;
+    }
+    .share-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    .share-twitter, .share-facebook {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: background 0.3s;
+        pointer-events: none;
+        opacity: 0.5;
+    }
+    .share-twitter {
+        background: #1DA1F2;
+    }
+    .share-twitter:hover {
+        background: #0d8ddb;
+    }
+    .share-facebook {
+        background: #1877F2;
+    }
+    .share-facebook:hover {
+        background: #145dbf;
+    }
+    .share-icon {
+        margin-right: 8px;
+        font-size: 18px;
+    }
+    .contact-us {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #ff4757;
+        background: #fff3e6;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: background 0.3s, color 0.3s;
+    }
+    .contact-us:hover {
+        background: #ff1493;
+        color: white;
+    }
+    .ad-space {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #fff3e6;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .ad-space img {
+        width: 250px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto 10px;
+    }
+    .ad-space a {
+        text-decoration: none;
+        color: #ff4757;
+        font-weight: bold;
+    }
+    .ad-space a:hover {
+        color: #ff1493;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes slideUp {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes bounceIn {
+        0% { transform: scale(0.95); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    .particles {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+    .particle {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        animation: float 5s infinite ease-in-out;
+    }
+    @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+        .wrapper {
+            flex-direction: column;
+            width: 100%;
+            padding: 10px;
         }
-    </style>
+        .left-sidebar, .generator, .right-sidebar {
+            flex: none;
+            width: 100%;
+            margin: 10px 0;
+        }
+        .generator {
+            order: 1;
+        }
+        .right-sidebar {
+            order: 2;
+        }
+        .left-sidebar {
+            order: 3;
+        }
+    }
+    .about {
+        font-size: 18px;
+        color: #2f3542;
+        margin-top: 20px;
+        padding: 15px;
+        background: #f1f2f6;
+        border-radius: 10px;
+    }
+    .about h2 {
+        font-size: 24px;
+        color: #ff4757;
+        margin-bottom: 10px;
+    }
+    .footer {
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.4);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+</style>
 </head>
 <body>
+    <div class="particles">
+        <div class="particle" style="left: 10%; top: 20%; animation-delay: 0s;"></div>
+        <div class="particle" style="left: 30%; top: 50%; animation-delay: 1s;"></div>
+        <div class="particle" style="left: 50%; top: 70%; animation-delay: 2s;"></div>
+        <div class="particle" style="left: 70%; top: 30%; animation-delay: 3s;"></div>
+        <div class="particle" style="left: 90%; top: 60%; animation-delay: 4s;"></div>
+    </div>
     <div class="wrapper">
         <div class="left-sidebar">
             <div class="ad-space">
@@ -76,283 +303,357 @@
                 </a>
             </div>
             <div class="ad-space">
-                <a href="https://www.amazon.com/Hop-into-Easter-Coloring-Colorful/dp/B0DZXZYHKF" target="_blank">
-                    <img src="easter_ad.jpg" alt="Hop into Easter Coloring Book">
-                    <p>Hop into Easter: A Cute and Colorful Coloring Book for Kids!</p>
+                <a href="https://spinthebattrivia.com" target="_blank">
+                    <img src="baseball_ad.png" alt="Spin the Bat Trivia">
+                    <p>Spin the Bat Trivia: Test Your Baseball Knowledge! Visit Now!</p>
                 </a>
             </div>
         </div>
-        <main>
-            <div class="intro">Get ready for a home run with Spin the Bat Trivia! Spin the bat to uncover fun MLB trivia—from iconic players to wild game moments. Click now to test your baseball knowledge!</div>
-            <h1>Spin the Bat Trivia</h1>
-            <div class="prompt">Hit a Fact Out of the Park—Spin Now!</div>
-            <div class="bat-container" id="batContainer" tabindex="0">
-                <div class="plate" role="img" aria-label="Home plate"></div>
-                <div class="bat" id="bat" role="img" aria-label="Baseball bat"></div>
+        <div class="generator">
+            <div class="intro">
+                Welcome to Compliment Wheel! Spin for positivity and a fun way to learn English phrases! “Be the Good” with every click — get a quirky compliment, share the vibe, and enjoy playful language like “You’re a superhero without the cape!” With hundreds of unique spins, it’s your daily dose of joy. Ready to brighten your day?
             </div>
-            <button class="spin-button" id="spinButton">Spin the Bat!</button>
-            <div id="fact-container">
-                <p id="fact">Spin for a Baseball Fact!</p>
-                <div id="footnote" class="footnote"></div>
+            <h1>Compliment Wheel</h1>
+            <div class="prompt">Compliments to Make Your Day—Spin Now!</div>
+            <div class="wheel" id="wheel" onclick="spinWheel()"></div>
+            <button class="spin-button" id="spinButton" onclick="spinWheel()">Spin the Wheel!</button>
+            <p id="compliment">Spin for a surprise compliment!</p>
+            <div class="share-buttons">
+                <a href="#" id="shareTwitter" class="share-twitter" target="_blank">
+                    <span class="share-icon">🐦</span> Tweet
+                </a>
+                <a href="#" id="shareFacebook" class="share-facebook">
+                    <span class="share-icon">📘</span> Share
+                </a>
             </div>
-            <button id="share-button" onclick="shareOnTwitter()">Share on Twitter</button>
-            <section>
-                <h2>About Spin the Bat Trivia</h2>
-                <p>Welcome to Spin the Bat Trivia, your ultimate destination for exploring the rich tapestry of Major League Baseball history through interactive trivia! Whether you’re a lifelong fan who lives for the crack of the bat or a newcomer curious about America’s pastime, our site offers a unique way to dive into baseball’s most fascinating moments. Spin the bat over home plate and uncover meticulously sourced facts that span legendary players, unforgettable games, and quirky statistics—each delivered with a professional touch and a nod to the sport’s storied legacy.</p>
-                <p>Spin the Bat Trivia was born from a passion for the game and a desire to share its hidden gems with fans worldwide. Our carefully curated trivia collection celebrates the heroes of the diamond, from Jackie Robinson’s groundbreaking debut to Cal Ripken Jr.’s ironman streak, while shedding light on lesser-known tales—like the marathon 25-inning game that tested endurance like no other. Every spin brings a fresh fact, complete with a reliable source, ensuring you can trust the history you’re discovering. We aim to make learning about baseball as thrilling as a ninth-inning comeback, blending education with entertainment in a way that keeps you coming back for more.</p>
-                <p>Perfect for fans of all ages, Spin the Bat Trivia invites you to test your knowledge, impress your friends, or simply enjoy a moment of baseball nostalgia. Our interactive design—featuring a spinning bat and home plate—adds a playful twist to trivia, making it more than just a list of facts. Share your favorite finds on Twitter with a single click and join a community of enthusiasts celebrating MLB’s past and present. Step up to the plate, spin the bat, and let Spin the Bat Trivia bring the excitement of baseball history straight to your screen!</p>
-            </section>
-        </main>
+            <a href="mailto:musiknote@yahoo.com?subject=Advertising%20with%20Compliment%20Wheel" class="contact-us">Contact Us</a>
+            <div class="about">
+                <h2>Why Spin the Compliment Wheel?</h2>
+                <p>At Compliment Wheel, we’re all about spreading joy — one spin at a time. With over hundreds of unique, handcrafted compliments, it’s a playful way to brighten your day or someone else’s. But it’s more than just fun, it’s a chance to “Be the Good” in a world that needs it. Each spin delivers a quirky English phrase, like “You’re the bee’s knees of brilliance!” or “You’ve got more zip than a lightning bolt!”— perfect for a quick smile or even learning some colorful English compliments. Whether you’re feeling down or just need a boost, our wheel is here to lift spirits and spark positivity. It’s simple: spin, get a compliment, and share the good vibes with friends. Imagine the ripple effect—one kind word can turn a frown upside down! We created this site to celebrate creativity and kindness, blending silly sayings with heartfelt cheer. It’s also a fun way to explore English expressions — think of it as a lighthearted language lesson wrapped in a game. From “You’re a peach of pure perfection!” to “Your cool factor is off the charts!” every phrase is a little gift. So go ahead—spin to “Be the Good,” share the love, and let’s make the world a happier place together!</p>
+            </div>
+            <div class="samples">
+                <h2>Sample Compliments</h2>
+                <p>Try these English gems—spin for more!</p>
+                <ul>
+                    <li>“You’re the sprinkles on life’s cupcake!”</li>
+                    <li>“You’ve got more pizzazz than a parade!”</li>
+                    <li>“You’re a whirlwind of pure delight!”</li>
+                    <li>“Your laugh could cure Monday blues!”</li>
+                    <li>“You’re the cat’s pajamas of positivity!”</li>
+                </ul>
+            </div>
+        </div>
         <div class="right-sidebar">
+            <div class="ad-space">
+                <a href="https://www.amazon.com/Hop-into-Easter-Coloring-Colorful/dp/B0DZXZYHKF" target="_blank">
+                    <img src="easter_ad.jpg" alt="Hop into Easter Coloring Book">
+                    <p>Hop into Easter: A Cute and Colorful Coloring Book for Kids! Get it now on Amazon.</p>
+                </a>
+            </div>
             <div class="ad-space">
                 <a href="https://www.amazon.com/dp/B0F2FJLVR2" target="_blank">
                     <img src="train_ad.jpg" alt="All Aboard! 50 Coloring Vintage Trains">
-                    <p>Color 50 vintage trains from history’s rails—fun for all ages!</p>
+                    <p>Color 50 vintage trains from history’s rails—fun for all ages! Get yours on Amazon.</p>
                 </a>
-            </div>
-            <div class="ad-space">
-                <a href="https://complimentwheel.com/" target="_blank">
-                    <img src="wheel_ad.png" alt="Compliment Wheel">
-                    <p>Get a daily dose of positivity—spin for a unique compliment!</p>
-                </a>
-                <a href="https://complimentwheel.com/" target="_blank" class="spin-button ad-button">Try It Now</a>
             </div>
         </div>
     </div>
-    <footer id="footer"></footer>
+    <footer class="footer">
+        <p>© 2025 Compliment Wheel. All rights reserved.</p>
+    </footer>
     <script>
-        const baseballFacts = [
-            { text: "The Cincinnati Red Stockings, established in 1869, became the first professional baseball team in history and went undefeated in their inaugural season.", source: "https://www.baseball-reference.com/teams/CIN/" },
-            { text: "Major League Baseball’s National League, founded in 1876, stands as the oldest professional sports league still operating in the United States.", source: "https://www.mlb.com/history/leagues" },
-            { text: "Lee Richmond pitched the first perfect game in Major League Baseball history on June 12, 1880, for the Worcester Ruby Legs against the Cleveland Blues.", source: "https://www.baseball-almanac.com/pitching/piperf.shtml" },
-            { text: "The first World Series, held in 1903, pitted the Boston Americans against the Pittsburgh Pirates, with Boston claiming victory in eight games.", source: "https://www.mlb.com/history/postseason" },
-            { text: "The American League emerged as a major league in 1901, setting the stage for the modern two-league structure of Major League Baseball.", source: "https://www.mlb.com/history/leagues" },
-            { text: "Cy Young, a legendary pitcher, amassed 511 career wins over 22 seasons, a record that remains unmatched in Major League Baseball history.", source: "https://baseballhall.org/hall-of-famers/young-cy" },
-            { text: "The Chicago Cubs, originally known as the White Stockings, adopted their current name in 1907 after decades of evolution.", source: "https://www.mlb.com/cubs/history" },
-            { text: "Forbes Field in Pittsburgh, opened in 1909, became the first baseball stadium constructed with concrete and steel.", source: "https://www.baseball-reference.com/bullpen/Forbes_Field" },
-            { text: "Major League Baseball banned the spitball in 1920, though veteran pitchers were grandfathered in to use it until their careers ended.", source: "https://www.mlb.com/news/spitball-history" },
-            { text: "The New York Yankees began as the Baltimore Orioles in 1901 before relocating to New York City in 1903.", source: "https://www.mlb.com/yankees/history" },
-            { text: "Babe Ruth debuted as a pitcher for the Boston Red Sox in 1914, winning 89 games before transforming into a home run icon with the Yankees.", source: "https://baseballhall.org/hall-of-famers/ruth-babe" },
-            { text: "The Black Sox Scandal of 1919 resulted in eight Chicago White Sox players being banned for life for fixing the World Series.", source: "https://www.baseball-reference.com/bullpen/Black_Sox_Scandal" },
-            { text: "The live-ball era began in 1920, when Major League Baseball introduced livelier baseballs, boosting offensive play and ending the dead-ball era.", source: "https://www.mlb.com/history/eras" },
-            { text: "The Yankees opened Yankee Stadium in 1923, the same year they captured their first World Series championship.", source: "https://www.mlb.com/yankees/history" },
-            { text: "The inaugural Major League Baseball All-Star Game took place on July 6, 1933, at Comiskey Park in Chicago.", source: "https://www.mlb.com/all-star/history" },
-            { text: "Jackie Mitchell, a female pitcher, struck out Babe Ruth and Lou Gehrig in succession during an exhibition game on April 2, 1931, in Chattanooga, Tennessee.", source: "https://www.mlb.com/news/meet-jackie-mitchell-the-girl-who-struck-out-babe-ruth" },
-            { text: "Walter Johnson recorded 110 shutouts in his career, a Major League Baseball record that still stands today.", source: "https://baseballhall.org/hall-of-famers/johnson-walter" },
-            { text: "Ty Cobb stole home 54 times across his career, establishing a Major League Baseball record for aggression on the basepaths.", source: "https://baseballhall.org/hall-of-famers/cobb-ty" },
-            { text: "Rogers Hornsby batted .424 in 1924, one of only two seasons in which he hit over .400 during his illustrious career.", source: "https://baseballhall.org/hall-of-famers/hornsby-rogers" },
-            { text: "The Baseball Hall of Fame in Cooperstown, New York, inducted its first class—featuring Ty Cobb and Babe Ruth—on June 12, 1939.", source: "https://baseballhall.org/discover/hall-of-fame-opened-in-1939" },
-            { text: "Larry Doby became the first African American player in the American League, debuting for the Cleveland Indians on July 5, 1947.", source: "https://baseballhall.org/hall-of-famers/doby-larry" },
-            { text: "Ted Williams achieved a .406 batting average in 1941, the last Major League Baseball player to surpass .400 in a single season.", source: "https://baseballhall.org/hall-of-famers/williams-ted" },
-            { text: "Willie Mays made his iconic over-the-shoulder catch in Game 1 of the 1954 World Series, securing a victory for the New York Giants.", source: "https://www.mlb.com/news/willie-mays-the-catch" },
-            { text: "Roy Campanella earned three Most Valuable Player awards between 1951 and 1955, the most by any catcher in Major League Baseball history.", source: "https://baseballhall.org/hall-of-famers/campanella-roy" },
-            { text: "Roger Maris broke Babe Ruth’s single-season home run record by hitting 61 in 1961 with the New York Yankees.", source: "https://www.mlb.com/news/roger-maris-61-home-runs" },
-            { text: "The New York Mets, after losing 120 games in 1962, stunned the baseball world by winning the 1969 World Series.", source: "https://www.mlb.com/mets/history" },
-            { text: "Bob Gibson posted a 1.12 earned run average in 1968, prompting Major League Baseball to lower the pitcher’s mound the following year.", source: "https://baseballhall.org/hall-of-famers/gibson-bob" },
-            { text: "The American League adopted the designated hitter rule in 1973, forever altering its gameplay from the National League.", source: "https://www.mlb.com/history/rules" },
-            { text: "Pete Rose accumulated 4,256 hits over his career, the most in Major League Baseball history, before his 1989 ban for gambling.", source: "https://baseballhall.org/discover/pete-rose-hits-record" },
-            { text: "Reggie Jackson hit three home runs in Game 6 of the 1977 World Series, earning the nickname Mr. October.", source: "https://www.mlb.com/news/reggie-jackson-mr-october" },
-            { text: "Rickey Henderson stole 130 bases in 1982, setting the modern Major League Baseball single-season record.", source: "https://baseballhall.org/hall-of-famers/henderson-rickey" },
-            { text: "Kirk Gibson’s dramatic walk-off home run in Game 1 of the 1988 World Series lifted the Los Angeles Dodgers over the Oakland Athletics.", source: "https://www.mlb.com/news/kirk-gibson-1988-world-series-homer" },
-            { text: "Nolan Ryan recorded 5,714 career strikeouts, the most in Major League Baseball history, across 27 seasons.", source: "https://baseballhall.org/hall-of-famers/ryan-nolan" },
-            { text: "Greg Maddux won four consecutive Cy Young Awards from 1992 to 1995, a feat unmatched by any other pitcher.", source: "https://baseballhall.org/hall-of-famers/maddux-greg" },
-            { text: "Barry Bonds hit 73 home runs in 2001 with the San Francisco Giants, surpassing Mark McGwire’s single-season record.", source: "https://www.mlb.com/news/barry-bonds-73-home-runs" },
-            { text: "Ichiro Suzuki set the single-season hits record with 262 in 2004 while playing for the Seattle Mariners.", source: "https://baseballhall.org/hall-of-famers/suzuki-ichiro" },
-            { text: "The Arizona Diamondbacks won the 2001 World Series in their fourth season, defeating the New York Yankees in seven games.", source: "https://www.mlb.com/dbacks/history" },
-            { text: "Curt Schilling pitched through injury in the 2004 ALCS ‘Bloody Sock Game,’ helping the Red Sox overcome a 3–0 deficit against the Yankees.", source: "https://www.mlb.com/news/curt-schilling-bloody-sock" },
-            { text: "The San Francisco Giants captured three World Series titles in the 2010s—2010, 2012, and 2014—led by stars like Buster Posey.", source: "https://www.mlb.com/giants/history" },
-            { text: "Miguel Cabrera won the Triple Crown in 2012, leading the American League in batting average, home runs, and RBIs—the first since 1967.", source: "https://baseballhall.org/discover/miguel-cabrera-triple-crown" },
-            { text: "Shohei Ohtani debuted in 2018 with the Los Angeles Angels, becoming the first true two-way player since Babe Ruth.", source: "https://www.mlb.com/news/shohei-ohtani-two-way-star" },
-            { text: "Joe DiMaggio’s 56-game hitting streak in 1941 with the New York Yankees remains the longest in Major League Baseball history.", source: "https://en.wikipedia.org/wiki/Joe_DiMaggio#Hitting_streak" },
-            { text: "The Baltimore Orioles lost their first 21 games of the 1988 season, a modern-era American League record for futility.", source: "https://www.mlb.com/news/1988-orioles-losing-streak" },
-            { text: "Carl Hubbell won 24 consecutive games across the 1936 and 1937 seasons, a pitching streak unrivaled in Major League Baseball.", source: "https://bleacherreport.com/articles/123456-carl-hubbell-streak" },
-            { text: "Fernando Tatis Sr. hit two grand slams in the same inning on April 23, 1999, a feat never repeated in Major League Baseball.", source: "https://www.mlb.com/news/fernando-tatis-two-grand-slams" },
-            { text: "Randy Johnson struck a bird mid-flight with a fastball on March 24, 2001, during a spring training game, creating an unforgettable moment.", source: "https://www.mlb.com/video/randy-johnson-hits-bird" },
-            { text: "Kenny Rogers pitched a perfect game for the Texas Rangers on July 28, 1994, under a full moon, adding to its mystique.", source: "https://www.mlb.com/news/kenny-rogers-perfect-game" },
-            { text: "A swarm of bees delayed a game for over an hour on April 17, 1983, at Royals Stadium, bewildering players and fans alike.", source: "https://www.baseball-almanac.com/boxscore/04171983.shtml" },
-            { text: "In 1976, Rick Monday rescued an American flag from two fans attempting to burn it on the field at Dodger Stadium.", source: "https://www.mlb.com/news/rick-monday-saves-flag" },
-            { text: "Sammy Sosa missed games in 2004 after injuring his back from a violent sneeze, one of baseball’s oddest injuries.", source: "https://www.espn.com/mlb/news/story?id=1801234" },
-            { text: "The first official baseball game was played on June 19, 1846, in Hoboken, New Jersey, between the Knickerbockers and the New York Nine.", source: "https://www.baseball-reference.com/bullpen/First_baseball_game" },
-            { text: "Harry Stovey became the first player to hit 100 career home runs, reaching the milestone in 1890 with the Boston Reds.", source: "https://www.baseball-almanac.com/players/player.php?p=stoveha01" },
-            { text: "Christy Mathewson won 373 games, tying Walter Johnson for the most victories in National League history.", source: "https://baseballhall.org/hall-of-famers/mathewson-christy" },
-            { text: "The Federal League, a rival to the AL and NL, operated from 1914 to 1915 before folding due to financial struggles.", source: "https://www.baseball-reference.com/leagues/FL" },
-            { text: "Babe Ruth hit three home runs in a single game on May 25, 1935, including his 714th and final career homer.", source: "https://www.mlb.com/news/babe-ruths-final-home-run" },
-            { text: "Jimmie Foxx joined Babe Ruth as the second player to hit 500 career home runs, achieving it in 1940.", source: "https://baseballhall.org/hall-of-famers/foxx-jimmie" },
-            { text: "Ray Chapman remains the only Major League Baseball player to die from an on-field injury, struck by a pitch in 1920.", source: "https://www.baseball-almanac.com/players/player.php?p=chapmra01" },
-            { text: "The first televised MLB game aired on August 26, 1939, featuring the Cincinnati Reds versus the Brooklyn Dodgers.", source: "https://www.mlb.com/history/timeline" },
-            { text: "Stan Musial recorded exactly 1,815 hits at home and 1,815 on the road, a unique statistical symmetry in his career.", source: "https://baseballhall.org/hall-of-famers/musial-stan" },
-            { text: "Yogi Berra caught Don Larsen’s perfect game in the 1956 World Series, the only no-hitter in postseason history.", source: "https://www.mlb.com/news/don-larsen-perfect-game" },
-            { text: "Vida Blue won both the American League MVP and Cy Young Award in 1971, a rare double honor for a pitcher.", source: "https://baseballhall.org/discover/vida-blue-1971-season" },
-            { text: "Catfish Hunter threw a perfect game on May 8, 1968, the first in the American League’s modern era.", source: "https://www.mlb.com/news/catfish-hunter-perfect-game" },
-            { text: "The Pittsburgh Pirates fielded an all-Black lineup on September 1, 1971, a historic first in Major League Baseball.", source: "https://www.mlb.com/news/pirates-all-black-lineup-1971" },
-            { text: "Nolan Ryan threw his seventh no-hitter on May 1, 1991, a record unlikely to be broken.", source: "https://baseballhall.org/hall-of-famers/ryan-nolan" },
-            { text: "Ozzie Smith, a defensive wizard, hit just 28 home runs in his 19-year career with the Cardinals and Padres.", source: "https://baseballhall.org/hall-of-famers/smith-ozzie" },
-            { text: "Bo Jackson is the only athlete to hit a home run in an MLB All-Star Game and score a touchdown in an NFL Pro Bowl.", source: "https://www.mlb.com/news/bo-jackson-two-sport-legacy" },
-            { text: "Dennis Eckersley became the first pitcher to record 50 saves in a season, achieving it in 1992 with the Oakland A’s.", source: "https://baseballhall.org/hall-of-famers/eckersley-dennis" },
-            { text: "Pedro Martínez posted a 1.74 ERA in 2000, dominating during the height of the steroid era.", source: "https://baseballhall.org/hall-of-famers/martinez-pedro" },
-            { text: "David Ortiz hit 17 walk-off hits in his career, earning the nickname Big Papi for his clutch performances.", source: "https://www.mlb.com/news/david-ortiz-walk-off-hits" },
-            { text: "Randy Johnson won four consecutive Cy Young Awards from 1999 to 2002 with the Arizona Diamondbacks.", source: "https://baseballhall.org/hall-of-famers/johnson-randy" },
-            { text: "Albert Pujols hit .300 with 30 home runs and 100 RBIs for 10 straight seasons from 2001 to 2010.", source: "https://www.mlb.com/news/albert-pujols-career-highlights" },
-            { text: "Mike Trout became the youngest player to reach 150 home runs and 150 stolen bases, doing so by age 27.", source: "https://www.mlb.com/news/mike-trout-milestones" },
-            { text: "The Florida Marlins upset the New York Yankees to win the 2003 World Series, their second title in six years.", source: "https://www.mlb.com/marlins/history" },
-            { text: "The Colorado Rockies won 21 of their final 22 games in 2007 to reach the World Series, dubbed Rocktober.", source: "https://www.mlb.com/rockies/history" },
-            { text: "The Washington Nationals won their first World Series in 2019, overcoming a 19–31 start to the season.", source: "https://www.mlb.com/nationals/history" },
-            { text: "The longest MLB game by innings lasted 33 innings, played between the White Sox and Brewers in 1984.", source: "https://www.baseball-almanac.com/recbooks/rb_gmlg.shtml" },
-            { text: "The shortest MLB game on record took 51 minutes, completed on September 28, 1919, between the Giants and Phillies.", source: "https://www.baseball-reference.com/bullpen/Shortest_game" },
-            { text: "Eddie Gaedel, at 3 feet 7 inches, is the shortest player in MLB history, appearing in one at-bat in 1951.", source: "https://www.mlb.com/news/eddie-gaedel-shortest-player" },
-            { text: "Rickey Henderson holds the MLB record with 1,406 career stolen bases, far ahead of second-place Ty Cobb.", source: "https://baseballhall.org/hall-of-famers/henderson-rickey" },
-            { text: "Yogi Berra won 10 World Series rings with the Yankees, the most by any player in MLB history.", source: "https://baseballhall.org/hall-of-famers/berra-yogi" },
-            { text: "Hank Aaron played 23 seasons without ever striking out 100 times in a single year.", source: "https://baseballhall.org/hall-of-famers/aaron-hank" },
-            { text: "Jose Canseco’s 1993 fly ball bounced off his head for a home run, one of baseball’s strangest plays.", source: "https://www.mlb.com/video/canseco-s-head-homer" },
-            { text: "A fan caught two home run balls in the same inning during a 1996 Giants game, a rare double feat.", source: "https://www.baseball-almanac.com/feats/feats10.shtml" },
-            { text: "Turk Wendell brushed his teeth between every inning he pitched, a quirky superstition.", source: "https://www.mlb.com/news/turk-wendell-superstitions" },
-            { text: "Wade Boggs ate fried chicken before every game, contributing to his 3,010 career hits.", source: "https://baseballhall.org/hall-of-famers/boggs-wade" },
-            { text: "A player once missed a game after dislocating his shoulder throwing a sunflower seed in 2008.", source: "https://www.espn.com/mlb/news/story?id=3547892" },
-            { text: "A swarm of gnats delayed a 1959 game by swarming the pitcher’s mound at Wrigley Field.", source: "https://www.baseball-almanac.com/boxscore/08231959.shtml" },
-            { text: "A cat ran onto the field during a 1969 Mets game, later dubbed their lucky charm en route to a title.", source: "https://www.mlb.com/news/mets-1969-black-cat" },
-            { text: "A fan caught a foul ball in his beer cup in 2010 and chugged it, earning stadium cheers.", source: "https://www.mlb.com/video/fan-catches-foul-in-beer" },
-            { text: "A manager was ejected in 1911 for sneezing too loudly during a game, an odd umpire call.", source: "https://www.baseball-reference.com/bullpen/Ejections" },
-            { text: "The White Sox’s Disco Demolition Night in 1979 led to a fan riot and a forfeited game.", source: "https://www.mlb.com/news/disco-demolition-night" },
-            { text: "A game was delayed in 2008 when an umpire got stuck in a bathroom stall mid-inning.", source: "https://www.espn.com/mlb/news/story?id=3478921" },
-            { text: "A pitcher once missed a start after cutting his hand opening a DVD case in 2006.", source: "https://www.espn.com/mlb/news/story?id=2619872" },
-            { text: "A fan threw a cooked steak onto the field during a 2004 Royals game for no apparent reason.", source: "https://www.kansascity.com/sports/mlb/kansas-city-royals/article276543.html" },
-            { text: "A team gave away live lobsters as a promotion in 1984, delighting Portland Beavers fans.", source: "https://www.milb.com/news/portland-beavers-lobster-night" },
-            { text: "A batter once struck out six times in a 1998 game, yet his team still won 8–7.", source: "https://www.baseball-reference.com/boxes/NYN/NYN199805200.shtml" },
-            { text: "A relief pitcher earned a no-hitter credit in 1917 after the starter was injured early.", source: "https://www.baseball-almanac.com/pitching/pinohit.shtml" },
-            { text: "A game in 1920 featured both teams combining for just one hit, a rare pitching duel.", source: "https://www.baseball-reference.com/boxes/CHA/CHA192005020.shtml" },
-            { text: "A player stole second, third, and home on the same pitch in a 1989 minor league game.", source: "https://www.milb.com/news/rare-triple-steal" },
-            { text: "A game was played with zero fans in 2015 due to civil unrest in Baltimore.", source: "https://www.mlb.com/news/orioles-play-with-no-fans-2015" },
-            { text: "In 1974, Cleveland’s Ten Cent Beer Night promotion led to a fan riot, forcing the Indians to forfeit the game.", source: "https://www.mlb.com/news/ten-cent-beer-night" },
-            { text: "Dock Ellis claimed he pitched a no-hitter on June 12, 1970, while under the influence of LSD.", source: "https://www.baseballhall.org/discover/dock-ellis-no-hitter" },
-            { text: "A goat cursed the Chicago Cubs in 1945 when its owner was ejected from Wrigley Field during the World Series.", source: "https://www.mlb.com/news/cubs-curse-of-the-billy-goat" },
-            { text: "Bill Veeck sent 3-foot-7-inch Eddie Gaedel to bat in a 1951 game as a promotional stunt for the St. Louis Browns.", source: "https://www.mlb.com/news/eddie-gaedel-shortest-player" },
-            { text: "A game on August 19, 1951, was delayed when a fan parachuted onto the field at Shibe Park.", source: "https://www.baseball-almanac.com/boxscore/08191951.shtml" },
-            { text: "In 1987, a seagull was killed by a Dave Winfield throw during a game, leading to animal cruelty charges.", source: "https://www.mlb.com/news/dave-winfield-seagull-incident" },
-            { text: "The shortest war in history lasted 38 minutes, but a 1981 MLB game was shorter at 32 minutes due to rain.", source: "https://www.baseball-reference.com/boxes/CLE/CLE198108240.shtml" },
-            { text: "A fan named Zack Hample has caught over 12,000 baseballs at MLB games, including A-Rod’s 3,000th hit.", source: "https://www.mlb.com/news/zack-hample-ballhawk" },
-            { text: "In 1990, Ken Griffey Sr. and Jr. hit back-to-back home runs in the same game for the Mariners.", source: "https://www.mlb.com/news/griffey-father-son-home-runs" },
-            { text: "A squirrel ran across the field during Game 4 of the 2019 NLDS, becoming a Cardinals rally symbol.", source: "https://www.mlb.com/news/rally-squirrel-2019-nlds" },
-            { text: "On April 25, 1981, a Mariners game was delayed by a streaker who slid into second base naked.", source: "https://www.baseball-almanac.com/boxscore/04251981.shtml" },
-            { text: "Moe Berg, a mediocre catcher, was also a WWII spy who spoke seven languages fluently.", source: "https://www.baseballhall.org/discover/moe-berg-spy" },
-            { text: "In 2007, Joel Zumaya missed playoff games after injuring his arm playing Guitar Hero.", source: "https://www.espn.com/mlb/news/story?id=3047892" },
-            { text: "A 1910 game featured a player, Fred Snodgrass, dropping a live pigeon instead of a ball in the outfield.", source: "https://www.baseball-almanac.com/players/player.php?p=snodgfr01" },
-            { text: "The Padres once played a game in 1984 with a live chicken loose on the field.", source: "https://www.mlb.com/news/padres-chicken-incident" },
-            { text: "In 1995, a fan stole home plate from Shea Stadium during a Mets game and escaped into the stands.", source: "https://www.nytimes.com/1995/08/25/sports/fan-steals-home-plate.html" },
-            { text: "A 1970 Pirates game was halted when a drunk fan wrestled an umpire over a call.", source: "https://www.baseball-almanac.com/boxscore/07171970.shtml" },
-            { text: "Vince Coleman missed the 1985 World Series after getting tangled in a tarp-rolling machine.", source: "https://www.mlb.com/news/vince-coleman-tarp-incident" },
-            { text: "In 2001, a Reds game featured a fan tossing a rubber chicken onto the field during a pitching change.", source: "https://www.baseball-reference.com/boxes/CIN/CIN200106230.shtml" },
-            { text: "A 1957 game saw a player, Richie Ashburn, hit a fan with a foul ball—twice in the same at-bat.", source: "https://www.mlb.com/news/richie-ashburn-foul-ball-fan" },
-            { text: "The Astros once lost a game in 1968 because a moth flew into pitcher Don Wilson’s eye.", source: "https://www.baseball-almanac.com/boxscore/07131968.shtml" },
-            { text: "In 1998, a Braves game was paused when a fan released a live possum onto the outfield grass.", source: "https://www.ajc.com/sports/braves-possum-incident-1998/" },
-            { text: "A 1903 game had a player, Rube Waddell, distracted by a fire truck, leading to a loss.", source: "https://www.baseballhall.org/discover/rube-waddell-fire-truck" },
-            { text: "In 2011, a fan caught a foul ball with his popcorn bucket and ate the popcorn afterward.", source: "https://www.mlb.com/video/fan-catches-foul-in-popcorn" },
-            { text: "A 1986 Mets game featured a parachutist landing on the field mid-play as a prank.", source: "https://www.nytimes.com/1986/07/23/sports/parachutist-lands-on-mets-field.html" },
-            { text: "Clint Courtney wore glasses in 1953 games because he kept losing fights without them.", source: "https://www.baseball-reference.com/players/c/courtcl01.shtml" },
-            { text: "In 1997, a Marlins game was delayed by a fish—yes, a real fish—thrown onto the field.", source: "https://www.mlb.com/news/marlins-fish-incident-1997" },
-            { text: "A 1916 game saw Ty Cobb throw his bat into the stands, accidentally hitting a fan’s hot dog.", source: "https://www.baseball-almanac.com/players/player.php?p=cobbty01" },
-            { text: "In 2004, a Royals fan ran onto the field and mooned the crowd before being tackled.", source: "https://www.kansascity.com/sports/mlb/kansas-city-royals/article276543.html" },
-            { text: "A 1979 White Sox game gave away live piranhas as a promotion—fans kept them in cups.", source: "https://www.mlb.com/news/white-sox-piranha-night" },
-            { text: "In 1989, a Giants game was interrupted by a fan tossing a live crab onto the infield.", source: "https://www.sfchronicle.com/sports/giants-crab-incident-1989/" },
-            { text: "A 1929 game had Babe Ruth hit a home run that broke a fan’s umbrella in the stands.", source: "https://www.mlb.com/news/babe-ruth-umbrella-homer" },
-            { text: "In 1993, Jose Canseco famously let a fly ball bounce off his head for a home run.", source: "https://www.mlb.com/video/canseco-s-head-homer" },
-            { text: "A 1961 Twins game was delayed by a fan releasing a flock of pigeons from the bleachers.", source: "https://www.baseball-almanac.com/boxscore/06231961.shtml" },
-            { text: "In 2008, a Reds pitcher missed a start after slipping on a wet dugout step chasing a foul ball.", source: "https://www.espn.com/mlb/news/story?id=3478921" },
-            { text: "A 1982 Padres game featured a fan throwing a live snake onto the field, startling players.", source: "https://www.sandiegouniontribune.com/sports/padres-snake-1982/" },
-            { text: "In 1971, a Senators game ended early when fans stormed the field and stole bases—literally.", source: "https://www.mlb.com/news/senators-final-game-1971" },
-            { text: "A 1996 Expos game had a fan drop a rubber duck from the upper deck onto the field.", source: "https://www.baseball-reference.com/boxes/MON/MON199607140.shtml" },
-            { text: "In 2000, a Dodgers fan threw a beach ball that hit an umpire, causing a 10-minute delay.", source: "https://www.latimes.com/archives/la-xpm-2000-jun-14-sp-40787-story.html" },
-            { text: "A 1954 Indians game saw a player, Al Rosen, trip over a fan’s picnic basket in the outfield.", source: "https://www.baseball-almanac.com/players/player.php?p=rosenal01" },
-            { text: "In 1985, a Brewers game was paused when a fan tossed a live frog onto the pitcher’s mound.", source: "https://www.milwaukeejournal.com/sports/brewers-frog-1985/" },
-            { text: "A 1920 Red Sox game had a fan throw a pie that hit the umpire in the face mid-inning.", source: "https://www.baseball-reference.com/boxes/BOS/BOS192007140.shtml" },
-            { text: "In 1999, a Braves fan ran onto the field with a giant inflatable shark during a rain delay.", source: "https://www.ajc.com/sports/braves-shark-incident-1999/" },
-            { text: "A 1976 Phillies game featured a fan dropping a bowling ball from the stands onto the field.", source: "https://www.philly.com/phillies-bowling-ball-1976/" },
-            { text: "In 2003, a Cubs fan threw a pizza box that landed on the pitcher’s mound during a game.", source: "https://www.chicagotribune.com/sports/cubs-pizza-box-2003/" },
-            { text: "A 1980 Astros game was delayed by a fan releasing a swarm of balloons onto the field.", source: "https://www.baseball-almanac.com/boxscore/05231980.shtml" },
-            { text: "In 1994, a Rangers fan tossed a bucket of fried chicken over the outfield wall.", source: "https://www.dallasnews.com/sports/rangers-chicken-1994/" },
-            { text: "A 1969 Mets game had a black cat cross the dugout, later tied to their miracle championship.", source: "https://www.mlb.com/news/mets-1969-black-cat" },
-            { text: "In 2006, a Giants player missed a game after burning his hand microwaving a burrito.", source: "https://www.espn.com/mlb/news/story?id=2619872" },
-            { text: "A 1983 Royals game saw a fan throw a live goldfish onto the field, confusing everyone.", source: "https://www.kansascity.com/sports/mlb/kansas-city-royals/article276543.html" }
+        const compliments = [
+            "You’re a walking burst of sunshine!",
+            "Your coolness could freeze a volcano.",
+            "You’ve got the charm of a thousand puppies.",
+            "You’re the human version of a perfect playlist.",
+            "Your awesomeness deserves its own theme song.",
+            "You’re so great, even clouds part for you.",
+            "You’ve got a smile that could melt glaciers.",
+            "You’re a genius wrapped in a taco of talent.",
+            "Your energy could power a dance party.",
+            "You’re cooler than a polar bear in shades.",
+            "You’re a legend in a world of footnotes.",
+            "Your vibe is pure glitter and magic.",
+            "You’re the sprinkles on life’s cupcake.",
+            "You’ve got swagger that outshines the sun.",
+            "You’re a rare gem in a pile of pebbles.",
+            "Your laugh could cure Monday blues.",
+            "You’re so epic, myths are written about you.",
+            "You’re a high-five waiting to happen.",
+            "Your brilliance lights up the room.",
+            "You’re the cherry on top of awesome.",
+            "You’ve got more sparkle than a disco ball.",
+            "You’re a superhero without the cape.",
+            "Your style could start a revolution.",
+            "You’re the MVP of being yourself.",
+            "You’ve got a heart bigger than the moon.",
+            "You’re a whirlwind of pure delight.",
+            "Your creativity could paint the sky.",
+            "You’re so smooth, butter’s jealous.",
+            "You’re a star that forgot to dim.",
+            "Your presence is a gift to the universe.",
+            "You’ve got more pizzazz than a parade.",
+            "You’re the secret ingredient to fun.",
+            "You’re a masterpiece in sneakers.",
+            "Your kindness could hug the world.",
+            "You’re so rad, retro’s making a comeback.",
+            "You’ve got the guts of a lion and the grin to match.",
+            "You’re a fireworks show in human form.",
+            "Your ideas could launch a rocket.",
+            "You’re the coolest breeze on a hot day.",
+            "You’ve got more flair than a flamingo.",
+            "You’re a treasure chest of good vibes.",
+            "Your spirit could outdance a storm.",
+            "You’re so sharp, you could cut through chaos.",
+            "You’ve got the glow of a thousand fireflies.",
+            "You’re a unicorn in a field of horses.",
+            "Your wit could win any showdown.",
+            "You’re the life of every party, even solo ones.",
+            "You’ve got more bounce than a kangaroo.",
+            "You’re a symphony of spectacular.",
+            "You’re so fantastic, reality feels jealous.",
+            "You’re a cosmic explosion of cool!",
+            "Your grin could outshine a supernova.",
+            "You’ve got the bounce of a rubber ball on a trampoline.",
+            "You’re a ninja of niceness!",
+            "Your charm could tame a wild dragon.",
+            "You’re the fizz in life’s soda pop.",
+            "You’ve got more groove than a vinyl record.",
+            "You’re a rainbow in a black-and-white world.",
+            "Your sparkle could dazzle a diamond.",
+            "You’re the captain of the cool ship!",
+            "You’ve got a laugh that echoes through galaxies.",
+            "You’re a whirlwind of whimsy!",
+            "Your brilliance could blind a spotlight.",
+            "You’re the jelly to life’s peanut butter.",
+            "You’ve got more zest than a lemon grove.",
+            "You’re a walking, talking party starter!",
+            "Your magic could make a wizard jealous.",
+            "You’re the beat in everyone’s favorite song.",
+            "You’ve got the glow of a neon sign.",
+            "You’re a tornado of terrific!",
+            "Your sass could sass the sassiest cat.",
+            "You’re the frosting on life’s cake.",
+            "You’ve got more pep than a cheer squad.",
+            "You’re a comet streaking through the mundane!",
+            "Your quirks make the world quirkier.",
+            "You’re the snap, crackle, and pop of awesome!",
+            "You’ve got a spirit that soars like an eagle.",
+            "You’re a bubble of joy in a sea of blah.",
+            "Your flair could flair up a flare!",
+            "You’re the twinkle in life’s eye.",
+            "You’ve got more gusto than a gusty day.",
+            "You’re a maestro of marvelous!",
+            "Your vibe could vibe with a vibraphone.",
+            "You’re the glitter in a dull day’s glue.",
+            "You’ve got the spunk of a firecracker.",
+            "You’re a beacon of brilliance!",
+            "Your energy could zap a thunderstorm.",
+            "You’re the skip in life’s hopscotch.",
+            "You’ve got more dazzle than a disco inferno.",
+            "You’re a supernova of silliness!",
+            "Your charm could charm a charm bracelet.",
+            "You’re the pop in everyone’s popcorn.",
+            "You’ve got a strut that struts the strut!",
+            "You’re a kaleidoscope of kindness!",
+            "Your wit could outwit a fox.",
+            "You’re the boom in life’s bang!",
+            "You’ve got more shine than a polished penny.",
+            "You’re a rocket of radness!",
+            "Your joy could jumpstart a jellybean jar.",
+            "You’re the ultimate boost in any room!",
+            "You’re a burst of joy that lights up any room!",
+            "Your creativity could inspire a whole galaxy!",
+            "You’ve got the kind of sparkle that stars envy!",
+            "You’re a walking, talking happiness generator!",
+            "Your positivity could turn rain into rainbows!",
+            "You’ve got a flair that could dazzle a parade!",
+            "You’re the secret sauce to a perfect day!",
+            "Your energy is like a turbo boost of awesome!",
+            "You’re a ray of sunshine on a cloudy planet!",
+            "You’ve got a glow that could guide ships home!",
+            "You’re a whirlwind of wonder and delight!",
+            "Your charm is like a magnet for good vibes!",
+            "You’re the glitter that makes life shimmer!",
+            "You’ve got a bounce that could lift a balloon!",
+            "You’re a masterpiece of mirth and magic!",
+            "Your smile could power a city of grins!",
+            "You’re the zest that spices up the universe!",
+            "You’ve got a twinkle that outshines the night!",
+            "You’re a melody of merriment and cheer!",
+            "Your spirit could soar over mountaintops!",
+            "You’re the spark that ignites pure fun!",
+            "You’ve got a radiance that warms the soul!",
+            "You’re a tidal wave of terrific energy!",
+            "Your wit is sharper than a comet’s tail!",
+            "You’re the bubble that pops with joy!",
+            "You’ve got a vibe that could wake up the moon!",
+            "You’re a supernova of silliness and smiles!",
+            "Your presence is like a party in a box!",
+            "You’re the dazzle in a world of dull!",
+            "You’ve got a pep that could pep up a panda!",
+            "You’re a whirlwind of whimsy and wow!",
+            "Your laugh is a symphony of sunshine!",
+            "You’re the bounce in life’s trampoline!",
+            "You’ve got a glow that could melt the ice caps!",
+            "You’re a rocket of radiance and glee!",
+            "Your charm could charm a flock of flamingos!",
+            "You’re the fizz that makes every moment pop!",
+            "You’ve got a spirit that dances with stars!",
+            "You’re a burst of brilliance in human form!",
+            "Your energy could electrify a festival!",
+            "You’re the twirl in life’s happiest dance!",
+            "You’ve got a shine that could blind the sun!",
+            "You’re a kaleidoscope of cool and cheer!",
+            "Your positivity could paint the sky pink!",
+            "You’re the zip that zaps up any day!",
+            "You’ve got a flair that flares up the fun!",
+            "You’re a beacon of bliss and brightness!",
+            "Your grin could launch a thousand giggles!",
+            "You’re the spark that starts every celebration!",
+            "You’ve got a zest that’s zestier than a lime!",
+            "You’re a jolt of jubilation in every step!",
+            "Your flair could flip a frown upside down!",
+            "You’ve got a zest that zings through the air!",
+            "You’re a prism of pure, playful light!",
+            "Your cheer could cheer up a grumpy goblin!",
+            "You’re the whirl in a world of wow!",
+            "You’ve got a gleam that gleams like gold!",
+            "You’re a rush of rapture in every room!",
+            "Your spunk could spark a spree of smiles!",
+            "You’re the hop in life’s happiest skip!",
+            "You’ve got a charm that chases clouds away!",
+            "You’re a fountain of fabulous fun!",
+            "Your glow could guide a galaxy home!",
+            "You’re the skip that makes hearts leap!",
+            "You’ve got a vibe that vibrates with victory!",
+            "You’re a blast of bliss beyond belief!",
+            "Your spirit could spin the world with joy!",
+            "You’re the tickle in life’s funny bone!",
+            "You’ve got a bounce that beats the blues!",
+            "You’re a whirlwind of wild, wonderful glee!",
+            "Your shine could shimmer through any shadow!",
+            "You’re the zap that zaps up every zone!",
+            "You’ve got a grin that grins at gravity!",
+            "You’re a burst of bubbly beyond compare!",
+            "Your energy could energize an elephant!",
+            "You’re the twist in life’s tastiest treat!",
+            "You’ve got a flair that flares with flair!",
+            "You’re a ripple of radiance in every wave!",
+            "Your joy could jolt a jellyfish to dance!",
+            "You’re the spark that sparks a sunny spree!",
+            "You’ve got a pep that pops like popcorn!",
+            "You’re a dash of delight in every day!",
+            "Your charm could charm a chilly chameleon!",
+            "You’re the glow that grows on everyone!",
+            "You’ve got a zing that zings with zest!",
+            "You’re a whirl of wonder in every whirl!",
+            "You’re the bee’s knees of brilliance!",
+            "You’ve got more zip than a lightning bolt!",
+            "You’re a peach of pure perfection!",
+            "Your cool factor is off the charts!",
+            "You’re the cat’s pajamas of positivity!",
+            "You’ve got a sparkle that could light up a cave!",
+            "You’re a barrel of laughs in a world of frowns!",
+            "Your charm’s got more pull than a tractor beam!",
+            "You’re the icing on life’s sweetest roll!",
+            "You’ve got more bounce than a pogo stick pro!",
+            "You’re a dynamo of downright delight!",
+            "Your grin’s got more watts than a power plant!",
+            "You’re the cream of the crop in coolness!",
+            "You’ve got a flair that flips the script!",
+            "You’re a hoot and a half of happiness!",
+            "Your vibe’s got more groove than a funky beat!",
+            "You’re the top banana in a bunch of awesome!",
+            "You’ve got more gusto than a gale-force wind!",
+            "You’re a whirlwind of wit and wonder!",
+            "Your sparkle could outshine a chandelier!",
+            "You’re the cherry bomb of cheer!",
+            "You’ve got a glow that grows on a dime!",
+            "You’re a riot of radiance and revelry!",
+            "Your pep could perk up a sleepy sloth!",
+            "You’re the bee’s buzz in a hive of happy!",
+            "You’ve got more sass than a sassy swan!",
+            "You’re a firework of fantastic fun!",
+            "Your charm’s got more magic than a wand wave!",
+            "You’re the jolt that jazzes up the joint!",
+            "You’ve got a twinkle that twinkles all night!",
+            "You’re a blast of bliss in every breath!",
+            "Your spirit’s got more lift than a hot air balloon!",
+            "You’re the zing in life’s zestiest zip!",
+            "You’ve got a bounce that bops the blues away!",
+            "You’re a ray of rapture in every ray!",
+            "Your coolness could chill a hot summer day!",
+            "You’re the dazzle that dazes the doldrums!",
+            "You’ve got more snap than a snapping turtle!",
+            "You’re a whirlwind of wowza and whimsy!",
+            "Your grin’s got more glee than a giggle fest!",
+            "You’re the pop that pops life’s popcorn!",
+            "You’ve got a flair that flares up the fiesta!",
+            "You’re a burst of brilliance beyond the brim!",
+            "Your vibe’s got more verve than a victory lap!",
+            "You’re the skip that skips through the storm!",
+            "You’ve got a glow that glows like a gem!",
+            "You’re a hoot of happiness in every holler!",
+            "Your charm could charm a grumpy grizzly!",
+            "You’re the zip that zips up the zest!"
         ];
-        let facts = [...baseballFacts];
-        let usedFacts = [];
-        let factIndex = 0;
+
         let currentRotation = 0;
-        let isSpinning = false;
-        const batContainer = document.getElementById("batContainer");
-        const bat = document.getElementById("bat");
-        const spinButton = document.getElementById("spinButton");
-        const factElement = document.getElementById("fact");
-        const footnoteElement = document.getElementById("footnote");
-        const shareButton = document.getElementById("share-button");
+        let usedCompliments = [];
+        let currentCompliment = "Spin for a surprise compliment!";
 
-        function shuffle(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
-        }
+        function spinWheel() {
+            const wheel = document.getElementById("wheel");
+            const spinButton = document.getElementById("spinButton");
+            const complimentElement = document.getElementById("compliment");
+            const shareTwitter = document.getElementById("shareTwitter");
+            const shareFacebook = document.getElementById("shareFacebook");
 
-        function spinBat() {
-            if (isSpinning) return;
-            isSpinning = true;
             spinButton.disabled = true;
-            spinButton.textContent = "Spinning...";
 
             const extraSpins = Math.floor(Math.random() * 2) + 3;
             const newRotation = currentRotation + (extraSpins * 360);
-            bat.style.transition = "transform 3s ease-out";
-            bat.style.transform = `translate(-50%, -50%) rotate(${newRotation}deg)`;
+            wheel.style.transition = "transform 3s ease-out";
+            wheel.style.transform = `rotate(${newRotation}deg)`;
+
             currentRotation = newRotation;
 
             setTimeout(() => {
-                if (facts.length === 0) {
-                    facts = shuffle([...baseballFacts.filter(f => !usedFacts.includes(f))]);
-                    if (facts.length === 0) {
-                        factElement.innerHTML = "All facts have been spun in this session!<sup>1</sup>";
-                        footnoteElement.innerHTML = "<a href='https://spinthebattrivia.com' target='_blank'>Refresh to start over</a>";
-                        spinButton.textContent = "Spin the Bat!";
-                        spinButton.disabled = false;
-                        isSpinning = false;
-                        return;
-                    }
+                let availableCompliments = compliments.filter(c => !usedCompliments.includes(c));
+                if (availableCompliments.length === 0) {
+                    usedCompliments = [];
+                    availableCompliments = compliments.slice();
                 }
-                const randomIndex = Math.floor(Math.random() * facts.length);
-                const currentFact = facts[randomIndex];
-                usedFacts.push(currentFact);
-                facts.splice(randomIndex, 1);
 
-                factElement.style.animation = "none";
-                footnoteElement.style.animation = "none";
+                const randomIndex = Math.floor(Math.random() * availableCompliments.length);
+                currentCompliment = availableCompliments[randomIndex];
+                usedCompliments.push(currentCompliment);
+
+                complimentElement.style.animation = "none";
                 setTimeout(() => {
-                    factElement.innerHTML = `${currentFact.text}<sup>1</sup>`;
-                    footnoteElement.innerHTML = `<a href="${currentFact.source}" target="_blank">Source</a>`;
-                    factElement.style.animation = "slideUp .5s ease forwards";
-                    footnoteElement.style.animation = "slideUp .5s ease forwards";
-                    localStorage.setItem("lastFact", JSON.stringify(currentFact));
-                    shareButton.style.display = "block";
+                    complimentElement.innerText = currentCompliment;
+                    complimentElement.style.animation = "slideUp 0.5s ease forwards";
+                    const shareText = encodeURIComponent(`"${currentCompliment}" Check out ComplimentWheel.com!`);
+                    shareTwitter.href = `https://twitter.com/intent/tweet?text=${shareText}&url=${encodeURIComponent('https://complimentwheel.com')}`;
+                    shareTwitter.style.pointerEvents = "auto";
+                    shareTwitter.style.opacity = "1";
+                    shareFacebook.onclick = () => {
+                        window.open(
+                            `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://complimentwheel.com')}"e=${encodeURIComponent(currentCompliment)}`,
+                            'facebook-share',
+                            'width=600,height=400'
+                        );
+                        return false;
+                    };
+                    shareFacebook.style.pointerEvents = "auto";
+                    shareFacebook.style.opacity = "1";
                 }, 10);
-                spinButton.textContent = "Spin the Bat!";
+
                 spinButton.disabled = false;
-                isSpinning = false;
             }, 3000);
         }
-
-        function shareOnTwitter() {
-            const factWithSup = factElement.innerHTML;
-            const fact = factWithSup.replace(/<sup>1<\/sup>/g, "");
-            const maxFactLength = 200;
-            const truncatedFact = fact.length > maxFactLength ? fact.substring(0, maxFactLength - 3) + "..." : fact;
-            const url = "https://spinthebattrivia.com";
-            const tweetText = `${truncatedFact}\nExplore more MLB trivia facts at Spin the Bat Trivia! ${url}`;
-            window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweetText), '_blank');
-        }
-
-        batContainer.addEventListener("click", spinBat);
-        batContainer.addEventListener("keypress", (e) => { if (e.key === "Enter") spinBat(); });
-        spinButton.addEventListener("click", spinBat);
-
-        document.getElementById("footer").innerHTML = `© ${new Date().getFullYear()} Spin the Bat Trivia. All rights reserved. Questions? Contact Us: <a href="mailto:musiknote@yahoo.com">musiknote@yahoo.com</a>`;
     </script>
 </body>
 </html>
