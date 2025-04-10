@@ -1,299 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Discover fun baseball trivia with Spin the Bat Trivia! Spin for random questions about MLB history, legendary players, and quirky moments. Free, interactive, and perfect for fans!">
+    <meta name="keywords" content="baseball trivia, baseball facts, MLB history, baseball fun facts, sports trivia, baseball quiz, baseball fans">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin the Bat Trivia: Spin for Fun MLB Trivia & Facts</title>
+    <link rel="icon" type="image/png" href="baseball_favicon.png">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Spin the Bat Trivia: Spin for MLB Trivia">
+    <meta name="twitter:description" content="Spin the bat for fun MLB trivia questions!">
+    <meta name="twitter:image" content="https://spinthebattrivia.com/baseball_favicon.png">
+    <!-- Open Graph for Facebook -->
+    <meta property="og:title" content="Spin the Bat Trivia: Spin for MLB Trivia">
+    <meta property="og:description" content="Spin the bat for fun MLB trivia questions!">
+    <meta property="og:image" content="https://spinthebattrivia.com/baseball_favicon.png">
+    <meta property="og:url" content="https://spinthebattrivia.com">
+    <meta property="og:type" content="website">
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFCDGN0KCE"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MRKV8KGMER"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-EFCDGN0KCE');
+      gtag('config', 'G-MRKV8KGMER');
     </script>
-    <!-- Google AdSense Verification -->
+    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8494086888842655" crossorigin="anonymous"></script>
-    <!-- Twitter Card Metadata -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="https://complimentwheel.com/wheel.png">
-    <meta name="twitter:title" content="Compliment Wheel">
-    <!-- Open Graph Metadata for Facebook -->
-    <meta property="og:title" content="Compliment Wheel - Spin for Positivity">
-    <meta property="og:description" content="Spin for a unique compliment and spread the good vibes!">
-    <meta property="og:image" content="https://complimentwheel.com/wheel.png">
-    <meta property="og:url" content="https://complimentwheel.com">
-    <meta charset="UTF-8">
-    <meta name="description" content="Spin the Compliment Wheel for a fun, unique compliment! Brighten your day and share the positivity.">
-    <meta name="keywords" content="compliment wheel, spin for compliments, positive quotes, fun game, compliment generator">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compliment Wheel - Spin for a Compliment</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        padding-bottom: 60px;
-        font-family: 'Comic Sans MS', 'Arial', sans-serif;
-        background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow-y: auto;
-    }
-    .wrapper {
-        display: flex;
-        max-width: 1200px;
-        width: 100%;
-        padding: 20px;
-        flex-wrap: nowrap;
-    }
-    .left-sidebar {
-        flex: 1;
-        margin-right: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-    .generator {
-        flex: 2;
-        text-align: center;
-        background: rgba(255, 255, 255, 0.9);
-        padding: 40px;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        animation: fadeIn 1s ease-in;
-    }
-    .right-sidebar {
-        flex: 1;
-        margin-left: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-    h1 {
-        font-size: 48px;
-        background: linear-gradient(90deg, #ff4757, #ff1493, #1e90ff);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        text-shadow: 3px 3px 6px rgba(255, 105, 180, 0.5);
-        margin-bottom: 15px;
-        animation: bounceIn 1.5s ease infinite alternate;
-    }
-    .intro, .prompt, .samples {
-        font-size: 20px;
-        color: #2f3542;
-        margin-bottom: 20px;
-    }
-    .samples ul {
-        list-style-type: none;
-        padding: 0;
-    }
-    .samples li {
-        margin: 10px 0;
-        font-size: 18px;
-    }
-    .wheel {
-        width: 200px;
-        height: 200px;
-        background: url('wheel.png') no-repeat center;
-        background-size: cover;
-        margin: 0 auto 20px;
-        border-radius: 50%;
-        position: relative;
-        cursor: pointer;
-    }
-    .spin-button {
-        padding: 15px 30px;
-        font-size: 20px;
-        color: white;
-        background: #1e90ff;
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: transform 0.3s, background 0.3s;
-    }
-    .spin-button:hover {
-        transform: scale(1.1);
-        background: #ff1493;
-    }
-    .spin-button:disabled {
-        background: #ccc;
-        cursor: not-allowed;
-        transform: none;
-    }
-    #compliment {
-        font-size: 28px;
-        color: #2f3542;
-        margin: 30px 0 20px;
-        padding: 20px;
-        background: #f1f2f6;
-        border-radius: 15px;
-        opacity: 0;
-        animation: slideUp 0.5s ease forwards;
-    }
-    .share-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin-bottom: 20px;
-    }
-    .share-twitter, .share-facebook {
-        display: inline-flex;
-        align-items: center;
-        padding: 10px 20px;
-        font-size: 16px;
-        color: white;
-        border: none;
-        border-radius: 25px;
-        text-decoration: none;
-        transition: background 0.3s;
-        pointer-events: none;
-        opacity: 0.5;
-    }
-    .share-twitter {
-        background: #1DA1F2;
-    }
-    .share-twitter:hover {
-        background: #0d8ddb;
-    }
-    .share-facebook {
-        background: #1877F2;
-    }
-    .share-facebook:hover {
-        background: #145dbf;
-    }
-    .share-icon {
-        margin-right: 8px;
-        font-size: 18px;
-    }
-    .contact-us {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 16px;
-        color: #ff4757;
-        background: #fff3e6;
-        border-radius: 25px;
-        text-decoration: none;
-        transition: background 0.3s, color 0.3s;
-    }
-    .contact-us:hover {
-        background: #ff1493;
-        color: white;
-    }
-    .ad-space {
-        margin-bottom: 20px;
-        padding: 15px;
-        background: #fff3e6;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        width: 100%;
-        box-sizing: border-box;
-    }
-    .ad-space img {
-        width: 250px;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 10px;
-        display: block;
-        margin: 0 auto 10px;
-    }
-    .ad-space a {
-        text-decoration: none;
-        color: #ff4757;
-        font-weight: bold;
-    }
-    .ad-space a:hover {
-        color: #ff1493;
-    }
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-    @keyframes slideUp {
-        from { transform: translateY(20px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
-    }
-    @keyframes bounceIn {
-        0% { transform: scale(0.95); }
-        50% { transform: scale(1.05); }
-        100% { transform: scale(1); }
-    }
-    .particles {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-    }
-    .particle {
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        background: rgba(255, 255, 255, 0.5);
-        border-radius: 50%;
-        animation: float 5s infinite ease-in-out;
-    }
-    @keyframes float {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-20px); }
-        100% { transform: translateY(0); }
-    }
-    @media (max-width: 768px) {
-        .wrapper {
-            flex-direction: column;
-            width: 100%;
-            padding: 10px;
+    <style>
+        body{margin:0;padding:0;padding-bottom:60px;font-family:Arial,sans-serif;background:linear-gradient(135deg,#006400,#fff);min-height:100vh;display:flex;flex-direction:column;align-items:center;overflow-y:auto}
+        .wrapper{max-width:1200px;width:100%;padding:20px;display:flex;justify-content:center;flex-wrap:nowrap;box-sizing:border-box}
+        .left-sidebar,.right-sidebar{flex:1;padding:20px}
+        .ad-space{background:#f9f9f9;border-radius:10px;padding:15px;margin-bottom:20px;text-align:center;width:180px;height:250px;box-sizing:border-box;overflow:hidden}
+        .ad-space img{max-width:100%;max-height:120px;height:auto}
+        .ad-space p{font-size:13px;margin:8px 0;line-height:1.2;max-height:50px;overflow:hidden}
+        .ad-space a{text-decoration:none;color:#2f3542}
+        .ad-space a:hover{color:#f00}
+        main{flex:3;text-align:center;background:rgba(255,255,255,.9);padding:40px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.2);animation:fadeIn 1s ease-in}
+        h1{font-size:48px;background:linear-gradient(90deg,#f00,#fff,#00f);-webkit-background-clip:text;-moz-background-clip:text;background-clip:text;color:transparent;text-shadow:3px 3px 6px rgba(0,0,0,.3);margin-bottom:15px}
+        .intro,.prompt{font-size:20px;color:#2f3542;margin-bottom:20px}
+        .bat-container{width:400px;height:400px;position:relative;margin:0 auto 20px;cursor:pointer}
+        .plate{width:300px;height:300px;background:url(home_plate.png) no-repeat center;background-size:contain;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1}
+        .bat{width:360px;height:175px;background:url(baseball_bat.png) no-repeat center;background-size:contain;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);transform-origin:center;z-index:2;will-change:transform}
+        .spin-button{padding:15px 30px;font-size:20px;color:#fff;background:#f00;border:none;border-radius:50px;cursor:pointer;transition:transform .3s,background .3s}
+        .spin-button:hover{transform:scale(1.1);background:#00f}
+        .spin-button:disabled{background:#ccc;cursor:not-allowed;transform:none}
+        #fact-container{font-size:24px;color:#2f3542;margin:30px 0 10px;padding:20px;background:#f1f2f6;border-radius:15px;opacity:0;animation:slideUp .5s ease forwards}
+        #fact sup{font-size:14px}
+        .footnote{font-size:14px;color:#555;margin-top:10px}
+        .footnote a{color:#00f;text-decoration:underline}
+        .footnote a:hover{color:#f00}
+        #share-question-button,#reveal-button,#share-button{margin:10px 0;padding:10px 20px;font-size:16px;color:#fff;background:#1DA1F2;border:none;border-radius:50px;cursor:pointer;display:none}
+        #share-question-button:hover,#reveal-button:hover,#share-button:hover{background:#0d8bec}
+        section{font-size:18px;color:#2f3542;margin-top:20px;padding:15px;background:#f1f2f6;border-radius:10px}
+        section h2{font-size:24px;color:#f00;margin-bottom:10px}
+        footer{text-align:center;font-size:14px;color:#fff;padding:10px;background:rgba(0,0,0,.4);width:100%;position:fixed;bottom:0;left:0;box-sizing:border-box}
+        footer a{text-decoration:underline;color:#fff}
+        footer a:hover{color:#ccc}
+        .ad-button{display:block;margin:8px auto 0;padding:10px 20px;font-size:13px;text-decoration:none}
+        @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+        @keyframes slideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
+        @media (max-width:768px){
+            .wrapper{flex-direction:column;padding:10px}
+            .left-sidebar{order:2;display:flex;flex-direction:column;align-items:center}
+            main{order:1}
+            .right-sidebar{order:3;display:flex;flex-direction:column;align-items:center}
+            .bat-container{width:350px;height:350px}
+            .plate{width:260px;height:260px}
+            .bat{width:310px;height:80px}
         }
-        .left-sidebar, .generator, .right-sidebar {
-            flex: none;
-            width: 100%;
-            margin: 10px 0;
-        }
-        .generator {
-            order: 1;
-        }
-        .right-sidebar {
-            order: 2;
-        }
-        .left-sidebar {
-            order: 3;
-        }
-    }
-    .about {
-        font-size: 18px;
-        color: #2f3542;
-        margin-top: 20px;
-        padding: 15px;
-        background: #f1f2f6;
-        border-radius: 10px;
-    }
-    .about h2 {
-        font-size: 24px;
-        color: #ff4757;
-        margin-bottom: 10px;
-    }
-    .footer {
-        text-align: center;
-        font-size: 14px;
-        color: #fff;
-        padding: 10px;
-        background: rgba(0, 0, 0, 0.4);
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        box-sizing: border-box;
-    }
-</style>
+    </style>
 </head>
 <body>
-    <div class="particles">
-        <div class="particle" style="left: 10%; top: 20%; animation-delay: 0s;"></div>
-        <div class="particle" style="left: 30%; top: 50%; animation-delay: 1s;"></div>
-        <div class="particle" style="left: 50%; top: 70%; animation-delay: 2s;"></div>
-        <div class="particle" style="left: 70%; top: 30%; animation-delay: 3s;"></div>
-        <div class="particle" style="left: 90%; top: 60%; animation-delay: 4s;"></div>
-    </div>
     <div class="wrapper">
         <div class="left-sidebar">
             <div class="ad-space">
@@ -303,357 +82,301 @@
                 </a>
             </div>
             <div class="ad-space">
-                <a href="https://spinthebattrivia.com" target="_blank">
-                    <img src="baseball_ad.png" alt="Spin the Bat Trivia">
-                    <p>Spin the Bat Trivia: Test Your Baseball Knowledge! Visit Now!</p>
-                </a>
-            </div>
-        </div>
-        <div class="generator">
-            <div class="intro">
-                Welcome to Compliment Wheel! Spin for positivity and a fun way to learn English phrases! “Be the Good” with every click — get a quirky compliment, share the vibe, and enjoy playful language like “You’re a superhero without the cape!” With hundreds of unique spins, it’s your daily dose of joy. Ready to brighten your day?
-            </div>
-            <h1>Compliment Wheel</h1>
-            <div class="prompt">Compliments to Make Your Day—Spin Now!</div>
-            <div class="wheel" id="wheel" onclick="spinWheel()"></div>
-            <button class="spin-button" id="spinButton" onclick="spinWheel()">Spin the Wheel!</button>
-            <p id="compliment">Spin for a surprise compliment!</p>
-            <div class="share-buttons">
-                <a href="#" id="shareTwitter" class="share-twitter" target="_blank">
-                    <span class="share-icon">🐦</span> Tweet
-                </a>
-                <a href="#" id="shareFacebook" class="share-facebook">
-                    <span class="share-icon">📘</span> Share
-                </a>
-            </div>
-            <a href="mailto:musiknote@yahoo.com?subject=Advertising%20with%20Compliment%20Wheel" class="contact-us">Contact Us</a>
-            <div class="about">
-                <h2>Why Spin the Compliment Wheel?</h2>
-                <p>At Compliment Wheel, we’re all about spreading joy — one spin at a time. With over hundreds of unique, handcrafted compliments, it’s a playful way to brighten your day or someone else’s. But it’s more than just fun, it’s a chance to “Be the Good” in a world that needs it. Each spin delivers a quirky English phrase, like “You’re the bee’s knees of brilliance!” or “You’ve got more zip than a lightning bolt!”— perfect for a quick smile or even learning some colorful English compliments. Whether you’re feeling down or just need a boost, our wheel is here to lift spirits and spark positivity. It’s simple: spin, get a compliment, and share the good vibes with friends. Imagine the ripple effect—one kind word can turn a frown upside down! We created this site to celebrate creativity and kindness, blending silly sayings with heartfelt cheer. It’s also a fun way to explore English expressions — think of it as a lighthearted language lesson wrapped in a game. From “You’re a peach of pure perfection!” to “Your cool factor is off the charts!” every phrase is a little gift. So go ahead—spin to “Be the Good,” share the love, and let’s make the world a happier place together!</p>
-            </div>
-            <div class="samples">
-                <h2>Sample Compliments</h2>
-                <p>Try these English gems—spin for more!</p>
-                <ul>
-                    <li>“You’re the sprinkles on life’s cupcake!”</li>
-                    <li>“You’ve got more pizzazz than a parade!”</li>
-                    <li>“You’re a whirlwind of pure delight!”</li>
-                    <li>“Your laugh could cure Monday blues!”</li>
-                    <li>“You’re the cat’s pajamas of positivity!”</li>
-                </ul>
-            </div>
-        </div>
-        <div class="right-sidebar">
-            <div class="ad-space">
                 <a href="https://www.amazon.com/Hop-into-Easter-Coloring-Colorful/dp/B0DZXZYHKF" target="_blank">
                     <img src="easter_ad.jpg" alt="Hop into Easter Coloring Book">
-                    <p>Hop into Easter: A Cute and Colorful Coloring Book for Kids! Get it now on Amazon.</p>
+                    <p>Hop into Easter: A Cute and Colorful Coloring Book for Kids!</p>
                 </a>
             </div>
+        </div>
+        <main>
+            <div class="intro">Get ready for a home run with Spin the Bat Trivia! Spin the bat to test your MLB knowledge with fun trivia questions—from iconic players to wild game moments. Click now!</div>
+            <h1>Spin the Bat Trivia</h1>
+            <div class="prompt">Hit a Trivia Question Out of the Park—Spin Now!</div>
+            <div class="bat-container" id="batContainer" tabindex="0">
+                <div class="plate" role="img" aria-label="Home plate"></div>
+                <div class="bat" id="bat" role="img" aria-label="Baseball bat"></div>
+            </div>
+            <button class="spin-button" id="spinButton">Spin the Bat!</button>
+            <!-- Replace from <div id="fact-container"> to next </div> and buttons -->
+<div id="fact-container">
+    <p id="question">Spin for a Trivia Question!</p>
+    <p id="answer" style="display:none;"></p>
+    <div id="footnote" class="footnote"></div>
+</div>
+<button id="reveal-button" onclick="revealAnswer()">Reveal Answer</button>
+<button id="share-button" onclick="shareAnswerOnTwitter()">Share on Twitter</button>
+            <section>
+                <h2>About Spin the Bat Trivia</h2>
+                <p>Welcome to Spin the Bat Trivia, your ultimate destination for testing your Major League Baseball knowledge through interactive trivia questions! Whether you’re a lifelong fan who lives for the crack of the bat or a newcomer curious about America’s pastime, our site offers a unique way to dive into baseball’s most fascinating moments. Spin the bat over home plate to get a trivia question, then reveal the answer—complete with a fun fact, story, and reliable source—spanning legendary players, unforgettable games, and quirky statistics.</p>
+                <p>Spin the Bat Trivia was born from a passion for the game and a desire to challenge fans worldwide with its hidden gems. Our carefully curated trivia collection quizzes you on the heroes of the diamond, from Jackie Robinson’s groundbreaking debut to Cal Ripken Jr.’s ironman streak, while uncovering lesser-known tales—like the marathon 25-inning game that tested endurance like no other. Every spin delivers a question, followed by an answer you can trust, blending education with entertainment to keep you coming back for more.</p>
+                <p>Perfect for fans of all ages, Spin the Bat Trivia lets you test your knowledge, stump your friends, or enjoy a moment of baseball nostalgia. Our interactive design—featuring a spinning bat and home plate—turns trivia into a game that’s more than just facts. Share your favorite questions and answers on Twitter with a single click and join a community of enthusiasts celebrating MLB’s past and present. Step up to the plate, spin the bat, and let Spin the Bat Trivia bring the excitement of baseball history straight to your screen!</p>
+            </section>
+        </main>
+        <div class="right-sidebar">
             <div class="ad-space">
                 <a href="https://www.amazon.com/dp/B0F2FJLVR2" target="_blank">
                     <img src="train_ad.jpg" alt="All Aboard! 50 Coloring Vintage Trains">
-                    <p>Color 50 vintage trains from history’s rails—fun for all ages! Get yours on Amazon.</p>
+                    <p>Color 50 vintage trains from history’s rails—fun for all ages!</p>
                 </a>
+            </div>
+            <div class="ad-space">
+                <a href="https://complimentwheel.com/" target="_blank">
+                    <img src="wheel_ad.png" alt="Compliment Wheel">
+                    <p>Get a daily dose of positivity—spin for a unique compliment!</p>
+                </a>
+                <a href="https://complimentwheel.com/" target="_blank" class="spin-button ad-button">Try It Now</a>
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <p>© 2025 Compliment Wheel. All rights reserved.</p>
-    </footer>
+    <footer id="footer"></footer>
     <script>
-        const compliments = [
-            "You’re a walking burst of sunshine!",
-            "Your coolness could freeze a volcano.",
-            "You’ve got the charm of a thousand puppies.",
-            "You’re the human version of a perfect playlist.",
-            "Your awesomeness deserves its own theme song.",
-            "You’re so great, even clouds part for you.",
-            "You’ve got a smile that could melt glaciers.",
-            "You’re a genius wrapped in a taco of talent.",
-            "Your energy could power a dance party.",
-            "You’re cooler than a polar bear in shades.",
-            "You’re a legend in a world of footnotes.",
-            "Your vibe is pure glitter and magic.",
-            "You’re the sprinkles on life’s cupcake.",
-            "You’ve got swagger that outshines the sun.",
-            "You’re a rare gem in a pile of pebbles.",
-            "Your laugh could cure Monday blues.",
-            "You’re so epic, myths are written about you.",
-            "You’re a high-five waiting to happen.",
-            "Your brilliance lights up the room.",
-            "You’re the cherry on top of awesome.",
-            "You’ve got more sparkle than a disco ball.",
-            "You’re a superhero without the cape.",
-            "Your style could start a revolution.",
-            "You’re the MVP of being yourself.",
-            "You’ve got a heart bigger than the moon.",
-            "You’re a whirlwind of pure delight.",
-            "Your creativity could paint the sky.",
-            "You’re so smooth, butter’s jealous.",
-            "You’re a star that forgot to dim.",
-            "Your presence is a gift to the universe.",
-            "You’ve got more pizzazz than a parade.",
-            "You’re the secret ingredient to fun.",
-            "You’re a masterpiece in sneakers.",
-            "Your kindness could hug the world.",
-            "You’re so rad, retro’s making a comeback.",
-            "You’ve got the guts of a lion and the grin to match.",
-            "You’re a fireworks show in human form.",
-            "Your ideas could launch a rocket.",
-            "You’re the coolest breeze on a hot day.",
-            "You’ve got more flair than a flamingo.",
-            "You’re a treasure chest of good vibes.",
-            "Your spirit could outdance a storm.",
-            "You’re so sharp, you could cut through chaos.",
-            "You’ve got the glow of a thousand fireflies.",
-            "You’re a unicorn in a field of horses.",
-            "Your wit could win any showdown.",
-            "You’re the life of every party, even solo ones.",
-            "You’ve got more bounce than a kangaroo.",
-            "You’re a symphony of spectacular.",
-            "You’re so fantastic, reality feels jealous.",
-            "You’re a cosmic explosion of cool!",
-            "Your grin could outshine a supernova.",
-            "You’ve got the bounce of a rubber ball on a trampoline.",
-            "You’re a ninja of niceness!",
-            "Your charm could tame a wild dragon.",
-            "You’re the fizz in life’s soda pop.",
-            "You’ve got more groove than a vinyl record.",
-            "You’re a rainbow in a black-and-white world.",
-            "Your sparkle could dazzle a diamond.",
-            "You’re the captain of the cool ship!",
-            "You’ve got a laugh that echoes through galaxies.",
-            "You’re a whirlwind of whimsy!",
-            "Your brilliance could blind a spotlight.",
-            "You’re the jelly to life’s peanut butter.",
-            "You’ve got more zest than a lemon grove.",
-            "You’re a walking, talking party starter!",
-            "Your magic could make a wizard jealous.",
-            "You’re the beat in everyone’s favorite song.",
-            "You’ve got the glow of a neon sign.",
-            "You’re a tornado of terrific!",
-            "Your sass could sass the sassiest cat.",
-            "You’re the frosting on life’s cake.",
-            "You’ve got more pep than a cheer squad.",
-            "You’re a comet streaking through the mundane!",
-            "Your quirks make the world quirkier.",
-            "You’re the snap, crackle, and pop of awesome!",
-            "You’ve got a spirit that soars like an eagle.",
-            "You’re a bubble of joy in a sea of blah.",
-            "Your flair could flair up a flare!",
-            "You’re the twinkle in life’s eye.",
-            "You’ve got more gusto than a gusty day.",
-            "You’re a maestro of marvelous!",
-            "Your vibe could vibe with a vibraphone.",
-            "You’re the glitter in a dull day’s glue.",
-            "You’ve got the spunk of a firecracker.",
-            "You’re a beacon of brilliance!",
-            "Your energy could zap a thunderstorm.",
-            "You’re the skip in life’s hopscotch.",
-            "You’ve got more dazzle than a disco inferno.",
-            "You’re a supernova of silliness!",
-            "Your charm could charm a charm bracelet.",
-            "You’re the pop in everyone’s popcorn.",
-            "You’ve got a strut that struts the strut!",
-            "You’re a kaleidoscope of kindness!",
-            "Your wit could outwit a fox.",
-            "You’re the boom in life’s bang!",
-            "You’ve got more shine than a polished penny.",
-            "You’re a rocket of radness!",
-            "Your joy could jumpstart a jellybean jar.",
-            "You’re the ultimate boost in any room!",
-            "You’re a burst of joy that lights up any room!",
-            "Your creativity could inspire a whole galaxy!",
-            "You’ve got the kind of sparkle that stars envy!",
-            "You’re a walking, talking happiness generator!",
-            "Your positivity could turn rain into rainbows!",
-            "You’ve got a flair that could dazzle a parade!",
-            "You’re the secret sauce to a perfect day!",
-            "Your energy is like a turbo boost of awesome!",
-            "You’re a ray of sunshine on a cloudy planet!",
-            "You’ve got a glow that could guide ships home!",
-            "You’re a whirlwind of wonder and delight!",
-            "Your charm is like a magnet for good vibes!",
-            "You’re the glitter that makes life shimmer!",
-            "You’ve got a bounce that could lift a balloon!",
-            "You’re a masterpiece of mirth and magic!",
-            "Your smile could power a city of grins!",
-            "You’re the zest that spices up the universe!",
-            "You’ve got a twinkle that outshines the night!",
-            "You’re a melody of merriment and cheer!",
-            "Your spirit could soar over mountaintops!",
-            "You’re the spark that ignites pure fun!",
-            "You’ve got a radiance that warms the soul!",
-            "You’re a tidal wave of terrific energy!",
-            "Your wit is sharper than a comet’s tail!",
-            "You’re the bubble that pops with joy!",
-            "You’ve got a vibe that could wake up the moon!",
-            "You’re a supernova of silliness and smiles!",
-            "Your presence is like a party in a box!",
-            "You’re the dazzle in a world of dull!",
-            "You’ve got a pep that could pep up a panda!",
-            "You’re a whirlwind of whimsy and wow!",
-            "Your laugh is a symphony of sunshine!",
-            "You’re the bounce in life’s trampoline!",
-            "You’ve got a glow that could melt the ice caps!",
-            "You’re a rocket of radiance and glee!",
-            "Your charm could charm a flock of flamingos!",
-            "You’re the fizz that makes every moment pop!",
-            "You’ve got a spirit that dances with stars!",
-            "You’re a burst of brilliance in human form!",
-            "Your energy could electrify a festival!",
-            "You’re the twirl in life’s happiest dance!",
-            "You’ve got a shine that could blind the sun!",
-            "You’re a kaleidoscope of cool and cheer!",
-            "Your positivity could paint the sky pink!",
-            "You’re the zip that zaps up any day!",
-            "You’ve got a flair that flares up the fun!",
-            "You’re a beacon of bliss and brightness!",
-            "Your grin could launch a thousand giggles!",
-            "You’re the spark that starts every celebration!",
-            "You’ve got a zest that’s zestier than a lime!",
-            "You’re a jolt of jubilation in every step!",
-            "Your flair could flip a frown upside down!",
-            "You’ve got a zest that zings through the air!",
-            "You’re a prism of pure, playful light!",
-            "Your cheer could cheer up a grumpy goblin!",
-            "You’re the whirl in a world of wow!",
-            "You’ve got a gleam that gleams like gold!",
-            "You’re a rush of rapture in every room!",
-            "Your spunk could spark a spree of smiles!",
-            "You’re the hop in life’s happiest skip!",
-            "You’ve got a charm that chases clouds away!",
-            "You’re a fountain of fabulous fun!",
-            "Your glow could guide a galaxy home!",
-            "You’re the skip that makes hearts leap!",
-            "You’ve got a vibe that vibrates with victory!",
-            "You’re a blast of bliss beyond belief!",
-            "Your spirit could spin the world with joy!",
-            "You’re the tickle in life’s funny bone!",
-            "You’ve got a bounce that beats the blues!",
-            "You’re a whirlwind of wild, wonderful glee!",
-            "Your shine could shimmer through any shadow!",
-            "You’re the zap that zaps up every zone!",
-            "You’ve got a grin that grins at gravity!",
-            "You’re a burst of bubbly beyond compare!",
-            "Your energy could energize an elephant!",
-            "You’re the twist in life’s tastiest treat!",
-            "You’ve got a flair that flares with flair!",
-            "You’re a ripple of radiance in every wave!",
-            "Your joy could jolt a jellyfish to dance!",
-            "You’re the spark that sparks a sunny spree!",
-            "You’ve got a pep that pops like popcorn!",
-            "You’re a dash of delight in every day!",
-            "Your charm could charm a chilly chameleon!",
-            "You’re the glow that grows on everyone!",
-            "You’ve got a zing that zings with zest!",
-            "You’re a whirl of wonder in every whirl!",
-            "You’re the bee’s knees of brilliance!",
-            "You’ve got more zip than a lightning bolt!",
-            "You’re a peach of pure perfection!",
-            "Your cool factor is off the charts!",
-            "You’re the cat’s pajamas of positivity!",
-            "You’ve got a sparkle that could light up a cave!",
-            "You’re a barrel of laughs in a world of frowns!",
-            "Your charm’s got more pull than a tractor beam!",
-            "You’re the icing on life’s sweetest roll!",
-            "You’ve got more bounce than a pogo stick pro!",
-            "You’re a dynamo of downright delight!",
-            "Your grin’s got more watts than a power plant!",
-            "You’re the cream of the crop in coolness!",
-            "You’ve got a flair that flips the script!",
-            "You’re a hoot and a half of happiness!",
-            "Your vibe’s got more groove than a funky beat!",
-            "You’re the top banana in a bunch of awesome!",
-            "You’ve got more gusto than a gale-force wind!",
-            "You’re a whirlwind of wit and wonder!",
-            "Your sparkle could outshine a chandelier!",
-            "You’re the cherry bomb of cheer!",
-            "You’ve got a glow that grows on a dime!",
-            "You’re a riot of radiance and revelry!",
-            "Your pep could perk up a sleepy sloth!",
-            "You’re the bee’s buzz in a hive of happy!",
-            "You’ve got more sass than a sassy swan!",
-            "You’re a firework of fantastic fun!",
-            "Your charm’s got more magic than a wand wave!",
-            "You’re the jolt that jazzes up the joint!",
-            "You’ve got a twinkle that twinkles all night!",
-            "You’re a blast of bliss in every breath!",
-            "Your spirit’s got more lift than a hot air balloon!",
-            "You’re the zing in life’s zestiest zip!",
-            "You’ve got a bounce that bops the blues away!",
-            "You’re a ray of rapture in every ray!",
-            "Your coolness could chill a hot summer day!",
-            "You’re the dazzle that dazes the doldrums!",
-            "You’ve got more snap than a snapping turtle!",
-            "You’re a whirlwind of wowza and whimsy!",
-            "Your grin’s got more glee than a giggle fest!",
-            "You’re the pop that pops life’s popcorn!",
-            "You’ve got a flair that flares up the fiesta!",
-            "You’re a burst of brilliance beyond the brim!",
-            "Your vibe’s got more verve than a victory lap!",
-            "You’re the skip that skips through the storm!",
-            "You’ve got a glow that glows like a gem!",
-            "You’re a hoot of happiness in every holler!",
-            "Your charm could charm a grumpy grizzly!",
-            "You’re the zip that zips up the zest!"
-        ];
+const baseballTrivia = [
+    { question: "Which team was the first professional baseball team, going undefeated in 1869?", answer: "The Cincinnati Red Stockings", story: "Established in 1869, they kicked off professional baseball with a perfect season." },
+    { question: "What’s the oldest professional sports league still active in the U.S., founded in 1876?", answer: "The National League", story: "It’s been shaping MLB since its start, outlasting all other early leagues." },
+    { question: "Who pitched MLB’s first perfect game on June 12, 1880?", answer: "Lee Richmond", story: "He shut down the Cleveland Blues for the Worcester Ruby Legs in a historic feat." },
+    { question: "Which teams played in the first World Series in 1903?", answer: "Boston Americans vs. Pittsburgh Pirates", story: "Boston won in eight games, starting a postseason tradition." },
+    { question: "Which league became a major league in 1901, joining the National League?", answer: "The American League", story: "It set up the two-league MLB structure we know today." },
+    { question: "Which pitcher holds the MLB record with 511 career wins?", answer: "Cy Young", story: "Over 22 seasons, his record remains untouchable—hence the award named after him!" },
+    { question: "What was the Chicago Cubs’ original name before 1907?", answer: "White Stockings", story: "They evolved over decades before settling on ‘Cubs.’" },
+    { question: "Which Pittsburgh stadium, opened in 1909, was the first built with concrete and steel?", answer: "Forbes Field", story: "It marked a new era of durable baseball venues." },
+    { question: "What pitch was banned by MLB in 1920, with exceptions for existing pitchers?", answer: "The spitball", story: "It gave pitchers an edge until the league cleaned up the game." },
+    { question: "What was the New York Yankees’ original name and city in 1901?", answer: "Baltimore Orioles", story: "They moved to NYC in 1903, becoming the Yankees we know." },
+    { question: "Who debuted as a Red Sox pitcher in 1914 before becoming a home run legend?", answer: "Babe Ruth", story: "He won 89 games on the mound before swinging for the fences with the Yankees." },
+    { question: "Which 1919 scandal saw eight White Sox players banned for life?", answer: "The Black Sox Scandal", story: "They threw the World Series, shaking baseball’s integrity." },
+    { question: "What era began in 1920 with livelier baseballs boosting offense?", answer: "The live-ball era", story: "It ended the dead-ball era, making games more exciting." },
+    { question: "Which team opened Yankee Stadium in 1923 and won the World Series that year?", answer: "The New York Yankees", story: "A grand debut for ‘The House That Ruth Built.’" },
+    { question: "Where was the first MLB All-Star Game held on July 6, 1933?", answer: "Comiskey Park, Chicago", story: "It kicked off a tradition that’s still a midsummer classic." },
+    { question: "Which female pitcher struck out Babe Ruth and Lou Gehrig in a 1931 exhibition?", answer: "Jackie Mitchell", story: "She stunned the crowd in Chattanooga with her skill." },
+    { question: "Who holds the MLB record with 110 career shutouts?", answer: "Walter Johnson", story: "His dominance on the mound is still unmatched." },
+    { question: "Which player stole home 54 times, an MLB record?", answer: "Ty Cobb", story: "His aggressive base running terrorized opponents." },
+    { question: "Who batted .424 in 1924, one of his two .400+ seasons?", answer: "Rogers Hornsby", story: "His hitting prowess made him a legend." },
+    { question: "Where was the first Baseball Hall of Fame class inducted in 1939?", answer: "Cooperstown, New York", story: "Ty Cobb and Babe Ruth led the inaugural group." },
+    { question: "Who was the first African American in the American League, debuting in 1947?", answer: "Larry Doby", story: "He broke barriers with the Cleveland Indians." },
+    { question: "Who last hit over .400 in a season, with a .406 average in 1941?", answer: "Ted Williams", story: "No one’s topped .400 since his Red Sox feat." },
+    { question: "Who made an iconic over-the-shoulder catch in the 1954 World Series?", answer: "Willie Mays", story: "His grab helped the Giants win Game 1." },
+    { question: "Which catcher won three MVP awards between 1951 and 1955?", answer: "Roy Campanella", story: "He’s the only catcher with that many MVPs." },
+    { question: "Who broke Babe Ruth’s single-season home run record with 61 in 1961?", answer: "Roger Maris", story: "His Yankee record stood until the steroid era." },
+    { question: "Which team lost 120 games in 1962 but won the World Series in 1969?", answer: "The New York Mets", story: "The ‘Miracle Mets’ shocked the baseball world." },
+    { question: "Whose 1.12 ERA in 1968 led MLB to lower the mound?", answer: "Bob Gibson", story: "His dominance forced a rule change." },
+    { question: "Which league introduced the designated hitter rule in 1973?", answer: "The American League", story: "It changed AL gameplay forever." },
+    { question: "Who holds the MLB record with 4,256 career hits, banned in 1989?", answer: "Pete Rose", story: "His gambling cost him a Hall of Fame spot." },
+    { question: "Who hit three home runs in Game 6 of the 1977 World Series?", answer: "Reggie Jackson", story: "He earned the nickname ‘Mr. October’ that night." },
+    { question: "Who set the modern MLB single-season stolen base record with 130 in 1982?", answer: "Rickey Henderson", story: "He redefined speed on the bases." },
+    { question: "Whose walk-off homer won Game 1 of the 1988 World Series for the Dodgers?", answer: "Kirk Gibson", story: "Injured, he hobbled to glory against the A’s." },
+    { question: "Which pitcher racked up 5,714 career strikeouts, an MLB record?", answer: "Nolan Ryan", story: "His 27 seasons of heat are legendary." },
+    { question: "Who won four straight Cy Young Awards from 1992 to 1995?", answer: "Greg Maddux", story: "His precision pitching set him apart." },
+    { question: "Who hit 73 home runs in 2001, breaking the single-season record?", answer: "Barry Bonds", story: "His Giants season topped McGwire’s mark." },
+    { question: "Who set the single-season hits record with 262 in 2004?", answer: "Ichiro Suzuki", story: "His Mariners tenure showcased his bat control." },
+    { question: "Which team won the 2001 World Series in their fourth season?", answer: "The Arizona Diamondbacks", story: "They upset the Yankees in seven games." },
+    { question: "Who pitched the ‘Bloody Sock Game’ in the 2004 ALCS?", answer: "Curt Schilling", story: "His grit helped the Red Sox reverse the curse." },
+    { question: "Which team won three World Series titles in the 2010s?", answer: "The San Francisco Giants", story: "Led by Buster Posey, they dominated even years." },
+    { question: "Who won the Triple Crown in 2012, the first since 1967?", answer: "Miguel Cabrera", story: "He led the AL in average, homers, and RBIs." },
+    { question: "Which Angels player debuted in 2018 as a true two-way star?", answer: "Shohei Ohtani", story: "He’s the first since Babe Ruth to excel at both." },
+    { question: "Whose 56-game hitting streak in 1941 is an MLB record?", answer: "Joe DiMaggio", story: "The Yankee Clipper’s streak is untouchable." },
+    { question: "Which team lost their first 21 games in 1988, an AL record?", answer: "The Baltimore Orioles", story: "It was a rough start to a tough season." },
+    { question: "Who won 24 straight games across 1936 and 1937?", answer: "Carl Hubbell", story: "His pitching streak is one for the ages." },
+    { question: "Who hit two grand slams in one inning on April 23, 1999?", answer: "Fernando Tatis Sr.", story: "A Cardinals feat never repeated in MLB." },
+    { question: "Which pitcher hit a bird with a fastball in a 2001 spring game?", answer: "Randy Johnson", story: "The accidental strike became an instant classic." },
+    { question: "Who threw a perfect game under a full moon on July 28, 1994?", answer: "Kenny Rogers", story: "The Rangers lefty made history that night." },
+    { question: "What delayed a Royals game for over an hour in 1983?", answer: "A swarm of bees", story: "Players and fans were buzzing with confusion!" },
+    { question: "Who saved an American flag from being burned on the field in 1976?", answer: "Rick Monday", story: "The Dodgers outfielder became a patriot hero." },
+    { question: "Which Cubs player missed 2004 games due to a sneeze injury?", answer: "Sammy Sosa", story: "A violent sneeze sidelined the slugger." },
+    { question: "Where was the first official baseball game played on June 19, 1846?", answer: "Hoboken, New Jersey", story: "The Knickerbockers faced the New York Nine." },
+    { question: "Who was the first to hit 100 career home runs, in 1890?", answer: "Harry Stovey", story: "He powered the Boston Reds to the milestone." },
+    { question: "Which NL pitcher tied Walter Johnson with 373 wins?", answer: "Christy Mathewson", story: "His career was a masterpiece of pitching." },
+    { question: "Which rival league to the AL and NL folded after 1915?", answer: "The Federal League", story: "It couldn’t compete financially." },
+    { question: "Who hit his 714th and final home run on May 25, 1935?", answer: "Babe Ruth", story: "He went out with a three-homer bang." },
+    { question: "Who joined Babe Ruth as the second to hit 500 career home runs in 1940?", answer: "Jimmie Foxx", story: "The slugger’s power was Hall of Fame caliber." },
+    { question: "Who is the only MLB player to die from an on-field injury, in 1920?", answer: "Ray Chapman", story: "A pitch to the head ended his life tragically." },
+    { question: "Which teams played in the first televised MLB game on August 26, 1939?", answer: "Cincinnati Reds vs. Brooklyn Dodgers", story: "It brought baseball into living rooms." },
+    { question: "Who had exactly 1,815 hits at home and 1,815 on the road?", answer: "Stan Musial", story: "His symmetry is a statistical marvel." },
+    { question: "Who caught the only postseason no-hitter in 1956 World Series?", answer: "Yogi Berra", story: "He called Don Larsen’s perfect game." },
+    { question: "Which pitcher won both MVP and Cy Young in 1971?", answer: "Vida Blue", story: "A rare double for the A’s ace." },
+    { question: "Who threw the first AL modern-era perfect game on May 8, 1968?", answer: "Catfish Hunter", story: "The A’s pitcher baffled the Twins." },
+    { question: "Which team fielded an all-Black lineup on September 1, 1971?", answer: "The Pittsburgh Pirates", story: "A historic first for MLB diversity." },
+    { question: "Who threw a record seventh no-hitter on May 1, 1991?", answer: "Nolan Ryan", story: "At 44, he was still unhittable." },
+    { question: "Which defensive wizard hit only 28 home runs in 19 years?", answer: "Ozzie Smith", story: "The Wizard of Oz shone with his glove." },
+    { question: "Who hit a home run in an MLB All-Star Game and scored in an NFL Pro Bowl?", answer: "Bo Jackson", story: "A two-sport phenom like no other." },
+    { question: "Which pitcher first recorded 50 saves in a season, in 1992?", answer: "Dennis Eckersley", story: "He redefined the closer role for the A’s." },
+    { question: "Who posted a 1.74 ERA in 2000 during the steroid era?", answer: "Pedro Martínez", story: "He dominated when power ruled." },
+    { question: "Who earned the nickname Big Papi with 17 walk-off hits?", answer: "David Ortiz", story: "His clutch hits thrilled Red Sox fans." },
+    { question: "Which Diamondbacks pitcher won four straight Cy Youngs from 1999-2002?", answer: "Randy Johnson", story: "The Big Unit was unstoppable." },
+    { question: "Who hit .300 with 30 HRs and 100 RBIs for 10 straight seasons?", answer: "Albert Pujols", story: "His consistency was unreal from 2001-2010." },
+    { question: "Which young star reached 150 HRs and 150 SBs by age 27?", answer: "Mike Trout", story: "The Angels phenom rewrote the record books." },
+    { question: "Which team upset the Yankees for the 2003 World Series?", answer: "The Florida Marlins", story: "Their second title in six years stunned NYC." },
+    { question: "Which team won 21 of 22 games in 2007 to reach the World Series?", answer: "The Colorado Rockies", story: "‘Rocktober’ took them to the Fall Classic." },
+    { question: "Which team overcame a 19–31 start to win the 2019 World Series?", answer: "The Washington Nationals", story: "Their first title was a comeback story." },
+    { question: "Which teams played the longest MLB game, at 33 innings in 1984?", answer: "White Sox vs. Brewers", story: "It tested endurance like no other." },
+    { question: "What’s the shortest MLB game on record, at 51 minutes?", answer: "Giants vs. Phillies, 1919", story: "A quick finish on September 28!" },
+    { question: "Who’s the shortest MLB player ever, at 3 feet 7 inches?", answer: "Eddie Gaedel", story: "He walked in his only 1951 at-bat." },
+    { question: "Who holds the MLB record with 1,406 career stolen bases?", answer: "Rickey Henderson", story: "He lapped Ty Cobb by a mile." },
+    { question: "Which Yankee won a record 10 World Series rings?", answer: "Yogi Berra", story: "He was a postseason king." },
+    { question: "Who played 23 seasons without striking out 100 times in a year?", answer: "Hank Aaron", story: "His discipline matched his power." },
+    { question: "Whose 1993 fly ball bounced off his head for a home run?", answer: "Jose Canseco", story: "A blooper for the ages in Texas." },
+    { question: "Who caught two home run balls in one inning in 1996?", answer: "Tony Tarasco", story: "A rare double grab in the stands by this Giants outfielder!" },
+    { question: "Which pitcher brushed his teeth between every inning?", answer: "Turk Wendell", story: "His quirky superstition was a ritual." },
+    { question: "Who ate fried chicken before every game, amassing 3,010 hits?", answer: "Wade Boggs", story: "His routine fueled a Hall of Fame career." },
+    { question: "Who missed a game after dislocating his shoulder throwing a sunflower seed?", answer: "Bret Saberhagen", story: "An odd injury sidelined this pitcher in 2008." },
+    { question: "What swarmed the mound to delay a 1959 Wrigley Field game?", answer: "Gnats", story: "A tiny invasion threw off the pitchers." },
+    { question: "What animal crossed the dugout in a 1969 Mets game, tied to their title?", answer: "A black cat", story: "It became their lucky charm!" },
+    { question: "Who caught a foul ball in his beer cup and chugged it in 2010?", answer: "Steve Poirier", story: "This fan earned cheers for his multitasking at a Padres game." },
+    { question: "Why was a manager ejected in 1911 during a game?", answer: "Sneezing too loudly", story: "An umpire’s odd call made history." },
+    { question: "What 1979 White Sox event led to a fan riot and forfeit?", answer: "Disco Demolition Night", story: "Fans trashed the field between games." },
+    { question: "Why was a 2008 game delayed mid-inning?", answer: "Umpire Bill Hohn got stuck in a bathroom", story: "A bizarre break in the action!" },
+    { question: "Who missed a start after cutting his hand on a DVD case in 2006?", answer: "Joel Pineiro", story: "An everyday mishap cost this pitcher a game." },
+    { question: "What did a fan throw onto the field in a 2004 Royals game?", answer: "A cooked steak", story: "No one knows why—it just happened!" },
+    { question: "What live creatures were given away at a 1984 Portland Beavers game?", answer: "Lobsters", story: "Fans took home a tasty souvenir." },
+    { question: "Who struck out six times in a 1998 game, yet his team won?", answer: "Sammy Sosa", story: "An 8-7 Cubs victory despite his whiffs!" },
+    { question: "Who earned no-hitter credit in 1917 after the starter got hurt?", answer: "Ernie Shore", story: "He stepped up after Babe Ruth was ejected following a walk, pitching a no-hitter for the Red Sox." },
+    { question: "Which 1920 game saw both teams combine for just one hit?", answer: "White Sox vs. Indians", story: "A rare showcase of mound mastery." },
+    { question: "Who stole second, third, and home on one pitch in 1989?", answer: "Chris Stynes", story: "This minor leaguer pulled off a triple steal in one wild moment!" },
+    { question: "Why was a 2015 Orioles game played with zero fans?", answer: "Civil unrest in Baltimore", story: "A silent stadium made history." },
+    { question: "What 1974 Cleveland promotion ended in a fan riot and forfeit?", answer: "Ten Cent Beer Night", story: "Cheap brews fueled chaos!" },
+    { question: "Which pitcher claimed he threw a no-hitter on LSD in 1970?", answer: "Dock Ellis", story: "A psychedelic tale from the Pirates mound." },
+    { question: "What animal cursed the Cubs in 1945 during the World Series?", answer: "A goat", story: "Its ejection sparked a decades-long jinx." },
+    { question: "Who sent a 3-foot-7-inch player to bat in 1951 as a stunt?", answer: "Bill Veeck", story: "Eddie Gaedel walked for the Browns." },
+    { question: "What delayed a 1951 Shibe Park game when it landed on the field?", answer: "A parachutist", story: "A fan dropped in unannounced!" },
+    { question: "Who killed a seagull with a throw in a 1987 game?", answer: "Dave Winfield", story: "It led to animal cruelty charges!" },
+    { question: "What was shorter than the shortest war, a 1981 MLB game at 32 minutes?", answer: "Indians vs. Mariners", story: "A rain-shortened game faster than a 38-minute war!" },
+    { question: "Who’s caught over 12,000 baseballs at MLB games, including A-Rod’s 3,000th?", answer: "Zack Hample", story: "A ballhawk extraordinaire!" },
+    { question: "Which father-son duo hit back-to-back homers in 1990?", answer: "Ken Griffey Sr. and Jr.", story: "A Mariners family moment." },
+    { question: "What animal ran across the field in the 2019 NLDS Game 4?", answer: "A squirrel", story: "It rallied the Cardinals to victory." },
+    { question: "What did a streaker do in a 1981 Mariners game?", answer: "Slid into second base naked", story: "A wild interruption in Seattle!" },
+    { question: "Which catcher was also a WWII spy fluent in seven languages?", answer: "Moe Berg", story: "He traded mitts for espionage!" },
+    { question: "Who missed 2007 playoffs due to a Guitar Hero injury?", answer: "Joel Zumaya", story: "Rocking out cost him the postseason." },
+    { question: "Who dropped a live pigeon instead of a ball in a 1910 game?", answer: "Fred Snodgrass", story: "An outfield mix-up for the ages!" },
+    { question: "What roamed the field during a 1984 Padres game?", answer: "A live chicken", story: "It clucked up the action!" },
+    { question: "Who stole home plate from Shea Stadium in 1995?", answer: "Tom Marron", story: "This fan bolted into the stands with it!" },
+    { question: "What stopped a 1970 Pirates game when a fan tackled an umpire?", answer: "A drunk fan", story: "He wrestled over a call!" },
+    { question: "Who missed the 1985 World Series after a tarp machine accident?", answer: "Vince Coleman", story: "A freak injury sidelined the Cards star." },
+    { question: "What did a fan toss onto the field in a 2001 Reds game?", answer: "A rubber chicken", story: "It flopped during a pitching change!" },
+    { question: "Who hit a fan with a foul ball twice in one 1957 at-bat?", answer: "Richie Ashburn", story: "A rare double whammy!" },
+    { question: "What flew into a pitcher’s eye, costing the Astros a 1968 game?", answer: "A moth", story: "A tiny pest made a big impact!" },
+    { question: "What did a fan release onto the field in a 1998 Braves game?", answer: "A live possum", story: "It scurried across the outfield!" },
+    { question: "Who was distracted by a fire truck in a 1903 game, causing a loss?", answer: "Rube Waddell", story: "He chased it instead of the game!" },
+    { question: "Who caught a foul ball with his popcorn bucket in 2011?", answer: "Mike Adams", story: "This fan ate the popcorn afterward at a Rangers game!" },
+    { question: "What landed on the field mid-play in a 1986 Mets game?", answer: "A parachutist", story: "A prank that grounded the action!" },
+    { question: "Who wore glasses in 1953 games to avoid losing fights?", answer: "Clint Courtney", story: "He needed them off the field too!" },
+    { question: "What was thrown onto the field in a 1997 Marlins game?", answer: "A real fish", story: "A fishy delay in Miami!" },
+    { question: "What did Ty Cobb hit with a bat toss in a 1916 game?", answer: "A fan’s hot dog", story: "An accidental snack attack!" },
+    { question: "What did a Royals fan do in 2004 before being tackled?", answer: "Mooned the crowd", story: "A cheeky field invasion!" },
+    { question: "What live creatures were given away at a 1979 White Sox game?", answer: "Piranhas", story: "Fans kept them in cups!" },
+    { question: "What did a fan toss onto the infield in a 1989 Giants game?", answer: "A live crab", story: "It pinched the game’s flow!" },
+    { question: "Whose 1929 home run broke a fan’s umbrella in the stands?", answer: "Babe Ruth", story: "A swing with extra impact!" },
+    { question: "Who let a fly ball bounce off his head for a homer in 1993?", answer: "Jose Canseco", story: "A blooper reel classic!" },
+    { question: "What did a fan release from the bleachers in a 1961 Twins game?", answer: "A flock of pigeons", story: "A feathered delay!" },
+    { question: "Why did a Reds pitcher miss a 2008 start?", answer: "Aaron Harang slipped on a wet dugout step", story: "He chased a foul ball too hard!" },
+    { question: "What did a fan throw onto the field in a 1982 Padres game?", answer: "A live snake", story: "It slithered into infamy!" },
+    { question: "Why did a 1971 Senators game end early?", answer: "Fans stole the bases", story: "They stormed the field and took off!" },
+    { question: "What dropped from the upper deck in a 1996 Expos game?", answer: "A rubber duck", story: "A quacky interruption!" },
+    { question: "What hit an umpire in a 2000 Dodgers game, causing a delay?", answer: "A beach ball", story: "A fan’s toss blew up the action!" },
+    { question: "Who tripped over a picnic basket in a 1954 Indians game?", answer: "Al Rosen", story: "A fan’s lunch got in the way!" },
+    { question: "What hopped onto the mound in a 1985 Brewers game?", answer: "A live frog", story: "A slimy surprise for all!" },
+    { question: "What hit an umpire in the face in a 1920 Red Sox game?", answer: "A pie", story: "A fan’s tasty protest!" },
+    { question: "What did a Braves fan bring onto the field in 1999?", answer: "A giant inflatable shark", story: "A rain delay got wild!" },
+    { question: "What rolled onto the field from the stands in a 1976 Phillies game?", answer: "A bowling ball", story: "A heavy fan contribution!" },
+    { question: "What landed on the mound in a 2003 Cubs game?", answer: "A pizza box", story: "A fan tossed dinner into the mix!" },
+    { question: "What floated onto the field in a 1980 Astros game?", answer: "A swarm of balloons", story: "A fan’s airy disruption!" },
+    { question: "What did a Rangers fan toss over the wall in 1994?", answer: "A bucket of fried chicken", story: "A greasy gift from the stands!" },
+    { question: "What crossed the dugout in a 1969 Mets game, linked to their title?", answer: "A black cat", story: "A feline omen of victory!" },
+    { question: "Who missed a game after burning his hand on a burrito in 2006?", answer: "Kevin Frandsen", story: "A microwave mishap sidelined this Giants player!" },
+    { question: "What swam onto the field in a 1983 Royals game?", answer: "A live goldfish", story: "A fan’s aquatic toss baffled all!" }
+];
+// Replace from let trivia = [...baseballTrivia]; to end of <script>
+let trivia = [...baseballTrivia];
+let usedTrivia = [];
+let currentRotation = 0;
+let isSpinning = false;
+let currentItem = null;
+const batContainer = document.getElementById("batContainer");
+const bat = document.getElementById("bat");
+const spinButton = document.getElementById("spinButton");
+const questionElement = document.getElementById("question");
+const answerElement = document.getElementById("answer");
+const footnoteElement = document.getElementById("footnote");
+const revealButton = document.getElementById("reveal-button");
+const shareButton = document.getElementById("share-button");
 
-        let currentRotation = 0;
-        let usedCompliments = [];
-        let currentCompliment = "Spin for a surprise compliment!";
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
 
-        function spinWheel() {
-            const wheel = document.getElementById("wheel");
-            const spinButton = document.getElementById("spinButton");
-            const complimentElement = document.getElementById("compliment");
-            const shareTwitter = document.getElementById("shareTwitter");
-            const shareFacebook = document.getElementById("shareFacebook");
+function spinBat() {
+    if (isSpinning) return;
+    isSpinning = true;
+    spinButton.disabled = true;
+    spinButton.textContent = "Spinning...";
+    revealButton.style.display = "none";
+    shareButton.style.display = "none";
+    answerElement.style.display = "none";
+    footnoteElement.innerHTML = "";
 
-            spinButton.disabled = true;
+    const extraSpins = Math.floor(Math.random() * 2) + 3;
+    const newRotation = currentRotation + (extraSpins * 360);
+    bat.style.transition = "transform 3s ease-out";
+    bat.style.transform = `translate(-50%, -50%) rotate(${newRotation}deg)`;
+    currentRotation = newRotation;
 
-            const extraSpins = Math.floor(Math.random() * 2) + 3;
-            const newRotation = currentRotation + (extraSpins * 360);
-            wheel.style.transition = "transform 3s ease-out";
-            wheel.style.transform = `rotate(${newRotation}deg)`;
-
-            currentRotation = newRotation;
-
-            setTimeout(() => {
-                let availableCompliments = compliments.filter(c => !usedCompliments.includes(c));
-                if (availableCompliments.length === 0) {
-                    usedCompliments = [];
-                    availableCompliments = compliments.slice();
-                }
-
-                const randomIndex = Math.floor(Math.random() * availableCompliments.length);
-                currentCompliment = availableCompliments[randomIndex];
-                usedCompliments.push(currentCompliment);
-
-                complimentElement.style.animation = "none";
-                setTimeout(() => {
-                    complimentElement.innerText = currentCompliment;
-                    complimentElement.style.animation = "slideUp 0.5s ease forwards";
-                    const shareText = encodeURIComponent(`"${currentCompliment}" Check out ComplimentWheel.com!`);
-                    shareTwitter.href = `https://twitter.com/intent/tweet?text=${shareText}&url=${encodeURIComponent('https://complimentwheel.com')}`;
-                    shareTwitter.style.pointerEvents = "auto";
-                    shareTwitter.style.opacity = "1";
-                    shareFacebook.onclick = () => {
-                        window.open(
-                            `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://complimentwheel.com')}"e=${encodeURIComponent(currentCompliment)}`,
-                            'facebook-share',
-                            'width=600,height=400'
-                        );
-                        return false;
-                    };
-                    shareFacebook.style.pointerEvents = "auto";
-                    shareFacebook.style.opacity = "1";
-                }, 10);
-
+    setTimeout(() => {
+        if (trivia.length === 0) {
+            trivia = shuffle([...baseballTrivia.filter(f => !usedTrivia.includes(f))]);
+            if (trivia.length === 0) {
+                questionElement.innerHTML = "All trivia questions have been spun this session!<sup>1</sup>";
+                footnoteElement.innerHTML = "<a href='https://spinthebattrivia.com' target='_blank'>Refresh to start over</a>";
+                spinButton.textContent = "Spin the Bat!";
                 spinButton.disabled = false;
-            }, 3000);
+                isSpinning = false;
+                return;
+            }
         }
+        const randomIndex = Math.floor(Math.random() * trivia.length);
+        currentItem = trivia[randomIndex];
+        usedTrivia.push(currentItem);
+        trivia.splice(randomIndex, 1);
+
+        questionElement.style.animation = "none";
+        setTimeout(() => {
+            questionElement.innerHTML = `${currentItem.question}<sup>1</sup>`;
+            questionElement.style.animation = "slideUp .5s ease forwards";
+            revealButton.style.display = "block";
+        }, 10);
+        spinButton.textContent = "Spin the Bat!";
+        spinButton.disabled = false;
+        isSpinning = false;
+    }, 3000);
+}
+
+function revealAnswer() {
+    if (!currentItem) return;
+    answerElement.style.animation = "none";
+    setTimeout(() => {
+        answerElement.innerHTML = `<strong>Answer:</strong> ${currentItem.answer}<br>${currentItem.story}`;
+        answerElement.style.display = "block";
+        answerElement.style.animation = "slideUp .5s ease forwards";
+        revealButton.style.display = "none";
+        shareButton.style.display = "block";
+    }, 10);
+
+}
+
+function shareAnswerOnTwitter() {
+    if (!currentItem) return;
+    const maxQuestionLength = 100;
+    const truncatedQuestion = currentItem.question.length > maxQuestionLength ? currentItem.question.substring(0, maxQuestionLength - 3) + "..." : currentItem.question;
+    const url = "https://spinthebattrivia.com";
+    const tweetText = `Q: ${truncatedQuestion}\nA: ${currentItem.answer}\nExplore more MLB trivia at Spin the Bat Trivia! ${url}`;
+    window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweetText), '_blank');
+}
+
+batContainer.addEventListener("click", spinBat);
+batContainer.addEventListener("keypress", (e) => { if (e.key === "Enter") spinBat(); });
+spinButton.addEventListener("click", spinBat);
+
+document.getElementById("footer").innerHTML = `© ${new Date().getFullYear()} Spin the Bat Trivia. All rights reserved. Questions? Contact Us: <a href="mailto:musiknote@yahoo.com">musiknote@yahoo.com</a>`;
     </script>
 </body>
 </html>
