@@ -29,354 +29,2291 @@
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8494086888842655" crossorigin="anonymous"></script>
     <style>
-        body{margin:0;padding:0;padding-bottom:60px;font-family:Arial,sans-serif;background:linear-gradient(135deg,#006400,#fff);min-height:100vh;display:flex;flex-direction:column;align-items:center;overflow-y:auto}
-        .wrapper{max-width:1200px;width:100%;padding:20px;display:flex;justify-content:center;flex-wrap:nowrap;box-sizing:border-box}
-        .left-sidebar,.right-sidebar{flex:1;padding:20px}
-        .ad-space{background:#f9f9f9;border-radius:10px;padding:15px;margin-bottom:20px;text-align:center;width:180px;height:250px;box-sizing:border-box;overflow:hidden}
-        .ad-space img{max-width:100%;max-height:120px;height:auto}
-        .ad-space p{font-size:13px;margin:8px 0;line-height:1.2;max-height:50px;overflow:hidden}
-        .ad-space a{text-decoration:none;color:#2f3542}
-        .ad-space a:hover{color:#f00}
-        main{flex:3;text-align:center;background:rgba(255,255,255,.9);padding:40px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.2);animation:fadeIn 1s ease-in}
-        h1{font-size:48px;background:linear-gradient(90deg,#f00,#fff,#00f);-webkit-background-clip:text;-moz-background-clip:text;background-clip:text;color:transparent;text-shadow:3px 3px 6px rgba(0,0,0,.3);margin-bottom:15px}
-        .intro,.prompt{font-size:20px;color:#2f3542;margin-bottom:20px}
-        .bat-container{width:400px;height:400px;position:relative;margin:0 auto 20px;cursor:pointer}
-        .plate{width:300px;height:300px;background:url(home_plate.png) no-repeat center;background-size:contain;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1}
-        .bat{width:360px;height:175px;background:url(baseball_bat.png) no-repeat center;background-size:contain;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);transform-origin:center;z-index:2;will-change:transform}
-        .spin-button{padding:15px 30px;font-size:20px;color:#fff;background:#f00;border:none;border-radius:50px;cursor:pointer;transition:transform .3s,background .3s}
-        .spin-button:hover{transform:scale(1.1);background:#00f}
-        .spin-button:disabled{background:#ccc;cursor:not-allowed;transform:none}
-        #fact-container{font-size:24px;color:#2f3542;margin:30px 0 10px;padding:20px;background:#f1f2f6;border-radius:15px;opacity:0;animation:slideUp .5s ease forwards}
-        #fact sup{font-size:14px}
-        .footnote{font-size:14px;color:#555;margin-top:10px}
-        .footnote a{color:#00f;text-decoration:underline}
-        .footnote a:hover{color:#f00}
-        #share-question-button,#reveal-button,#share-button{margin:10px 0;padding:10px 20px;font-size:16px;color:#fff;background:#1DA1F2;border:none;border-radius:50px;cursor:pointer;display:none}
-        #share-question-button:hover,#reveal-button:hover,#share-button:hover{background:#0d8bec}
-        section{font-size:18px;color:#2f3542;margin-top:20px;padding:15px;background:#f1f2f6;border-radius:10px}
-        section h2{font-size:24px;color:#f00;margin-bottom:10px}
-        footer{text-align:center;font-size:14px;color:#fff;padding:10px;background:rgba(0,0,0,.4);width:100%;position:fixed;bottom:0;left:0;box-sizing:border-box}
-        footer a{text-decoration:underline;color:#fff}
-        footer a:hover{color:#ccc}
-        .ad-button{display:block;margin:8px auto 0;padding:10px 20px;font-size:13px;text-decoration:none}
-        @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-        @keyframes slideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
-        @media (max-width:768px){
-            .wrapper{flex-direction:column;padding:10px}
-            .left-sidebar{order:2;display:flex;flex-direction:column;align-items:center}
-            main{order:1}
-            .right-sidebar{order:3;display:flex;flex-direction:column;align-items:center}
-            .bat-container{width:350px;height:350px}
-            .plate{width:260px;height:260px}
-            .bat{width:310px;height:80px}
+        :root {
+            --primary-color: #002D72; /* MLB blue */
+            --secondary-color: #E31937; /* MLB red */
+            --accent-color: #FDB827; /* Baseball gold */
+            --light-bg: #f8f9fa;
+            --dark-text: #333;
+            --light-text: #fff;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            padding-bottom: 60px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, var(--primary-color), #fff);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto;
+        }
+        
+        .wrapper {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            box-sizing: border-box;
+        }
+        
+        .left-sidebar, .right-sidebar {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        .ad-space {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            width: 180px;
+            height: 250px;
+            box-sizing: border-box;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .ad-space:hover {
+            transform: translateY(-5px);
+        }
+        
+        .ad-space img {
+            max-width: 100%;
+            max-height: 120px;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        .ad-space p {
+            font-size: 13px;
+            margin: 8px 0;
+            line-height: 1.2;
+            max-height: 50px;
+            overflow: hidden;
+        }
+        
+        .ad-space a {
+            text-decoration: none;
+            color: #2f3542;
+        }
+        
+        .ad-space a:hover {
+            color: var(--secondary-color);
+        }
+        
+        main {
+            flex: 3;
+            text-align: center;
+            background: rgba(255,255,255,.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+            animation: fadeIn 1s ease-in;
+        }
+        
+        h1 {
+            font-size: 48px;
+            background: linear-gradient(90deg, var(--secondary-color), #fff, var(--primary-color));
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 3px 3px 6px rgba(0,0,0,.3);
+            margin-bottom: 15px;
+        }
+        
+        .intro, .prompt {
+            font-size: 20px;
+            color: #2f3542;
+            margin-bottom: 20px;
+        }
+        
+        .bat-container {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            margin: 0 auto 20px;
+            cursor: pointer;
+        }
+        
+        .plate {
+            width: 300px;
+            height: 300px;
+            background: url(home_plate.png) no-repeat center;
+            background-size: contain;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 1;
+        }
+        
+        .bat {
+            width: 360px;
+            height: 175px;
+            background: url(baseball_bat.png) no-repeat center;
+            background-size: contain;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            transform-origin: center;
+            z-index: 2;
+            will-change: transform;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+        
+        .spin-button {
+            padding: 15px 30px;
+            font-size: 20px;
+            color: #fff;
+            background: var(--secondary-color);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform .3s, background .3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .spin-button:hover {
+            transform: scale(1.05);
+            background: #c01125;
+        }
+        
+        .spin-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        #fact-container {
+            font-size: 24px;
+            color: #2f3542;
+            margin: 30px 0 10px;
+            padding: 20px;
+            background: #f1f2f6;
+            border-radius: 15px;
+            opacity: 1; /* Changed from 0 to make it visible by default */
+        }
+        
+        #question {
+            font-size: 24px;
+            color: var(--dark-text);
+            margin-bottom: 20px;
+            line-height: 1.5;
+            font-weight: 600;
+        }
+        
+        #answer {
+            font-size: 20px;
+            line-height: 1.6;
+            padding: 15px;
+            background-color: rgba(0,45,114,0.05);
+            border-radius: 8px;
+            margin-top: 15px;
+            text-align: left;
+        }
+        
+        .footnote {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+        }
+        
+        .footnote a {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+        
+        .footnote a:hover {
+            color: var(--secondary-color);
+        }
+        
+        /* Multiple choice options */
+        .options-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 20px 0;
+            width: 100%;
+        }
+        
+        .option-button {
+            padding: 14px;
+            background: var(--light-bg);
+            border: 2px solid var(--primary-color);
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: left;
+        }
+        
+        .option-button:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Result messages */
+        .result {
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        .correct {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .incorrect {
+            background: var(--secondary-color);
+            color: white;
+        }
+        
+        .result h3 {
+            margin-bottom: 15px;
+        }
+        
+        /* Score display */
+        .score-display {
+            display: flex;
+            justify-content: space-around;
+            background: var(--primary-color);
+            color: white;
+            padding: 10px;
+            border-radius: 50px;
+            margin: 15px auto;
+            width: fit-content;
+            min-width: 300px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .score-item {
+            text-align: center;
+        }
+        
+        .score-label {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .score-value {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        section {
+            font-size: 18px;
+            color: #2f3542;
+            margin-top: 20px;
+            padding: 15px;
+            background: #f1f2f6;
+            border-radius: 10px;
+        }
+        
+        section h2 {
+            font-size: 24px;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+            padding: 10px;
+            background: rgba(0,0,0,.4);
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            box-sizing: border-box;
+        }
+        
+        footer a {
+            text-decoration: underline;
+            color: #fff;
+        }
+        
+        footer a:hover {
+            color: #ccc;
+        }
+        
+        .ad-button {
+            display: block;
+            margin: 8px auto 0;
+            padding: 8px 16px;
+            font-size: 13px;
+            background-color: var(--accent-color);
+            color: var(--dark-text);
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .ad-button:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        /* Difficulty selector */
+        .difficulty-selector {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            gap: 10px;
+        }
+        
+        .difficulty-btn {
+            padding: 8px 16px;
+            background: #f1f2f6;
+            border: 2px solid var(--primary-color);
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .difficulty-btn:hover, .difficulty-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        @media (max-width: 768px) {
+            .wrapper {
+                flex-direction: column;
+                padding: 10px;
+            }
+            
+            .left-sidebar {
+                order: 2;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            
+            main {
+                order: 1;
+                padding: 20px;
+            }
+            
+            .right-sidebar {
+                display: none;
+            }
+            
+            .bat-container {
+                width: 350px;
+                height: 350px;
+            }
+            
+            .plate {
+                width: 260px;
+                height: 260px;
+            }
+            
+            .bat {
+                width: 310px;
+                height: 150px;
+            }
+            
+            .options-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .bat-container {
+                width: 280px;
+                height: 280px;
+            }
+            
+            .plate {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .bat {
+                width: 240px;
+                height: 120px;
+            }
+            
+            h1 {
+                font-size: 36px;
+            }
+            
+            .score-display {
+                min-width: auto;
+                width: 100%;
+            }
+            
+            .difficulty-selector {
+                flex-wrap: wrap;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="left-sidebar">
-            <div class="ad-space">
-                <a href="https://www.untoldstorieshistory.com/" target="_blank">
-                    <img src="history_ad.jpg" alt="Untold Stories History">
-                    <p>Discover Hidden Tales at Untold Stories History — Explore Now!</p>
-                </a>
-            </div>
-            <div class="ad-space">
-                <a href="https://www.amazon.com/Hop-into-Easter-Coloring-Colorful/dp/B0DZXZYHKF" target="_blank">
-                    <img src="easter_ad.jpg" alt="Hop into Easter Coloring Book">
-                    <p>Hop into Easter: A Cute and Colorful Coloring Book for Kids!</p>
-                </a>
-            </div>
-        </div>
+      <div class="wrapper">
         <main>
-            <div class="intro">Get ready for a home run with Spin the Bat Trivia! Spin the bat to test your MLB knowledge with fun trivia questions—from iconic players to wild game moments. Click now!</div>
+            <div class="intro">Get ready for a home run with Spin the Bat Trivia! Test your MLB knowledge with fun multiple-choice questions about iconic players, historic moments, and baseball oddities.</div>
+            
             <h1>Spin the Bat Trivia</h1>
-            <div class="prompt">Hit a Trivia Question Out of the Park—Spin Now!</div>
-            <div class="bat-container" id="batContainer" tabindex="0">
+            
+            <div class="prompt">Spin the bat and choose the correct answer to earn points!</div>
+            
+            <div class="difficulty-selector">
+                <button class="difficulty-btn active" data-difficulty="all">All Levels</button>
+                <button class="difficulty-btn" data-difficulty="easy">Rookie</button>
+                <button class="difficulty-btn" data-difficulty="medium">All-Star</button>
+                <button class="difficulty-btn" data-difficulty="hard">Hall of Fame</button>
+            </div>
+            
+            <div class="score-display">
+                <div class="score-item">
+                    <div class="score-label">SCORE</div>
+                    <div class="score-value" id="score-value">0</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-label">STREAK</div>
+                    <div class="score-value" id="streak-value">0</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-label">ANSWERED</div>
+                    <div class="score-value" id="answered-value">0</div>
+                </div>
+            </div>
+            
+            <div class="bat-container" id="batContainer" tabindex="0" aria-label="Click or press Enter to spin the bat">
                 <div class="plate" role="img" aria-label="Home plate"></div>
                 <div class="bat" id="bat" role="img" aria-label="Baseball bat"></div>
             </div>
+            
             <button class="spin-button" id="spinButton">Spin the Bat!</button>
-            <!-- Replace from <div id="fact-container"> to next </div> and buttons -->
-<div id="fact-container">
-    <p id="question">Spin for a Trivia Question!</p>
-    <p id="answer" style="display:none;"></p>
-    <div id="footnote" class="footnote"></div>
-</div>
-<button id="reveal-button" onclick="revealAnswer()">Reveal Answer</button>
-<button id="share-button" onclick="shareAnswerOnTwitter()">Share on Twitter</button>
+            
+            <div id="fact-container">
+                <p id="question">Spin for a Trivia Question!</p>
+                <div id="options-container" class="options-container"></div>
+                <p id="answer" style="display:none;"></p>
+                <div id="footnote" class="footnote"></div>
+            </div>
+            
             <section>
                 <h2>About Spin the Bat Trivia</h2>
-                <p>Welcome to Spin the Bat Trivia, your ultimate destination for testing your Major League Baseball knowledge through interactive trivia questions! Whether you’re a lifelong fan who lives for the crack of the bat or a newcomer curious about America’s pastime, our site offers a unique way to dive into baseball’s most fascinating moments. Spin the bat over home plate to get a trivia question, then reveal the answer—complete with a fun fact, story, and reliable source—spanning legendary players, unforgettable games, and quirky statistics.</p>
-                <p>Spin the Bat Trivia was born from a passion for the game and a desire to challenge fans worldwide with its hidden gems. Our carefully curated trivia collection quizzes you on the heroes of the diamond, from Jackie Robinson’s groundbreaking debut to Cal Ripken Jr.’s ironman streak, while uncovering lesser-known tales—like the marathon 25-inning game that tested endurance like no other. Every spin delivers a question, followed by an answer you can trust, blending education with entertainment to keep you coming back for more.</p>
-                <p>Perfect for fans of all ages, Spin the Bat Trivia lets you test your knowledge, stump your friends, or enjoy a moment of baseball nostalgia. Our interactive design—featuring a spinning bat and home plate—turns trivia into a game that’s more than just facts. Share your favorite questions and answers on Twitter with a single click and join a community of enthusiasts celebrating MLB’s past and present. Step up to the plate, spin the bat, and let Spin the Bat Trivia bring the excitement of baseball history straight to your screen!</p>
+                <p>Welcome to Spin the Bat Trivia, your ultimate destination for testing your Major League Baseball knowledge through interactive trivia questions! Whether you're a lifelong fan who lives for the crack of the bat or a newcomer curious about America's pastime, our site offers a unique way to dive into baseball's most fascinating moments. Spin the bat over home plate to get a trivia question, then select the correct answer—complete with a fun fact, story, and reliable source—spanning legendary players, unforgettable games, and quirky statistics.</p>
+                <p>Spin the Bat Trivia was born from a passion for the game and a desire to challenge fans worldwide with its hidden gems. Our carefully curated trivia collection quizzes you on the heroes of the diamond, from Jackie Robinson's groundbreaking debut to Cal Ripken Jr.'s ironman streak, while uncovering lesser-known tales—like the marathon 25-inning game that tested endurance like no other. Every spin delivers a question, followed by an answer you can trust, blending education with entertainment to keep you coming back for more.</p>
+                <p>Perfect for fans of all ages, Spin the Bat Trivia lets you test your knowledge, stump your friends, or enjoy a moment of baseball nostalgia. Our interactive design—featuring a spinning bat and home plate—turns trivia into a game that's more than just facts. Share your favorite questions and answers on Twitter with a single click and join a community of enthusiasts celebrating MLB's past and present. Step up to the plate, spin the bat, and let Spin the Bat Trivia bring the excitement of baseball history straight to your screen!</p>
             </section>
         </main>
-        <div class="right-sidebar">
-            <div class="ad-space">
-                <a href="https://www.amazon.com/dp/B0F2FJLVR2" target="_blank">
-                    <img src="train_ad.jpg" alt="All Aboard! 50 Coloring Vintage Trains">
-                    <p>Color 50 vintage trains from history’s rails—fun for all ages!</p>
-                </a>
-            </div>
-            <div class="ad-space">
-                <a href="https://complimentwheel.com/" target="_blank">
-                    <img src="wheel_ad.png" alt="Compliment Wheel">
-                    <p>Get a daily dose of positivity—spin for a unique compliment!</p>
-                </a>
-                <a href="https://complimentwheel.com/" target="_blank" class="spin-button ad-button">Try It Now</a>
-            </div>
-        </div>
     </div>
     <footer id="footer"></footer>
+
     <script>
-const baseballTrivia = [
-    { question: "Which team was the first professional baseball team, going undefeated in 1869?", answer: "The Cincinnati Red Stockings", story: "Established in 1869, they kicked off professional baseball with a perfect season." },
-    { question: "What’s the oldest professional sports league still active in the U.S., founded in 1876?", answer: "The National League", story: "It’s been shaping MLB since its start, outlasting all other early leagues." },
-    { question: "Who pitched MLB’s first perfect game on June 12, 1880?", answer: "Lee Richmond", story: "He shut down the Cleveland Blues for the Worcester Ruby Legs in a historic feat." },
-    { question: "Which teams played in the first World Series in 1903?", answer: "Boston Americans vs. Pittsburgh Pirates", story: "Boston won in eight games, starting a postseason tradition." },
-    { question: "Which league became a major league in 1901, joining the National League?", answer: "The American League", story: "It set up the two-league MLB structure we know today." },
-    { question: "Which pitcher holds the MLB record with 511 career wins?", answer: "Cy Young", story: "Over 22 seasons, his record remains untouchable—hence the award named after him!" },
-    { question: "What was the Chicago Cubs’ original name before 1907?", answer: "White Stockings", story: "They evolved over decades before settling on ‘Cubs.’" },
-    { question: "Which Pittsburgh stadium, opened in 1909, was the first built with concrete and steel?", answer: "Forbes Field", story: "It marked a new era of durable baseball venues." },
-    { question: "What pitch was banned by MLB in 1920, with exceptions for existing pitchers?", answer: "The spitball", story: "It gave pitchers an edge until the league cleaned up the game." },
-    { question: "What was the New York Yankees’ original name and city in 1901?", answer: "Baltimore Orioles", story: "They moved to NYC in 1903, becoming the Yankees we know." },
-    { question: "Who debuted as a Red Sox pitcher in 1914 before becoming a home run legend?", answer: "Babe Ruth", story: "He won 89 games on the mound before swinging for the fences with the Yankees." },
-    { question: "Which 1919 scandal saw eight White Sox players banned for life?", answer: "The Black Sox Scandal", story: "They threw the World Series, shaking baseball’s integrity." },
-    { question: "What era began in 1920 with livelier baseballs boosting offense?", answer: "The live-ball era", story: "It ended the dead-ball era, making games more exciting." },
-    { question: "Which team opened Yankee Stadium in 1923 and won the World Series that year?", answer: "The New York Yankees", story: "A grand debut for ‘The House That Ruth Built.’" },
-    { question: "Where was the first MLB All-Star Game held on July 6, 1933?", answer: "Comiskey Park, Chicago", story: "It kicked off a tradition that’s still a midsummer classic." },
-    { question: "Which female pitcher struck out Babe Ruth and Lou Gehrig in a 1931 exhibition?", answer: "Jackie Mitchell", story: "She stunned the crowd in Chattanooga with her skill." },
-    { question: "Who holds the MLB record with 110 career shutouts?", answer: "Walter Johnson", story: "His dominance on the mound is still unmatched." },
-    { question: "Which player stole home 54 times, an MLB record?", answer: "Ty Cobb", story: "His aggressive base running terrorized opponents." },
-    { question: "Who batted .424 in 1924, one of his two .400+ seasons?", answer: "Rogers Hornsby", story: "His hitting prowess made him a legend." },
-    { question: "Where was the first Baseball Hall of Fame class inducted in 1939?", answer: "Cooperstown, New York", story: "Ty Cobb and Babe Ruth led the inaugural group." },
-    { question: "Who was the first African American in the American League, debuting in 1947?", answer: "Larry Doby", story: "He broke barriers with the Cleveland Indians." },
-    { question: "Who last hit over .400 in a season, with a .406 average in 1941?", answer: "Ted Williams", story: "No one’s topped .400 since his Red Sox feat." },
-    { question: "Who made an iconic over-the-shoulder catch in the 1954 World Series?", answer: "Willie Mays", story: "His grab helped the Giants win Game 1." },
-    { question: "Which catcher won three MVP awards between 1951 and 1955?", answer: "Roy Campanella", story: "He’s the only catcher with that many MVPs." },
-    { question: "Who broke Babe Ruth’s single-season home run record with 61 in 1961?", answer: "Roger Maris", story: "His Yankee record stood until the steroid era." },
-    { question: "Which team lost 120 games in 1962 but won the World Series in 1969?", answer: "The New York Mets", story: "The ‘Miracle Mets’ shocked the baseball world." },
-    { question: "Whose 1.12 ERA in 1968 led MLB to lower the mound?", answer: "Bob Gibson", story: "His dominance forced a rule change." },
-    { question: "Which league introduced the designated hitter rule in 1973?", answer: "The American League", story: "It changed AL gameplay forever." },
-    { question: "Who holds the MLB record with 4,256 career hits, banned in 1989?", answer: "Pete Rose", story: "His gambling cost him a Hall of Fame spot." },
-    { question: "Who hit three home runs in Game 6 of the 1977 World Series?", answer: "Reggie Jackson", story: "He earned the nickname ‘Mr. October’ that night." },
-    { question: "Who set the modern MLB single-season stolen base record with 130 in 1982?", answer: "Rickey Henderson", story: "He redefined speed on the bases." },
-    { question: "Whose walk-off homer won Game 1 of the 1988 World Series for the Dodgers?", answer: "Kirk Gibson", story: "Injured, he hobbled to glory against the A’s." },
-    { question: "Which pitcher racked up 5,714 career strikeouts, an MLB record?", answer: "Nolan Ryan", story: "His 27 seasons of heat are legendary." },
-    { question: "Who won four straight Cy Young Awards from 1992 to 1995?", answer: "Greg Maddux", story: "His precision pitching set him apart." },
-    { question: "Who hit 73 home runs in 2001, breaking the single-season record?", answer: "Barry Bonds", story: "His Giants season topped McGwire’s mark." },
-    { question: "Who set the single-season hits record with 262 in 2004?", answer: "Ichiro Suzuki", story: "His Mariners tenure showcased his bat control." },
-    { question: "Which team won the 2001 World Series in their fourth season?", answer: "The Arizona Diamondbacks", story: "They upset the Yankees in seven games." },
-    { question: "Who pitched the ‘Bloody Sock Game’ in the 2004 ALCS?", answer: "Curt Schilling", story: "His grit helped the Red Sox reverse the curse." },
-    { question: "Which team won three World Series titles in the 2010s?", answer: "The San Francisco Giants", story: "Led by Buster Posey, they dominated even years." },
-    { question: "Who won the Triple Crown in 2012, the first since 1967?", answer: "Miguel Cabrera", story: "He led the AL in average, homers, and RBIs." },
-    { question: "Which Angels player debuted in 2018 as a true two-way star?", answer: "Shohei Ohtani", story: "He’s the first since Babe Ruth to excel at both." },
-    { question: "Whose 56-game hitting streak in 1941 is an MLB record?", answer: "Joe DiMaggio", story: "The Yankee Clipper’s streak is untouchable." },
-    { question: "Which team lost their first 21 games in 1988, an AL record?", answer: "The Baltimore Orioles", story: "It was a rough start to a tough season." },
-    { question: "Who won 24 straight games across 1936 and 1937?", answer: "Carl Hubbell", story: "His pitching streak is one for the ages." },
-    { question: "Who hit two grand slams in one inning on April 23, 1999?", answer: "Fernando Tatis Sr.", story: "A Cardinals feat never repeated in MLB." },
-    { question: "Which pitcher hit a bird with a fastball in a 2001 spring game?", answer: "Randy Johnson", story: "The accidental strike became an instant classic." },
-    { question: "Who threw a perfect game under a full moon on July 28, 1994?", answer: "Kenny Rogers", story: "The Rangers lefty made history that night." },
-    { question: "What delayed a Royals game for over an hour in 1983?", answer: "A swarm of bees", story: "Players and fans were buzzing with confusion!" },
-    { question: "Who saved an American flag from being burned on the field in 1976?", answer: "Rick Monday", story: "The Dodgers outfielder became a patriot hero." },
-    { question: "Which Cubs player missed 2004 games due to a sneeze injury?", answer: "Sammy Sosa", story: "A violent sneeze sidelined the slugger." },
-    { question: "Where was the first official baseball game played on June 19, 1846?", answer: "Hoboken, New Jersey", story: "The Knickerbockers faced the New York Nine." },
-    { question: "Who was the first to hit 100 career home runs, in 1890?", answer: "Harry Stovey", story: "He powered the Boston Reds to the milestone." },
-    { question: "Which NL pitcher tied Walter Johnson with 373 wins?", answer: "Christy Mathewson", story: "His career was a masterpiece of pitching." },
-    { question: "Which rival league to the AL and NL folded after 1915?", answer: "The Federal League", story: "It couldn’t compete financially." },
-    { question: "Who hit his 714th and final home run on May 25, 1935?", answer: "Babe Ruth", story: "He went out with a three-homer bang." },
-    { question: "Who joined Babe Ruth as the second to hit 500 career home runs in 1940?", answer: "Jimmie Foxx", story: "The slugger’s power was Hall of Fame caliber." },
-    { question: "Who is the only MLB player to die from an on-field injury, in 1920?", answer: "Ray Chapman", story: "A pitch to the head ended his life tragically." },
-    { question: "Which teams played in the first televised MLB game on August 26, 1939?", answer: "Cincinnati Reds vs. Brooklyn Dodgers", story: "It brought baseball into living rooms." },
-    { question: "Who had exactly 1,815 hits at home and 1,815 on the road?", answer: "Stan Musial", story: "His symmetry is a statistical marvel." },
-    { question: "Who caught the only postseason no-hitter in 1956 World Series?", answer: "Yogi Berra", story: "He called Don Larsen’s perfect game." },
-    { question: "Which pitcher won both MVP and Cy Young in 1971?", answer: "Vida Blue", story: "A rare double for the A’s ace." },
-    { question: "Who threw the first AL modern-era perfect game on May 8, 1968?", answer: "Catfish Hunter", story: "The A’s pitcher baffled the Twins." },
-    { question: "Which team fielded an all-Black lineup on September 1, 1971?", answer: "The Pittsburgh Pirates", story: "A historic first for MLB diversity." },
-    { question: "Who threw a record seventh no-hitter on May 1, 1991?", answer: "Nolan Ryan", story: "At 44, he was still unhittable." },
-    { question: "Which defensive wizard hit only 28 home runs in 19 years?", answer: "Ozzie Smith", story: "The Wizard of Oz shone with his glove." },
-    { question: "Who hit a home run in an MLB All-Star Game and scored in an NFL Pro Bowl?", answer: "Bo Jackson", story: "A two-sport phenom like no other." },
-    { question: "Which pitcher first recorded 50 saves in a season, in 1992?", answer: "Dennis Eckersley", story: "He redefined the closer role for the A’s." },
-    { question: "Who posted a 1.74 ERA in 2000 during the steroid era?", answer: "Pedro Martínez", story: "He dominated when power ruled." },
-    { question: "Who earned the nickname Big Papi with 17 walk-off hits?", answer: "David Ortiz", story: "His clutch hits thrilled Red Sox fans." },
-    { question: "Which Diamondbacks pitcher won four straight Cy Youngs from 1999-2002?", answer: "Randy Johnson", story: "The Big Unit was unstoppable." },
-    { question: "Who hit .300 with 30 HRs and 100 RBIs for 10 straight seasons?", answer: "Albert Pujols", story: "His consistency was unreal from 2001-2010." },
-    { question: "Which young star reached 150 HRs and 150 SBs by age 27?", answer: "Mike Trout", story: "The Angels phenom rewrote the record books." },
-    { question: "Which team upset the Yankees for the 2003 World Series?", answer: "The Florida Marlins", story: "Their second title in six years stunned NYC." },
-    { question: "Which team won 21 of 22 games in 2007 to reach the World Series?", answer: "The Colorado Rockies", story: "‘Rocktober’ took them to the Fall Classic." },
-    { question: "Which team overcame a 19–31 start to win the 2019 World Series?", answer: "The Washington Nationals", story: "Their first title was a comeback story." },
-    { question: "Which teams played the longest MLB game, at 33 innings in 1984?", answer: "White Sox vs. Brewers", story: "It tested endurance like no other." },
-    { question: "What’s the shortest MLB game on record, at 51 minutes?", answer: "Giants vs. Phillies, 1919", story: "A quick finish on September 28!" },
-    { question: "Who’s the shortest MLB player ever, at 3 feet 7 inches?", answer: "Eddie Gaedel", story: "He walked in his only 1951 at-bat." },
-    { question: "Who holds the MLB record with 1,406 career stolen bases?", answer: "Rickey Henderson", story: "He lapped Ty Cobb by a mile." },
-    { question: "Which Yankee won a record 10 World Series rings?", answer: "Yogi Berra", story: "He was a postseason king." },
-    { question: "Who played 23 seasons without striking out 100 times in a year?", answer: "Hank Aaron", story: "His discipline matched his power." },
-    { question: "Whose 1993 fly ball bounced off his head for a home run?", answer: "Jose Canseco", story: "A blooper for the ages in Texas." },
-    { question: "Who caught two home run balls in one inning in 1996?", answer: "Tony Tarasco", story: "A rare double grab in the stands by this Giants outfielder!" },
-    { question: "Which pitcher brushed his teeth between every inning?", answer: "Turk Wendell", story: "His quirky superstition was a ritual." },
-    { question: "Who ate fried chicken before every game, amassing 3,010 hits?", answer: "Wade Boggs", story: "His routine fueled a Hall of Fame career." },
-    { question: "Who missed a game after dislocating his shoulder throwing a sunflower seed?", answer: "Bret Saberhagen", story: "An odd injury sidelined this pitcher in 2008." },
-    { question: "What swarmed the mound to delay a 1959 Wrigley Field game?", answer: "Gnats", story: "A tiny invasion threw off the pitchers." },
-    { question: "What animal crossed the dugout in a 1969 Mets game, tied to their title?", answer: "A black cat", story: "It became their lucky charm!" },
-    { question: "Who caught a foul ball in his beer cup and chugged it in 2010?", answer: "Steve Poirier", story: "This fan earned cheers for his multitasking at a Padres game." },
-    { question: "Why was a manager ejected in 1911 during a game?", answer: "Sneezing too loudly", story: "An umpire’s odd call made history." },
-    { question: "What 1979 White Sox event led to a fan riot and forfeit?", answer: "Disco Demolition Night", story: "Fans trashed the field between games." },
-    { question: "Why was a 2008 game delayed mid-inning?", answer: "Umpire Bill Hohn got stuck in a bathroom", story: "A bizarre break in the action!" },
-    { question: "Who missed a start after cutting his hand on a DVD case in 2006?", answer: "Joel Pineiro", story: "An everyday mishap cost this pitcher a game." },
-    { question: "What did a fan throw onto the field in a 2004 Royals game?", answer: "A cooked steak", story: "No one knows why—it just happened!" },
-    { question: "What live creatures were given away at a 1984 Portland Beavers game?", answer: "Lobsters", story: "Fans took home a tasty souvenir." },
-    { question: "Who struck out six times in a 1998 game, yet his team won?", answer: "Sammy Sosa", story: "An 8-7 Cubs victory despite his whiffs!" },
-    { question: "Who earned no-hitter credit in 1917 after the starter got hurt?", answer: "Ernie Shore", story: "He stepped up after Babe Ruth was ejected following a walk, pitching a no-hitter for the Red Sox." },
-    { question: "Which 1920 game saw both teams combine for just one hit?", answer: "White Sox vs. Indians", story: "A rare showcase of mound mastery." },
-    { question: "Who stole second, third, and home on one pitch in 1989?", answer: "Chris Stynes", story: "This minor leaguer pulled off a triple steal in one wild moment!" },
-    { question: "Why was a 2015 Orioles game played with zero fans?", answer: "Civil unrest in Baltimore", story: "A silent stadium made history." },
-    { question: "What 1974 Cleveland promotion ended in a fan riot and forfeit?", answer: "Ten Cent Beer Night", story: "Cheap brews fueled chaos!" },
-    { question: "Which pitcher claimed he threw a no-hitter on LSD in 1970?", answer: "Dock Ellis", story: "A psychedelic tale from the Pirates mound." },
-    { question: "What animal cursed the Cubs in 1945 during the World Series?", answer: "A goat", story: "Its ejection sparked a decades-long jinx." },
-    { question: "Who sent a 3-foot-7-inch player to bat in 1951 as a stunt?", answer: "Bill Veeck", story: "Eddie Gaedel walked for the Browns." },
-    { question: "What delayed a 1951 Shibe Park game when it landed on the field?", answer: "A parachutist", story: "A fan dropped in unannounced!" },
-    { question: "Who killed a seagull with a throw in a 1987 game?", answer: "Dave Winfield", story: "It led to animal cruelty charges!" },
-    { question: "What was shorter than the shortest war, a 1981 MLB game at 32 minutes?", answer: "Indians vs. Mariners", story: "A rain-shortened game faster than a 38-minute war!" },
-    { question: "Who’s caught over 12,000 baseballs at MLB games, including A-Rod’s 3,000th?", answer: "Zack Hample", story: "A ballhawk extraordinaire!" },
-    { question: "Which father-son duo hit back-to-back homers in 1990?", answer: "Ken Griffey Sr. and Jr.", story: "A Mariners family moment." },
-    { question: "What animal ran across the field in the 2019 NLDS Game 4?", answer: "A squirrel", story: "It rallied the Cardinals to victory." },
-    { question: "What did a streaker do in a 1981 Mariners game?", answer: "Slid into second base naked", story: "A wild interruption in Seattle!" },
-    { question: "Which catcher was also a WWII spy fluent in seven languages?", answer: "Moe Berg", story: "He traded mitts for espionage!" },
-    { question: "Who missed 2007 playoffs due to a Guitar Hero injury?", answer: "Joel Zumaya", story: "Rocking out cost him the postseason." },
-    { question: "Who dropped a live pigeon instead of a ball in a 1910 game?", answer: "Fred Snodgrass", story: "An outfield mix-up for the ages!" },
-    { question: "What roamed the field during a 1984 Padres game?", answer: "A live chicken", story: "It clucked up the action!" },
-    { question: "Who stole home plate from Shea Stadium in 1995?", answer: "Tom Marron", story: "This fan bolted into the stands with it!" },
-    { question: "What stopped a 1970 Pirates game when a fan tackled an umpire?", answer: "A drunk fan", story: "He wrestled over a call!" },
-    { question: "Who missed the 1985 World Series after a tarp machine accident?", answer: "Vince Coleman", story: "A freak injury sidelined the Cards star." },
-    { question: "What did a fan toss onto the field in a 2001 Reds game?", answer: "A rubber chicken", story: "It flopped during a pitching change!" },
-    { question: "Who hit a fan with a foul ball twice in one 1957 at-bat?", answer: "Richie Ashburn", story: "A rare double whammy!" },
-    { question: "What flew into a pitcher’s eye, costing the Astros a 1968 game?", answer: "A moth", story: "A tiny pest made a big impact!" },
-    { question: "What did a fan release onto the field in a 1998 Braves game?", answer: "A live possum", story: "It scurried across the outfield!" },
-    { question: "Who was distracted by a fire truck in a 1903 game, causing a loss?", answer: "Rube Waddell", story: "He chased it instead of the game!" },
-    { question: "Who caught a foul ball with his popcorn bucket in 2011?", answer: "Mike Adams", story: "This fan ate the popcorn afterward at a Rangers game!" },
-    { question: "What landed on the field mid-play in a 1986 Mets game?", answer: "A parachutist", story: "A prank that grounded the action!" },
-    { question: "Who wore glasses in 1953 games to avoid losing fights?", answer: "Clint Courtney", story: "He needed them off the field too!" },
-    { question: "What was thrown onto the field in a 1997 Marlins game?", answer: "A real fish", story: "A fishy delay in Miami!" },
-    { question: "What did Ty Cobb hit with a bat toss in a 1916 game?", answer: "A fan’s hot dog", story: "An accidental snack attack!" },
-    { question: "What did a Royals fan do in 2004 before being tackled?", answer: "Mooned the crowd", story: "A cheeky field invasion!" },
-    { question: "What live creatures were given away at a 1979 White Sox game?", answer: "Piranhas", story: "Fans kept them in cups!" },
-    { question: "What did a fan toss onto the infield in a 1989 Giants game?", answer: "A live crab", story: "It pinched the game’s flow!" },
-    { question: "Whose 1929 home run broke a fan’s umbrella in the stands?", answer: "Babe Ruth", story: "A swing with extra impact!" },
-    { question: "Who let a fly ball bounce off his head for a homer in 1993?", answer: "Jose Canseco", story: "A blooper reel classic!" },
-    { question: "What did a fan release from the bleachers in a 1961 Twins game?", answer: "A flock of pigeons", story: "A feathered delay!" },
-    { question: "Why did a Reds pitcher miss a 2008 start?", answer: "Aaron Harang slipped on a wet dugout step", story: "He chased a foul ball too hard!" },
-    { question: "What did a fan throw onto the field in a 1982 Padres game?", answer: "A live snake", story: "It slithered into infamy!" },
-    { question: "Why did a 1971 Senators game end early?", answer: "Fans stole the bases", story: "They stormed the field and took off!" },
-    { question: "What dropped from the upper deck in a 1996 Expos game?", answer: "A rubber duck", story: "A quacky interruption!" },
-    { question: "What hit an umpire in a 2000 Dodgers game, causing a delay?", answer: "A beach ball", story: "A fan’s toss blew up the action!" },
-    { question: "Who tripped over a picnic basket in a 1954 Indians game?", answer: "Al Rosen", story: "A fan’s lunch got in the way!" },
-    { question: "What hopped onto the mound in a 1985 Brewers game?", answer: "A live frog", story: "A slimy surprise for all!" },
-    { question: "What hit an umpire in the face in a 1920 Red Sox game?", answer: "A pie", story: "A fan’s tasty protest!" },
-    { question: "What did a Braves fan bring onto the field in 1999?", answer: "A giant inflatable shark", story: "A rain delay got wild!" },
-    { question: "What rolled onto the field from the stands in a 1976 Phillies game?", answer: "A bowling ball", story: "A heavy fan contribution!" },
-    { question: "What landed on the mound in a 2003 Cubs game?", answer: "A pizza box", story: "A fan tossed dinner into the mix!" },
-    { question: "What floated onto the field in a 1980 Astros game?", answer: "A swarm of balloons", story: "A fan’s airy disruption!" },
-    { question: "What did a Rangers fan toss over the wall in 1994?", answer: "A bucket of fried chicken", story: "A greasy gift from the stands!" },
-    { question: "What crossed the dugout in a 1969 Mets game, linked to their title?", answer: "A black cat", story: "A feline omen of victory!" },
-    { question: "Who missed a game after burning his hand on a burrito in 2006?", answer: "Kevin Frandsen", story: "A microwave mishap sidelined this Giants player!" },
-    { question: "What swam onto the field in a 1983 Royals game?", answer: "A live goldfish", story: "A fan’s aquatic toss baffled all!" }
-];
-// Replace from let trivia = [...baseballTrivia]; to end of <script>
+    // Debug helper
+    function debug(message) {
+      console.log(`[DEBUG] ${message}`);
+    }
+    
+    // Enhanced baseball trivia with multiple choice options and difficulty levels
+    const baseballTrivia = [
+        { 
+            question: "Which team was the first professional baseball team, going undefeated in 1869?", 
+            answer: "The Cincinnati Red Stockings", 
+            options: [
+                "The Cincinnati Red Stockings",
+                "The New York Knickerbockers",
+                "The Chicago White Stockings",
+                "The Boston Red Sox"
+            ],
+            story: "Established in 1869, they kicked off professional baseball with a perfect season.",
+            difficulty: "medium"
+        },
+        { 
+            question: "What's the oldest professional sports league still active in the U.S., founded in 1876?", 
+            answer: "The National League", 
+            options: [
+                "The National League",
+                "The American League",
+                "The Major League Baseball",
+                "The National Football League"
+            ],
+            story: "It's been shaping MLB since its start, outlasting all other early leagues.",
+            difficulty: "easy"
+        },
+        { 
+            question: "Who pitched MLB's first perfect game on June 12, 1880?", 
+            answer: "Lee Richmond", 
+            options: [
+                "Lee Richmond",
+                "Jim Galvin",
+                "Cy Young",
+                "John Ward"
+            ],
+            story: "He shut down the Cleveland Blues for the Worcester Ruby Legs in a historic feat.",
+            difficulty: "hard"
+        },
+        // Adding more questions to prevent running out
+        {
+            question: "Which player holds the MLB record for most career home runs?",
+            answer: "Barry Bonds",
+            options: [
+                "Barry Bonds",
+                "Hank Aaron",
+                "Babe Ruth",
+                "Alex Rodriguez"
+            ],
+            story: "He finished his career with 762 home runs, breaking Hank Aaron's previous record of 755.",
+            difficulty: "easy"
+        },
+        {
+            question: "Which team holds the record for the longest championship drought in MLB history?",
+            answer: "Chicago Cubs",
+            options: [
+                "Chicago Cubs",
+                "Cleveland Indians",
+                "Boston Red Sox",
+                "Chicago White Sox"
+            ],
+            story: "The Cubs went 108 years between World Series titles (1908-2016).",
+            difficulty: "easy"
+        },
+        {
+            question: "Who was the first player to have his number retired by a Major League team?",
+            answer: "Lou Gehrig",
+            options: [
+                "Lou Gehrig",
+                "Babe Ruth",
+                "Jackie Robinson",
+                "Ted Williams"
+            ],
+            story: "The Yankees retired his #4 in 1939 after his career was cut short by ALS.",
+            difficulty: "medium"
+        },
+        {
+            question: "Which pitcher holds the record for most career strikeouts?",
+            answer: "Nolan Ryan",
+            options: [
+                "Nolan Ryan",
+                "Randy Johnson",
+                "Roger Clemens",
+                "Pedro Martinez"
+            ],
+            story: "He struck out 5,714 batters over his 27-season career.",
+            difficulty: "easy"
+        },
+        {
+            question: "Which player broke the color barrier in Major League Baseball in 1947?",
+            answer: "Jackie Robinson",
+            options: [
+                "Jackie Robinson",
+                "Satchel Paige",
+                "Larry Doby",
+                "Roy Campanella"
+            ],
+            story: "He debuted with the Brooklyn Dodgers on April 15, which is now celebrated as Jackie Robinson Day.",
+            difficulty: "easy"
+        },
+        {
+            question: "Which player had exactly 4,256 career hits, the most in MLB history?",
+            answer: "Pete Rose",
+            options: [
+                "Pete Rose",
+                "Ty Cobb",
+                "Hank Aaron",
+                "Stan Musial"
+            ],
+            story: "Despite his hit record, he remains ineligible for the Hall of Fame due to gambling issues.",
+            difficulty: "easy"
+        },
+        {
+            question: "Which team won the 2023 World Series?",
+            answer: "Texas Rangers",
+            options: [
+                "Texas Rangers",
+                "Arizona Diamondbacks",
+                "Philadelphia Phillies",
+                "Los Angeles Dodgers"
+            ],
+            story: "They defeated the Arizona Diamondbacks 4-1 in the series for their first championship.",
+            difficulty: "medium"
+        },
+		
+		// Additional 90 baseball trivia questions
+{
+    question: "Who holds the record for most consecutive games played in MLB history?",
+    answer: "Cal Ripken Jr.",
+    options: [
+        "Cal Ripken Jr.",
+        "Lou Gehrig",
+        "Pete Rose",
+        "Derek Jeter"
+    ],
+    story: "He played in 2,632 consecutive games for the Baltimore Orioles from 1982 to 1998, breaking Lou Gehrig's previous record.",
+    difficulty: "easy"
+},
+{
+    question: "What team moved from Brooklyn to Los Angeles in 1958?",
+    answer: "The Dodgers",
+    options: [
+        "The Dodgers",
+        "The Giants",
+        "The Braves",
+        "The Athletics"
+    ],
+    story: "Under owner Walter O'Malley, they moved west along with the New York Giants, who relocated to San Francisco.",
+    difficulty: "easy"
+},
+{
+    question: "Who was the first player to hit 500 home runs and steal 500 bases?",
+    answer: "Willie Mays",
+    options: [
+        "Willie Mays",
+        "Barry Bonds",
+        "Rickey Henderson",
+        "Hank Aaron"
+    ],
+    story: "The 'Say Hey Kid' finished his career with 660 home runs and 338 stolen bases, showcasing his unique combination of power and speed.",
+    difficulty: "medium"
+},
+{
+    question: "Which pitcher threw a perfect game while reportedly under the influence of LSD?",
+    answer: "Dock Ellis",
+    options: [
+        "Dock Ellis",
+        "Bill Lee",
+        "Tim Lincecum",
+        "Mickey Lolich"
+    ],
+    story: "He claimed to have pitched his June 12, 1970 no-hitter for the Pirates against the Padres while high on LSD.",
+    difficulty: "medium"
+},
+{
+    question: "What is the name of the Red Sox's iconic left field wall?",
+    answer: "The Green Monster",
+    options: [
+        "The Green Monster",
+        "The Big Green",
+        "Fenway Wall",
+        "The Left Field Cliff"
+    ],
+    story: "Standing 37 feet tall, it's only 310 feet from home plate, making it a distinctive feature in baseball.",
+    difficulty: "easy"
+},
+{
+    question: "Which MLB stadium is the oldest still in use?",
+    answer: "Fenway Park",
+    options: [
+        "Fenway Park",
+        "Wrigley Field",
+        "Dodger Stadium",
+        "Yankee Stadium"
+    ],
+    story: "Opened in 1912, Boston's Fenway Park predates Chicago's Wrigley Field by two years.",
+    difficulty: "easy"
+},
+{
+    question: "Which team won the first World Series in 1903?",
+    answer: "Boston Americans",
+    options: [
+        "Boston Americans",
+        "Pittsburgh Pirates",
+        "New York Giants",
+        "Chicago Cubs"
+    ],
+    story: "They defeated the Pittsburgh Pirates 5 games to 3 in a best-of-nine series, later becoming the Boston Red Sox.",
+    difficulty: "medium"
+},
+{
+    question: "What player was nicknamed 'The Splendid Splinter'?",
+    answer: "Ted Williams",
+    options: [
+        "Ted Williams",
+        "Joe DiMaggio",
+        "Stan Musial",
+        "Mickey Mantle"
+    ],
+    story: "The Red Sox legend is the last player to hit over .400 in a season (.406 in 1941).",
+    difficulty: "easy"
+},
+{
+    question: "Which MLB team has won the most World Series titles?",
+    answer: "New York Yankees",
+    options: [
+        "New York Yankees",
+        "St. Louis Cardinals",
+        "Boston Red Sox",
+        "Los Angeles Dodgers"
+    ],
+    story: "The Bronx Bombers have won 27 World Series championships, far ahead of the Cardinals' 11.",
+    difficulty: "easy"
+},
+{
+    question: "Which pitcher holds the record for most wins in MLB history?",
+    answer: "Cy Young",
+    options: [
+        "Cy Young",
+        "Walter Johnson",
+        "Christy Mathewson",
+        "Warren Spahn"
+    ],
+    story: "He won 511 games during his 22-year career, a record that will likely never be broken.",
+    difficulty: "easy"
+},
+{
+    question: "Which player holds the record for highest career batting average?",
+    answer: "Ty Cobb",
+    options: [
+        "Ty Cobb",
+        "Rogers Hornsby",
+        "Ted Williams",
+        "Babe Ruth"
+    ],
+    story: "The Georgia Peach compiled a .366 average over his 24-year career, mostly with the Detroit Tigers.",
+    difficulty: "medium"
+},
+{
+    question: "What was the name of the first baseball stadium with a dome?",
+    answer: "Astrodome",
+    options: [
+        "Astrodome",
+        "Kingdome",
+        "Skydome",
+        "Metrodome"
+    ],
+    story: "Opened in 1965 in Houston, it was dubbed the 'Eighth Wonder of the World' and led to the development of artificial turf.",
+    difficulty: "medium"
+},
+{
+    question: "Who was the first player to have his number retired by all MLB teams?",
+    answer: "Jackie Robinson",
+    options: [
+        "Jackie Robinson",
+        "Babe Ruth",
+        "Roberto Clemente",
+        "Hank Aaron"
+    ],
+    story: "His #42 was universally retired in 1997, fifty years after he broke baseball's color barrier.",
+    difficulty: "easy"
+},
+{
+    question: "Which pitcher holds the record for most career no-hitters?",
+    answer: "Nolan Ryan",
+    options: [
+        "Nolan Ryan",
+        "Sandy Koufax",
+        "Cy Young",
+        "Bob Feller"
+    ],
+    story: "The 'Ryan Express' threw an incredible seven no-hitters during his 27-year career.",
+    difficulty: "easy"
+},
+{
+    question: "Which baseball player appeared in the most All-Star games?",
+    answer: "Hank Aaron",
+    options: [
+        "Hank Aaron",
+        "Willie Mays",
+        "Stan Musial",
+        "Cal Ripken Jr."
+    ],
+    story: "Hammerin' Hank appeared in 25 All-Star games during his illustrious career.",
+    difficulty: "medium"
+},
+{
+    question: "What MLB team was previously known as the Seattle Pilots?",
+    answer: "Milwaukee Brewers",
+    options: [
+        "Milwaukee Brewers",
+        "Seattle Mariners",
+        "Minnesota Twins",
+        "Texas Rangers"
+    ],
+    story: "The Pilots played just one season (1969) in Seattle before moving to Milwaukee and becoming the Brewers.",
+    difficulty: "hard"
+},
+{
+    question: "Which MLB franchise has gone the longest without a World Series appearance?",
+    answer: "Seattle Mariners",
+    options: [
+        "Seattle Mariners",
+        "Pittsburgh Pirates",
+        "Milwaukee Brewers",
+        "Colorado Rockies"
+    ],
+    story: "Founded in 1977, the Mariners remain the only MLB franchise never to have played in a World Series.",
+    difficulty: "medium"
+},
+{
+    question: "Which pitcher threw 7 consecutive no-hitters in the minor leagues?",
+    answer: "Johnny Vander Meer",
+    options: [
+        "Johnny Vander Meer",
+        "Nolan Ryan",
+        "Sandy Koufax",
+        "Bob Feller"
+    ],
+    story: "He remains the only MLB pitcher to throw back-to-back no-hitters, doing so for the Cincinnati Reds in 1938.",
+    difficulty: "hard"
+},
+{
+    question: "Which MLB team was formerly known as the Montreal Expos?",
+    answer: "Washington Nationals",
+    options: [
+        "Washington Nationals",
+        "Toronto Blue Jays",
+        "Miami Marlins",
+        "Tampa Bay Rays"
+    ],
+    story: "The Expos moved from Montreal to Washington D.C. after the 2004 season.",
+    difficulty: "easy"
+},
+{
+    question: "What is the 'Mendoza Line' in baseball?",
+    answer: ".200 batting average",
+    options: [
+        ".200 batting average",
+        ".250 batting average",
+        "100 strikeouts in a season",
+        "3.00 ERA for pitchers"
+    ],
+    story: "Named after light-hitting shortstop Mario Mendoza, it represents the threshold of batting futility.",
+    difficulty: "medium"
+},
+{
+    question: "Which player was known as 'Mr. October'?",
+    answer: "Reggie Jackson",
+    options: [
+        "Reggie Jackson",
+        "Derek Jeter",
+        "David Ortiz",
+        "Mickey Mantle"
+    ],
+    story: "He earned the nickname for his clutch hitting in the postseason, especially after hitting three home runs in Game 6 of the 1977 World Series.",
+    difficulty: "easy"
+},
+{
+    question: "Who was the youngest player to hit 500 home runs?",
+    answer: "Alex Rodriguez",
+    options: [
+        "Alex Rodriguez",
+        "Jimmie Foxx",
+        "Mickey Mantle",
+        "Mike Trout"
+    ],
+    story: "A-Rod was 32 years, 8 days old when he hit his 500th homer in 2007.",
+    difficulty: "medium"
+},
+{
+    question: "Which team has lost the most World Series?",
+    answer: "New York Yankees",
+    options: [
+        "New York Yankees",
+        "Los Angeles Dodgers",
+        "St. Louis Cardinals",
+        "Detroit Tigers"
+    ],
+    story: "Despite their 27 championships, the Yankees have also lost 13 World Series.",
+    difficulty: "medium"
+},
+{
+    question: "Who was the tallest player in MLB history?",
+    answer: "Jon Rauch",
+    options: [
+        "Jon Rauch",
+        "Randy Johnson",
+        "Richie Sexson",
+        "Frank Howard"
+    ],
+    story: "The relief pitcher stood 6 feet, 11 inches tall, towering over the competition.",
+    difficulty: "hard"
+},
+{
+    question: "What team did Babe Ruth play for before joining the Yankees?",
+    answer: "Boston Red Sox",
+    options: [
+        "Boston Red Sox",
+        "Baltimore Orioles",
+        "Boston Braves",
+        "Philadelphia Athletics"
+    ],
+    story: "Ruth started as a pitcher for the Red Sox before being sold to the Yankees in 1919, beginning the 'Curse of the Bambino.'",
+    difficulty: "easy"
+},
+{
+    question: "Which MLB commissioner banned the spitball in 1920?",
+    answer: "Kenesaw Mountain Landis",
+    options: [
+        "Kenesaw Mountain Landis",
+        "Ford Frick",
+        "Bowie Kuhn",
+        "Judge Landis"
+    ],
+    story: "Baseball's first commissioner banned the pitch after Ray Chapman was killed by a pitch many believe was a spitball.",
+    difficulty: "hard"
+},
+{
+    question: "What was the original name of the New York Yankees?",
+    answer: "New York Highlanders",
+    options: [
+        "New York Highlanders",
+        "New York Americans",
+        "New York Knickerbockers",
+        "Baltimore Orioles"
+    ],
+    story: "They were known as the Highlanders from 1903-1912 before becoming the Yankees.",
+    difficulty: "medium"
+},
+{
+    question: "Who was the first MLB player to have his name on the back of his jersey?",
+    answer: "Bill Veeck",
+    options: [
+        "Bill Veeck",
+        "Ted Williams",
+        "Jackie Robinson",
+        "Larry Doby"
+    ],
+    story: "The innovative owner introduced names on jerseys with the 1960 Chicago White Sox.",
+    difficulty: "hard"
+},
+{
+    question: "Which MLB team plays its home games at PNC Park?",
+    answer: "Pittsburgh Pirates",
+    options: [
+        "Pittsburgh Pirates",
+        "Philadelphia Phillies",
+        "Tampa Bay Rays",
+        "Kansas City Royals"
+    ],
+    story: "Opened in 2001, PNC Park is widely regarded as one of the most beautiful stadiums in baseball.",
+    difficulty: "medium"
+},
+{
+    question: "Which MLB player was nicknamed 'Charlie Hustle'?",
+    answer: "Pete Rose",
+    options: [
+        "Pete Rose",
+        "Ty Cobb",
+        "Rickey Henderson",
+        "Joe Morgan"
+    ],
+    story: "He earned the nickname for his aggressive, all-out style of play, including running to first base after walks.",
+    difficulty: "easy"
+},
+{
+    question: "Who was the first player to win MVP awards in both leagues?",
+    answer: "Frank Robinson",
+    options: [
+        "Frank Robinson",
+        "Nolan Ryan",
+        "Hank Aaron",
+        "Willie Mays"
+    ],
+    story: "He won MVP with the Reds (NL, 1961) and Orioles (AL, 1966), and later became MLB's first African American manager.",
+    difficulty: "medium"
+},
+{
+    question: "What was the 'Black Sox Scandal'?",
+    answer: "Players throwing the 1919 World Series",
+    options: [
+        "Players throwing the 1919 World Series",
+        "A uniform controversy",
+        "A player strike in 1972",
+        "Segregation protest"
+    ],
+    story: "Eight Chicago White Sox players were banned for life for conspiring with gamblers to lose the Series intentionally.",
+    difficulty: "medium"
+},
+{
+    question: "Which MLB player was nicknamed 'The Big Unit'?",
+    answer: "Randy Johnson",
+    options: [
+        "Randy Johnson",
+        "Roger Clemens",
+        "CC Sabathia",
+        "Frank Thomas"
+    ],
+    story: "The 6'10\" left-handed pitcher was one of the most dominant of his era, winning 5 Cy Young Awards.",
+    difficulty: "easy"
+},
+{
+    question: "Which team was involved in the famous 'Pine Tar Incident' of 1983?",
+    answer: "Kansas City Royals",
+    options: [
+        "Kansas City Royals",
+        "New York Yankees",
+        "Boston Red Sox",
+        "Baltimore Orioles"
+    ],
+    story: "George Brett's home run was initially nullified because pine tar extended too far up his bat, a decision later reversed.",
+    difficulty: "medium"
+},
+{
+    question: "What MLB team was formerly known as the Houston Colt .45s?",
+    answer: "Houston Astros",
+    options: [
+        "Houston Astros",
+        "Texas Rangers",
+        "Arizona Diamondbacks",
+        "Colorado Rockies"
+    ],
+    story: "The team changed their name in 1965 when they moved into the Astrodome.",
+    difficulty: "medium"
+},
+{
+    question: "Which pitcher holds the record for most strikeouts in a single game?",
+    answer: "Tom Cheney",
+    options: [
+        "Tom Cheney",
+        "Roger Clemens",
+        "Nolan Ryan",
+        "Max Scherzer"
+    ],
+    story: "He struck out 21 batters in a 16-inning complete game for the Washington Senators in 1962.",
+    difficulty: "hard"
+},
+{
+    question: "What's the minimum number of pitches possible in a complete 9-inning game?",
+    answer: "27",
+    options: [
+        "27",
+        "54",
+        "81",
+        "9"
+    ],
+    story: "A perfect game with every batter putting the first pitch into play would require exactly 27 pitches.",
+    difficulty: "medium"
+},
+{
+    question: "Who is the only pitcher to throw a no-hitter in the World Series?",
+    answer: "Don Larsen",
+    options: [
+        "Don Larsen",
+        "Sandy Koufax",
+        "Bob Gibson",
+        "Roy Halladay"
+    ],
+    story: "He pitched a perfect game for the Yankees against the Dodgers in Game 5 of the 1956 World Series.",
+    difficulty: "medium"
+},
+{
+    question: "Which player was known as 'The Iron Horse'?",
+    answer: "Lou Gehrig",
+    options: [
+        "Lou Gehrig",
+        "Cal Ripken Jr.",
+        "Joe DiMaggio",
+        "Ernie Banks"
+    ],
+    story: "He played in 2,130 consecutive games for the Yankees before ALS ended his career.",
+    difficulty: "easy"
+},
+{
+    question: "What team famously blew a 3-0 lead in the 2004 ALCS?",
+    answer: "New York Yankees",
+    options: [
+        "New York Yankees",
+        "Boston Red Sox",
+        "St. Louis Cardinals",
+        "Chicago Cubs"
+    ],
+    story: "They lost to the Boston Red Sox, who became the first MLB team to win a best-of-seven series after trailing 3-0.",
+    difficulty: "easy"
+},
+{
+    question: "Who was the first MLB player to hit 60 home runs in a season?",
+    answer: "Babe Ruth",
+    options: [
+        "Babe Ruth",
+        "Roger Maris",
+        "Mark McGwire",
+        "Jimmie Foxx"
+    ],
+    story: "The Bambino hit 60 homers in 1927, a record that stood until Roger Maris hit 61 in 1961.",
+    difficulty: "easy"
+},
+{
+    question: "Which team won the 'Miracle Mets' World Series in 1969?",
+    answer: "New York Mets",
+    options: [
+        "New York Mets",
+        "Baltimore Orioles",
+        "Oakland Athletics",
+        "Cincinnati Reds"
+    ],
+    story: "They upset the heavily favored Baltimore Orioles after finishing last or second-to-last in their first seven seasons.",
+    difficulty: "medium"
+},
+{
+    question: "What was unusual about Jim Abbott as a pitcher?",
+    answer: "He was born without a right hand",
+    options: [
+        "He was born without a right hand",
+        "He pitched blindfolded",
+        "He threw with both arms",
+        "He was the youngest pitcher ever"
+    ],
+    story: "Despite his disability, he pitched a no-hitter for the Yankees in 1993 and had a successful 10-year MLB career.",
+    difficulty: "medium"
+},
+{
+    question: "In what stadium did 'The Catch' by Willie Mays occur?",
+    answer: "Polo Grounds",
+    options: [
+        "Polo Grounds",
+        "Ebbets Field",
+        "Yankee Stadium",
+        "Fenway Park"
+    ],
+    story: "His over-the-shoulder catch in Game 1 of the 1954 World Series is considered one of baseball's greatest defensive plays.",
+    difficulty: "hard"
+},
+{
+    question: "What MLB team played in Montreal from 1969-2004?",
+    answer: "Montreal Expos",
+    options: [
+        "Montreal Expos",
+        "Montreal Royals",
+        "Montreal Blue Jays",
+        "Montreal Canadiens"
+    ],
+    story: "They were MLB's first franchise outside the United States before relocating to Washington D.C. as the Nationals.",
+    difficulty: "easy"
+},
+{
+    question: "Which MLB team has gone the longest without winning a World Series?",
+    answer: "Cleveland Indians/Guardians",
+    options: [
+        "Cleveland Indians/Guardians",
+        "Chicago Cubs",
+        "Seattle Mariners",
+        "Pittsburgh Pirates"
+    ],
+    story: "They haven't won a World Series since 1948, giving them the longest active championship drought in MLB.",
+    difficulty: "medium"
+},
+{
+    question: "What current MLB ballpark features a giant Coca-Cola bottle?",
+    answer: "Oracle Park",
+    options: [
+        "Oracle Park",
+        "Fenway Park",
+        "Wrigley Field",
+        "Coors Field"
+    ],
+    story: "The 80-foot bottle slide is a distinctive feature in the San Francisco Giants' home park.",
+    difficulty: "medium"
+},
+{
+    question: "Which team signed Jackie Robinson to break MLB's color barrier?",
+    answer: "Brooklyn Dodgers",
+    options: [
+        "Brooklyn Dodgers",
+        "New York Giants",
+        "Boston Red Sox",
+        "Cleveland Indians"
+    ],
+    story: "General Manager Branch Rickey signed Robinson in 1945, and he made his MLB debut in 1947.",
+    difficulty: "easy"
+},
+{
+    question: "Which MLB player delivered 'The Shot Heard 'Round the World' home run?",
+    answer: "Bobby Thomson",
+    options: [
+        "Bobby Thomson",
+        "Bill Mazeroski",
+        "Babe Ruth",
+        "Kirk Gibson"
+    ],
+    story: "His three-run homer won the 1951 National League pennant for the New York Giants over the Brooklyn Dodgers.",
+    difficulty: "medium"
+},
+{
+    question: "Which MLB team drafted John Elway in 1981?",
+    answer: "New York Yankees",
+    options: [
+        "New York Yankees",
+        "Los Angeles Dodgers",
+        "Baltimore Orioles",
+        "Pittsburgh Pirates"
+    ],
+    story: "Elway played minor league baseball before choosing an NFL career with the Denver Broncos.",
+    difficulty: "hard"
+},
+{
+    question: "What was the name of the steroid scandal report released in 2007?",
+    answer: "Mitchell Report",
+    options: [
+        "Mitchell Report",
+        "Balco Papers",
+        "Clemens Investigation",
+        "MLB Steroid Study"
+    ],
+    story: "Former Senator George Mitchell's report named 89 MLB players alleged to have used performance-enhancing drugs.",
+    difficulty: "medium"
+},
+{
+    question: "Which pitcher famously struck out 17 batters in his first MLB start?",
+    answer: "Stephen Strasburg",
+    options: [
+        "Stephen Strasburg",
+        "Kerry Wood",
+        "Nolan Ryan",
+        "Pedro Martinez"
+    ],
+    story: "The Nationals' phenom made his remarkable debut on June 8, 2010, against the Pittsburgh Pirates.",
+    difficulty: "medium"
+},
+{
+    question: "Who holds the record for highest single-season batting average since 1941?",
+    answer: "Tony Gwynn",
+    options: [
+        "Tony Gwynn",
+        "George Brett",
+        "Rod Carew",
+        "Wade Boggs"
+    ],
+    story: "Gwynn hit .394 during the strike-shortened 1994 season, the closest approach to .400 since Ted Williams.",
+    difficulty: "medium"
+},
+{
+    question: "What was the 'Dead Ball Era' in baseball?",
+    answer: "1900-1919 period with few home runs",
+    options: [
+        "1900-1919 period with few home runs",
+        "Years when MLB used defective baseballs",
+        "Strike-shortened seasons",
+        "Era of frequent player deaths"
+    ],
+    story: "This period featured few home runs, low scoring, and an emphasis on pitching, base running, and defense.",
+    difficulty: "medium"
+},
+{
+    question: "Which baseball player earned a Ph.D in theoretical physics?",
+    answer: "Moe Berg",
+    options: [
+        "Moe Berg",
+        "Bill Lee",
+        "Ross Ohlendorf",
+        "Craig Breslow"
+    ],
+    story: "The catcher later served as a spy for the U.S. during World War II, using his intellect and language skills.",
+    difficulty: "hard"
+},
+{
+    question: "What year did the American League adopt the designated hitter rule?",
+    answer: "1973",
+    options: [
+        "1973",
+        "1965",
+        "1980",
+        "1994"
+    ],
+    story: "The rule change eliminated the need for pitchers to bat in American League games.",
+    difficulty: "medium"
+},
+{
+    question: "What team moved from Boston to Atlanta in 1966?",
+    answer: "The Braves",
+    options: [
+        "The Braves",
+        "The Red Sox",
+        "The Bees",
+        "The Athletics"
+    ],
+    story: "The franchise began in Boston, moved to Milwaukee in 1953, and then to Atlanta in 1966.",
+    difficulty: "medium"
+},
+{
+    question: "Which player has the most career grand slams?",
+    answer: "Alex Rodriguez",
+    options: [
+        "Alex Rodriguez",
+        "Lou Gehrig",
+        "Manny Ramirez",
+        "Albert Pujols"
+    ],
+    story: "A-Rod hit 25 grand slams during his career, breaking a tie with Lou Gehrig.",
+    difficulty: "medium"
+},
+{
+    question: "What is the name of the trophy awarded to the World Series champion?",
+    answer: "Commissioner's Trophy",
+    options: [
+        "Commissioner's Trophy",
+        "World Series Cup",
+        "Pennant Trophy",
+        "Champions Plate"
+    ],
+    story: "Unlike other sports' trophies, a new Commissioner's Trophy is made each year rather than being passed to the new champion.",
+    difficulty: "easy"
+},
+{
+    question: "Which manager has won the most World Series titles?",
+    answer: "Joe McCarthy",
+    options: [
+        "Joe McCarthy",
+        "Casey Stengel",
+        "Tony La Russa",
+        "Connie Mack"
+    ],
+    story: "He won seven championships with the Yankees between 1931 and 1946.",
+    difficulty: "hard"
+},
+{
+    question: "What was the 'Ball Four' controversy?",
+    answer: "A tell-all book exposing baseball's secrets",
+    options: [
+        "A tell-all book exposing baseball's secrets",
+        "A disputed call in the World Series",
+        "A pitching rule change",
+        "A corked ball scandal"
+    ],
+    story: "Jim Bouton's 1970 book caused outrage by revealing the off-field behavior of players, breaking baseball's 'code of silence.'",
+    difficulty: "medium"
+},
+{
+    question: "Who was the only player to die from an injury sustained during an MLB game?",
+    answer: "Ray Chapman",
+    options: [
+        "Ray Chapman",
+        "Mike Coolbaugh",
+        "Tony Conigliaro",
+        "Don Drysdale"
+    ],
+    story: "The Cleveland shortstop was hit in the head by a pitch from Carl Mays in 1920 and died the next day.",
+    difficulty: "hard"
+},
+{
+    question: "What is a 'balk' in baseball?",
+    answer: "An illegal pitching motion",
+    options: [
+        "An illegal pitching motion",
+        "A catcher's interference",
+        "A dropped third strike",
+        "A delayed game call"
+    ],
+    story: "This pitching violation results in all baserunners advancing one base.",
+    difficulty: "easy"
+},
+{
+    question: "Which MLB player was nicknamed 'The Human Vacuum Cleaner'?",
+    answer: "Brooks Robinson",
+    options: [
+        "Brooks Robinson",
+        "Ozzie Smith",
+        "Omar Vizquel",
+        "Keith Hernandez"
+    ],
+    story: "The Orioles third baseman won 16 consecutive Gold Glove awards for his spectacular fielding.",
+    difficulty: "medium"
+},
+{
+    question: "What was the name of the Negro Leagues' premier team from Pittsburgh?",
+    answer: "Pittsburgh Crawfords",
+    options: [
+        "Pittsburgh Crawfords",
+        "Pittsburgh Monarchs",
+        "Pittsburgh Grays",
+        "Pittsburgh Black Sox"
+    ],
+    story: "With stars like Satchel Paige and Josh Gibson, they were considered one of the greatest teams of the 1930s.",
+    difficulty: "hard"
+},
+{
+    question: "Which player holds the record for most career walks?",
+    answer: "Barry Bonds",
+    options: [
+        "Barry Bonds",
+        "Rickey Henderson",
+        "Babe Ruth",
+        "Ted Williams"
+    ],
+    story: "He received 2,558 career walks, including a record 232 in the 2004 season.",
+    difficulty: "medium"
+},
+{
+    question: "What was 'Merkle's Boner'?",
+    answer: "A baserunning error that cost the Giants the 1908 pennant",
+    options: [
+        "A baserunning error that cost the Giants the 1908 pennant",
+        "A misplayed fly ball in the World Series",
+        "A typo in the rulebook",
+        "A incorrectly manufactured bat"
+    ],
+    story: "Fred Merkle failed to touch second base on what should have been a game-winning hit, resulting in a force out that led to the Giants losing the pennant.",
+    difficulty: "hard"
+},
+{
+    question: "Who are the only brothers to both win MLB MVP awards?",
+    answer: "Joe and Dom DiMaggio",
+    options: [
+        "Joe and Dom DiMaggio",
+        "Justin and B.J. Upton",
+        "Aaron and Bret Boone",
+        "Roberto and Sandy Alomar"
+    ],
+    story: "Joe won three AL MVPs with the Yankees, while Dom won the 1946 NL MVP with the Boston Braves.",
+    difficulty: "hard"
+},
+{
+    question: "What was the 'Curse of the Billy Goat'?",
+    answer: "A curse on the Chicago Cubs",
+    options: [
+        "A curse on the Chicago Cubs",
+        "A superstition about left-handed pitchers",
+        "A batting slump myth",
+        "A Cleveland Indians hex"
+    ],
+    story: "According to legend, tavern owner William Sianis cursed the Cubs in 1945 after his pet goat was ejected from Wrigley Field.",
+    difficulty: "easy"
+},
+{
+    question: "Which MLB park features a swimming pool in the outfield?",
+    answer: "Chase Field",
+    options: [
+        "Chase Field",
+        "Marlins Park",
+        "Dodger Stadium",
+        "Petco Park"
+    ],
+    story: "The Arizona Diamondbacks' stadium has a pool beyond the right-center field wall that can be rented by fans.",
+    difficulty: "medium"
+},
+{
+    question: "Which player has appeared in the most MLB games?",
+    answer: "Pete Rose",
+    options: [
+        "Pete Rose",
+        "Cal Ripken Jr.",
+        "Hank Aaron",
+        "Rickey Henderson"
+    ],
+    story: "Charlie Hustle played in 3,562 games over his 24-year career.",
+    difficulty: "medium"
+},
+{
+    question: "Who pitched MLB's first perfect game of the modern era in 1904?",
+    answer: "Cy Young",
+    options: [
+        "Cy Young",
+        "Christy Mathewson",
+        "Walter Johnson",
+        "Addie Joss"
+    ],
+    story: "The legendary pitcher threw his perfect game for the Boston Americans (later Red Sox) against the Philadelphia Athletics.",
+    difficulty: "hard"
+},
+
+   {
+    question: "What was the 'Homer in the Gloamin''?",
+    answer: "Gabby Hartnett's famous twilight home run",
+    options: [
+        "Gabby Hartnett's famous twilight home run",
+        "Babe Ruth's called shot",
+        "A homer hit during a power outage",
+        "Joe Carter's walk-off World Series homer"
+    ],
+    story: "Hartnett's dramatic ninth-inning homer in near-darkness helped the Cubs win the 1938 pennant race.",
+    difficulty: "hard"
+},
+{
+    question: "Which MLB team once had a mechanical rabbit deliver balls to the umpire?",
+    answer: "Chicago White Sox",
+    options: [
+        "Chicago White Sox",
+        "St. Louis Browns",
+        "Brooklyn Dodgers",
+        "Philadelphia Phillies"
+    ],
+    story: "Owner Bill Veeck introduced 'Harvey the Rabbit' in the 1960s as one of his famous promotional stunts.",
+    difficulty: "hard"
+},
+{
+    question: "What was the shortest MLB game in history?",
+    answer: "A 51-minute game in 1919",
+    options: [
+        "A 51-minute game in 1919",
+        "A 45-minute game in 1932",
+        "A 58-minute game in 1944",
+        "A 49-minute game in 1911"
+    ],
+    story: "The New York Giants beat the Philadelphia Phillies 6-1 in just 51 minutes on September 28, 1919.",
+    difficulty: "hard"
+},
+{
+    question: "Which two MLB teams share spring training facilities in Arizona?",
+    answer: "Chicago Cubs and Arizona Diamondbacks",
+    options: [
+        "Chicago Cubs and Arizona Diamondbacks",
+        "Los Angeles Dodgers and Chicago White Sox",
+        "San Francisco Giants and Oakland Athletics",
+        "Cleveland Indians and Cincinnati Reds"
+    ],
+    story: "They share Sloan Park in Mesa, Arizona as part of MLB's Cactus League spring training.",
+    difficulty: "hard"
+},
+{
+    question: "What MLB team previously played as the Washington Senators?",
+    answer: "Minnesota Twins",
+    options: [
+        "Minnesota Twins",
+        "Texas Rangers",
+        "Oakland Athletics",
+        "Baltimore Orioles"
+    ],
+    story: "The original Senators moved to Minnesota in 1961, becoming the Twins.",
+    difficulty: "medium"
+},
+{
+    question: "Which pitcher threw the most innings in a single MLB season?",
+    answer: "Will White",
+    options: [
+        "Will White",
+        "Cy Young",
+        "Walter Johnson",
+        "Old Hoss Radbourn"
+    ],
+    story: "He pitched an incredible 680 innings for the Cincinnati Reds in 1879.",
+    difficulty: "hard"
+},
+{
+    question: "Which MLB team has lost the most consecutive World Series appearances?",
+    answer: "Texas Rangers",
+    options: [
+        "Texas Rangers",
+        "Atlanta Braves",
+        "Cleveland Indians/Guardians",
+        "Detroit Tigers"
+    ],
+    story: "Before winning in 2023, they lost back-to-back World Series in 2010 and 2011.",
+    difficulty: "medium"
+},
+{
+    question: "What is 'Tommy John surgery' in baseball?",
+    answer: "Ulnar collateral ligament reconstruction",
+    options: [
+        "Ulnar collateral ligament reconstruction",
+        "Rotator cuff repair",
+        "Knee ligament replacement",
+        "Shoulder impingement procedure"
+    ],
+    story: "Named after the first player to undergo the procedure in 1974, it has saved countless pitching careers.",
+    difficulty: "easy"
+},
+{
+    question: "Which player's retirement caused MLB to universally retire his number?",
+    answer: "Jackie Robinson",
+    options: [
+        "Jackie Robinson",
+        "Lou Gehrig",
+        "Roberto Clemente",
+        "Babe Ruth"
+    ],
+    story: "His #42 was retired across MLB in 1997, with Mariano Rivera being the last active player to wear it.",
+    difficulty: "easy"
+},
+{
+    question: "Which MLB team was the last to integrate Black players?",
+    answer: "Boston Red Sox",
+    options: [
+        "Boston Red Sox",
+        "New York Yankees",
+        "Philadelphia Phillies",
+        "Detroit Tigers"
+    ],
+    story: "They were the last team to integrate, when Pumpsie Green debuted in 1959, 12 years after Jackie Robinson broke the color barrier.",
+    difficulty: "hard"
+},
+{
+    question: "Who was the last MLB pitcher to win 30 games in a season?",
+    answer: "Denny McLain",
+    options: [
+        "Denny McLain",
+        "Steve Carlton",
+        "Nolan Ryan",
+        "Sandy Koufax"
+    ],
+    story: "He won 31 games for the Detroit Tigers in 1968, a feat unlikely to be matched in modern baseball.",
+    difficulty: "medium"
+},
+{
+    question: "What MLB team played as the 'Colt .45s' before changing names?",
+    answer: "Houston Astros",
+    options: [
+        "Houston Astros",
+        "Texas Rangers",
+        "Colorado Rockies",
+        "Arizona Diamondbacks"
+    ],
+    story: "They changed their name to the Astros in 1965 when they moved into the Astrodome.",
+    difficulty: "medium"
+},
+{
+    question: "Which MLB player holds the record for highest career slugging percentage?",
+    answer: "Babe Ruth",
+    options: [
+        "Babe Ruth",
+        "Ted Williams",
+        "Barry Bonds",
+        "Lou Gehrig"
+    ],
+    story: "The Sultan of Swat's .690 career slugging percentage remains unmatched.",
+    difficulty: "medium"
+},
+{
+    question: "Which team featured the 'Nasty Boys' bullpen trio?",
+    answer: "Cincinnati Reds",
+    options: [
+        "Cincinnati Reds",
+        "Oakland Athletics",
+        "Detroit Tigers",
+        "New York Mets"
+    ],
+    story: "Rob Dibble, Norm Charlton, and Randy Myers formed this dominant relief trio for the 1990 World Series champions.",
+    difficulty: "hard"
+},
+{
+    question: "Which MLB player was known as 'The Big Hurt'?",
+    answer: "Frank Thomas",
+    options: [
+        "Frank Thomas",
+        "Jim Thome",
+        "Mo Vaughn",
+        "Cecil Fielder"
+    ],
+    story: "The two-time MVP and Hall of Famer played most of his career with the Chicago White Sox.",
+    difficulty: "easy"
+},
+{
+    question: "What team did Barry Bonds play for before joining the Giants?",
+    answer: "Pittsburgh Pirates",
+    options: [
+        "Pittsburgh Pirates",
+        "Atlanta Braves",
+        "Los Angeles Dodgers",
+        "Oakland Athletics"
+    ],
+    story: "He played his first seven seasons with the Pirates before signing with San Francisco in 1993.",
+    difficulty: "medium"
+},
+{
+    question: "Which MLB pitcher is known as 'The Dominican Dandy'?",
+    answer: "Juan Marichal",
+    options: [
+        "Juan Marichal",
+        "Pedro Martinez",
+        "Bartolo Colon",
+        "Luis Tiant"
+    ],
+    story: "The Hall of Famer was known for his high leg kick and precision pitching for the Giants in the 1960s.",
+    difficulty: "hard"
+},
+{
+    question: "What MLB player was known as 'The Flying Dutchman'?",
+    answer: "Honus Wagner",
+    options: [
+        "Honus Wagner",
+        "Babe Ruth",
+        "Ty Cobb",
+        "Tris Speaker"
+    ],
+    story: "The Pirates shortstop was one of the first five players inducted into the Baseball Hall of Fame.",
+    difficulty: "hard"
+},
+{
+    question: "Which MLB team won the 'Subway Series' World Series in 2000?",
+    answer: "New York Yankees",
+    options: [
+        "New York Yankees",
+        "New York Mets",
+        "Brooklyn Dodgers",
+        "New York Giants"
+    ],
+    story: "They defeated the Mets in five games in the first Subway Series since 1956.",
+    difficulty: "medium"
+},
+{
+    question: "What player was nicknamed 'Stan the Man'?",
+    answer: "Stan Musial",
+    options: [
+        "Stan Musial",
+        "Stan Coveleski",
+        "Stan Javier",
+        "Stan Bahnsen"
+    ],
+    story: "The Cardinals legend got his nickname when Brooklyn Dodgers fans would say, 'Here comes that man again' whenever he came to bat.",
+    difficulty: "easy"
+},
+{
+    question: "What MLB team formerly played in Philadelphia before moving west?",
+    answer: "Oakland Athletics",
+    options: [
+        "Oakland Athletics",
+        "San Francisco Giants",
+        "Los Angeles Dodgers",
+        "San Diego Padres"
+    ],
+    story: "They were the Philadelphia Athletics until 1954, then moved to Kansas City before settling in Oakland in 1968.",
+    difficulty: "medium"
+},
+{
+    question: "What player holds the record for highest batting average in a single season?",
+    answer: "Hugh Duffy",
+    options: [
+        "Hugh Duffy",
+        "Ty Cobb",
+        "Rogers Hornsby",
+        "Ted Williams"
+    ],
+    story: "He hit .440 for the Boston Beaneaters in 1894, a record that has stood for over 125 years.",
+    difficulty: "hard"
+},
+{
+    question: "Who is the only MLB player to die on the field during a game?",
+    answer: "Ray Chapman",
+    options: [
+        "Ray Chapman",
+        "Thurman Munson",
+        "Darryl Kile",
+        "Lyman Bostock"
+    ],
+    story: "The Cleveland shortstop was hit in the head by a pitch from Carl Mays in 1920 and died the next day.",
+    difficulty: "hard"
+},
+{
+    question: "What MLB team briefly changed its name to the 'Devil Rays'?",
+    answer: "Tampa Bay Rays",
+    options: [
+        "Tampa Bay Rays",
+        "Miami Marlins",
+        "Seattle Mariners",
+        "Los Angeles Angels"
+    ],
+    story: "They were the Tampa Bay Devil Rays from 1998-2007 before shortening to just 'Rays'.",
+    difficulty: "easy"
+},
+{
+    question: "Which MLB team has the longest active World Series title drought?",
+    answer: "Cleveland Indians/Guardians",
+    options: [
+        "Cleveland Indians/Guardians",
+        "Pittsburgh Pirates",
+        "Seattle Mariners",
+        "San Diego Padres"
+    ],
+    story: "They haven't won a World Series since 1948, giving them the longest active drought since the Cubs broke their curse in 2016.",
+    difficulty: "medium"
+},
+{
+    question: "What team intentionally had no names on its jerseys from 1974-1990?",
+    answer: "New York Yankees",
+    options: [
+        "New York Yankees",
+        "Chicago Cubs",
+        "Philadelphia Phillies",
+        "Boston Red Sox"
+    ],
+    story: "Owner George Steinbrenner believed individual identities should be secondary to team identity.",
+    difficulty: "medium"
+},
+{
+    question: "What MLB rule was added after Ray Chapman's death?",
+    answer: "Requirement to replace dirty/scuffed balls",
+    options: [
+        "Requirement to replace dirty/scuffed balls",
+        "Batting helmets",
+        "Pitcher screens during practice",
+        "Medical staff at games"
+    ],
+    story: "After Chapman was killed by a pitch in 1920, MLB began requiring umpires to replace dirty balls, making them easier for batters to see.",
+    difficulty: "hard"
+},
+{
+    question: "Which MLB team has the oldest stadium still in use?",
+    answer: "Boston Red Sox",
+    options: [
+        "Boston Red Sox",
+        "Chicago Cubs",
+        "Los Angeles Dodgers",
+        "San Francisco Giants"
+    ],
+    story: "Fenway Park opened in 1912, making it MLB's oldest active ballpark.",
+    difficulty: "easy"
+},
+{
+    question: "What was unusual about Jim Abbott as an MLB pitcher?",
+    answer: "He was born without a right hand",
+    options: [
+        "He was born without a right hand",
+        "He could pitch with both arms",
+        "He was legally blind",
+        "He pitched sitting down"
+    ],
+    story: "Despite having only one hand, he pitched a no-hitter for the Yankees in 1993.",
+    difficulty: "medium"
+},
+{
+    question: "What is the term for the imaginary box that defines the strike zone?",
+    answer: "The strike zone",
+    options: [
+        "The strike zone",
+        "The batter's box",
+        "The pitcher's window",
+        "The calling zone"
+    ],
+    story: "It extends from the hollow beneath the kneecap to the midpoint between the top of the shoulders and the top of the uniform pants.",
+    difficulty: "easy"
+},
+{
+    question: "Which MLB player was the first to have his number retired by any team?",
+    answer: "Lou Gehrig",
+    options: [
+        "Lou Gehrig",
+        "Babe Ruth",
+        "Jackie Robinson",
+        "Ty Cobb"
+    ],
+    story: "The Yankees retired his #4 in 1939 after he was diagnosed with ALS.",
+    difficulty: "medium"
+},
+{
+    question: "What MLB team became the first expansion franchise to win a World Series?",
+    answer: "New York Mets",
+    options: [
+        "New York Mets",
+        "Kansas City Royals",
+        "Toronto Blue Jays",
+        "Arizona Diamondbacks"
+    ],
+    story: "The 'Miracle Mets' won the 1969 World Series in their eighth season of existence.",
+    difficulty: "medium"
+},
+{
+    question: "In 1988, who hit a famous World Series home run despite injured legs?",
+    answer: "Kirk Gibson",
+    options: [
+        "Kirk Gibson",
+        "Mark McGwire",
+        "Jose Canseco",
+        "Don Mattingly"
+    ],
+    story: "His pinch-hit, walk-off home run for the Dodgers in Game 1 against the Athletics is one of baseball's most iconic moments.",
+    difficulty: "medium"
+},
+
+]
+   
+
+// App state variables
 let trivia = [...baseballTrivia];
 let usedTrivia = [];
-let currentRotation = 0;
 let isSpinning = false;
 let currentItem = null;
-const batContainer = document.getElementById("batContainer");
-const bat = document.getElementById("bat");
-const spinButton = document.getElementById("spinButton");
-const questionElement = document.getElementById("question");
-const answerElement = document.getElementById("answer");
-const footnoteElement = document.getElementById("footnote");
-const revealButton = document.getElementById("reveal-button");
-const shareButton = document.getElementById("share-button");
+let score = 0;
+let currentStreak = 0;
+let questionsAnswered = 0;
+let selectedDifficulty = "all";
 
-function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+// DOM elements
+let batContainer, bat, spinButton, questionElement, answerElement, optionsContainer, 
+    footnoteElement, scoreValue, streakValue, answeredValue, difficultyButtons;
+
+// Load saved stats from sessionStorage
+function loadStats() {
+    debug("Loading stats from sessionStorage");
+    try {
+        if (sessionStorage.getItem('baseballTriviaStats')) {
+            const stats = JSON.parse(sessionStorage.getItem('baseballTriviaStats'));
+            score = stats.score || 0;
+            currentStreak = stats.streak || 0;
+            questionsAnswered = stats.answered || 0;
+            updateStatsDisplay();
+        }
+    } catch (e) {
+        debug("Error accessing sessionStorage: " + e.message);
+        // Fallback to default values
+        score = 0;
+        currentStreak = 0;
+        questionsAnswered = 0;
+        updateStatsDisplay();
     }
-    return array;
 }
 
+// Save stats to sessionStorage
+function saveStats() {
+    debug("Saving stats to sessionStorage");
+    try {
+        const stats = {
+            score,
+            streak: currentStreak,
+            answered: questionsAnswered
+        };
+        sessionStorage.setItem('baseballTriviaStats', JSON.stringify(stats));
+    } catch (e) {
+        debug("Error saving to sessionStorage: " + e.message);
+        // Continue without saving
+    }
+}
+
+// Update stats display
+function updateStatsDisplay() {
+    debug("Updating stats display");
+    scoreValue.textContent = score;
+    streakValue.textContent = currentStreak;
+    answeredValue.textContent = questionsAnswered;
+}
+
+// Shuffle array
+function shuffle(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
+// Filter trivia based on selected difficulty
+function filterTrivia() {
+    debug(`Filtering trivia by difficulty: ${selectedDifficulty}`);
+    if (selectedDifficulty === "all") {
+        return trivia;
+    } else {
+        return trivia.filter(item => item.difficulty === selectedDifficulty);
+    }
+}
+
+// Spin the bat for a new question
 function spinBat() {
-    if (isSpinning) return;
+    debug("Spin function called");
+    
+    if (isSpinning) {
+        debug("Already spinning - ignoring click");
+        return;
+    }
+    
+    // Get filtered trivia
+    const filteredTrivia = filterTrivia();
+    debug(`Available questions: ${filteredTrivia.length}`);
+    
+    if (filteredTrivia.length === 0) {
+        // Refresh the trivia pool if empty
+        debug("Trivia pool empty, resetting");
+        trivia = [...baseballTrivia];
+        usedTrivia = [];
+        const newFilteredTrivia = filterTrivia();
+        if (newFilteredTrivia.length === 0) {
+            debug("No questions match current filter");
+            questionElement.innerHTML = "No questions available for selected difficulty. Try another level!";
+            return;
+        }
+    }
+    
     isSpinning = true;
     spinButton.disabled = true;
     spinButton.textContent = "Spinning...";
-    revealButton.style.display = "none";
-    shareButton.style.display = "none";
+    
+    // Show fact container
+    document.getElementById("fact-container").style.opacity = "1";
+    
+    // Clear previous question
+    optionsContainer.innerHTML = '';
     answerElement.style.display = "none";
     footnoteElement.innerHTML = "";
-
-    const extraSpins = Math.floor(Math.random() * 2) + 3;
-    const newRotation = currentRotation + (extraSpins * 360);
-    bat.style.transition = "transform 3s ease-out";
-    bat.style.transform = `translate(-50%, -50%) rotate(${newRotation}deg)`;
-    currentRotation = newRotation;
-
+    
+    debug("Starting bat animation");
+    // Simplified spin animation
+    const spinAmount = 720 + Math.floor(Math.random() * 720); // 2-4 full rotations
+    const currentTransform = getComputedStyle(bat).transform;
+    bat.style.transition = "transform 3s cubic-bezier(0.2, 0.8, 0.2, 1)";
+    bat.style.transform = `translate(-50%, -50%) rotate(${spinAmount}deg)`;
+    
     setTimeout(() => {
-        if (trivia.length === 0) {
-            trivia = shuffle([...baseballTrivia.filter(f => !usedTrivia.includes(f))]);
-            if (trivia.length === 0) {
-                questionElement.innerHTML = "All trivia questions have been spun this session!<sup>1</sup>";
-                footnoteElement.innerHTML = "<a href='https://spinthebattrivia.com' target='_blank'>Refresh to start over</a>";
-                spinButton.textContent = "Spin the Bat!";
-                spinButton.disabled = false;
-                isSpinning = false;
-                return;
-            }
-        }
-        const randomIndex = Math.floor(Math.random() * trivia.length);
-        currentItem = trivia[randomIndex];
+        debug("Animation completed, showing question");
+        
+        // Select a random question
+        const filteredTrivia = filterTrivia();
+        const randomIndex = Math.floor(Math.random() * filteredTrivia.length);
+        currentItem = filteredTrivia[randomIndex];
+        debug(`Selected question: ${currentItem.question}`);
+        
+        // Remove from available pool
+        trivia = trivia.filter(item => item !== currentItem);
         usedTrivia.push(currentItem);
-        trivia.splice(randomIndex, 1);
-
+        
+        // Update question display
         questionElement.style.animation = "none";
         setTimeout(() => {
-            questionElement.innerHTML = `${currentItem.question}<sup>1</sup>`;
-            questionElement.style.animation = "slideUp .5s ease forwards";
-            revealButton.style.display = "block";
+            questionElement.innerHTML = currentItem.question;
+            questionElement.style.animation = "slideUp 0.5s ease forwards";
+            
+            // Display options
+            displayMultipleChoiceOptions();
         }, 10);
+        
         spinButton.textContent = "Spin the Bat!";
         spinButton.disabled = false;
         isSpinning = false;
     }, 3000);
 }
 
-function revealAnswer() {
-    if (!currentItem) return;
-    answerElement.style.animation = "none";
-    setTimeout(() => {
-        answerElement.innerHTML = `<strong>Answer:</strong> ${currentItem.answer}<br>${currentItem.story}`;
-        answerElement.style.display = "block";
-        answerElement.style.animation = "slideUp .5s ease forwards";
-        revealButton.style.display = "none";
-        shareButton.style.display = "block";
-    }, 10);
-
+// Display multiple choice options
+function displayMultipleChoiceOptions() {
+    debug("Displaying multiple choice options");
+    optionsContainer.innerHTML = '';
+    
+    if (!currentItem.options) {
+        debug("Question has no options, generating random ones");
+        // If question doesn't have options yet (during transition), create some
+        currentItem.options = [
+            currentItem.answer,
+            getRandomIncorrectAnswer(),
+            getRandomIncorrectAnswer(),
+            getRandomIncorrectAnswer()
+        ];
+    }
+    
+    // Shuffle options
+    const shuffledOptions = shuffle(currentItem.options);
+    
+    // Create button for each option
+    shuffledOptions.forEach(option => {
+        const button = document.createElement('button');
+        button.className = 'option-button';
+        button.textContent = option;
+        button.addEventListener('click', () => checkAnswer(option));
+        optionsContainer.appendChild(button);
+    });
 }
 
-function shareAnswerOnTwitter() {
+// Get a random incorrect answer from other questions
+function getRandomIncorrectAnswer() {
+    const otherQuestions = baseballTrivia.filter(q => q !== currentItem);
+    const randomQuestion = otherQuestions[Math.floor(Math.random() * otherQuestions.length)];
+    return randomQuestion.answer;
+}
+
+// Check if selected answer is correct
+function checkAnswer(selectedOption) {
+    debug(`Checking answer: ${selectedOption}`);
+    const isCorrect = selectedOption === currentItem.answer;
+    
+    // Clear options
+    optionsContainer.innerHTML = '';
+    
+    // Create result container
+    const resultDiv = document.createElement('div');
+    resultDiv.className = isCorrect ? 'result correct' : 'result incorrect';
+    
+    if (isCorrect) {
+        // Calculate points based on difficulty
+        let pointsEarned = 10;
+        
+        switch(currentItem.difficulty) {
+            case 'easy': pointsEarned = 10; break;
+            case 'medium': pointsEarned = 20; break;
+            case 'hard': pointsEarned = 30; break;
+        }
+        
+        // Streak bonus
+        currentStreak++;
+        if (currentStreak > 1) {
+            const streakBonus = Math.min(currentStreak * 2, 20);
+            pointsEarned += streakBonus;
+        }
+        
+        // Update score
+        score += pointsEarned;
+        debug(`Correct answer: +${pointsEarned} points, new score: ${score}`);
+        
+        resultDiv.innerHTML = `
+            <h3>Correct! +${pointsEarned} points</h3>
+            <p>${currentItem.story}</p>
+        `;
+    } else {
+        // Reset streak on wrong answer
+        debug(`Incorrect answer. Correct was: ${currentItem.answer}`);
+        currentStreak = 0;
+        
+        resultDiv.innerHTML = `
+            <h3>Strike! The correct answer is:</h3>
+            <p>${currentItem.answer}</p>
+            <p>${currentItem.story}</p>
+        `;
+    }
+    
+    // Add to DOM
+    optionsContainer.appendChild(resultDiv);
+    
+    // Add next question button
+    const nextButton = document.createElement('button');
+    nextButton.className = 'spin-button';
+    nextButton.style.margin = '15px auto';
+    nextButton.style.display = 'block';
+    nextButton.textContent = 'Next Question';
+    nextButton.addEventListener('click', spinBat);
+    optionsContainer.appendChild(nextButton);
+    
+    // Update stats
+    questionsAnswered++;
+    updateStatsDisplay();
+    saveStats();
+}
+
+// Handle difficulty selection
+function setupDifficultyButtons() {
+    debug("Setting up difficulty buttons");
+    difficultyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Update active button
+            difficultyButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            // Update selected difficulty
+            selectedDifficulty = button.dataset.difficulty;
+            debug(`Difficulty changed to: ${selectedDifficulty}`);
+        });
+    });
+}
+
+// Share on Twitter
+function shareOnTwitter() {
     if (!currentItem) return;
+    
     const maxQuestionLength = 100;
-    const truncatedQuestion = currentItem.question.length > maxQuestionLength ? currentItem.question.substring(0, maxQuestionLength - 3) + "..." : currentItem.question;
+    const truncatedQuestion = currentItem.question.length > maxQuestionLength ? 
+        currentItem.question.substring(0, maxQuestionLength - 3) + "..." : 
+        currentItem.question;
+        
     const url = "https://spinthebattrivia.com";
-    const tweetText = `Q: ${truncatedQuestion}\nA: ${currentItem.answer}\nExplore more MLB trivia at Spin the Bat Trivia! ${url}`;
+    const tweetText = `I scored ${score} points on Spin the Bat Trivia! Try your baseball knowledge: ${url}`;
+    
     window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweetText), '_blank');
 }
 
-batContainer.addEventListener("click", spinBat);
-batContainer.addEventListener("keypress", (e) => { if (e.key === "Enter") spinBat(); });
-spinButton.addEventListener("click", spinBat);
+// Reset trivia pool
+function resetTrivia() {
+    debug("Resetting trivia pool");
+    trivia = [...baseballTrivia];
+    usedTrivia = [];
+    questionElement.innerHTML = "Questions have been reset. Spin the bat for a new question!";
+    optionsContainer.innerHTML = "";
+    footnoteElement.innerHTML = "";
+}
 
-document.getElementById("footer").innerHTML = `© ${new Date().getFullYear()} Spin the Bat Trivia. All rights reserved. Questions? Contact Us: <a href="mailto:musiknote@yahoo.com">musiknote@yahoo.com</a>`;
+// Share score on social media
+function shareScore() {
+    debug("Sharing score");
+    const url = "https://spinthebattrivia.com";
+    const tweetText = `I scored ${score} points on Spin the Bat Trivia! Test your baseball knowledge: ${url}`;
+    window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweetText), '_blank');
+}
+
+// Add a share score button to the page
+function addShareScoreButton() {
+    if (!document.getElementById("share-score-button")) {
+        debug("Adding share score button");
+        const shareButton = document.createElement("button");
+        shareButton.id = "share-score-button";
+        shareButton.className = "spin-button";
+        shareButton.style.backgroundColor = "#1DA1F2";
+        shareButton.style.marginTop = "20px";
+        shareButton.textContent = "Share Your Score";
+        shareButton.addEventListener("click", shareScore);
+        
+        const scoreDisplay = document.querySelector(".score-display");
+        scoreDisplay.after(shareButton);
+    }
+}
+
+// Initialize app
+document.addEventListener("DOMContentLoaded", () => {
+    debug("DOM fully loaded");
+    
+    // Initialize DOM elements
+    batContainer = document.getElementById("batContainer");
+    bat = document.getElementById("bat");
+    spinButton = document.getElementById("spinButton");
+    questionElement = document.getElementById("question");
+    answerElement = document.getElementById("answer");
+    optionsContainer = document.getElementById("options-container");
+    footnoteElement = document.getElementById("footnote");
+    scoreValue = document.getElementById("score-value");
+    streakValue = document.getElementById("streak-value");
+    answeredValue = document.getElementById("answered-value");
+    difficultyButtons = document.querySelectorAll(".difficulty-btn");
+    
+    // Set current year in footer
+    document.getElementById("footer").innerHTML = `© ${new Date().getFullYear()} Spin the Bat Trivia. All rights reserved. Questions? Contact Us: <a href="mailto:musiknote@yahoo.com">musiknote@yahoo.com</a>`;
+    
+    // Make fact container visible
+    document.getElementById("fact-container").style.opacity = "1";
+    
+    // Add event listeners here to ensure they're properly attached
+    debug("Adding event listeners");
+    batContainer.addEventListener("click", spinBat);
+    batContainer.addEventListener("keypress", (e) => { 
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            spinBat();
+        }
+    });
+    spinButton.addEventListener("click", spinBat);
+    
+    // Setup difficulty buttons
+    setupDifficultyButtons();
+    
+    // Add keyboard accessibility
+    document.addEventListener("keydown", (e) => {
+        // Reveal with "R" key when options are showing
+        if (e.key === "r" && optionsContainer.children.length > 0) {
+            const correctOption = currentItem ? currentItem.answer : null;
+            if (correctOption) {
+                checkAnswer(correctOption);
+            }
+        }
+    });
+    
+    // Load saved stats
+    loadStats();
+    
+    // Initialize stats display
+    updateStatsDisplay();
+    
+    // Add share score button if score > 0
+    if (score > 0) {
+        addShareScoreButton();
+    }
+    
+    debug("Initialization complete");
+});
     </script>
 </body>
 </html>
