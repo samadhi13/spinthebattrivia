@@ -206,7 +206,7 @@
             padding: 20px;
             background: #f1f2f6;
             border-radius: 15px;
-            opacity: 1; /* Changed from 0 to make it visible by default */
+            opacity: 1;
         }
         
         #question {
@@ -242,7 +242,6 @@
             color: var(--secondary-color);
         }
         
-        /* Multiple choice options */
         .options-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -268,7 +267,6 @@
             transform: translateY(-3px);
         }
         
-        /* Result messages */
         .result {
             padding: 20px;
             border-radius: 10px;
@@ -290,7 +288,6 @@
             margin-bottom: 15px;
         }
         
-        /* Score display */
         .score-display {
             display: flex;
             justify-content: space-around;
@@ -373,7 +370,6 @@
             color: white;
         }
         
-        /* Difficulty selector */
         .difficulty-selector {
             display: flex;
             justify-content: center;
@@ -426,7 +422,11 @@
             }
             
             .right-sidebar {
-                display: none;
+                order: 3;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
             }
             
             .bat-container {
@@ -481,7 +481,21 @@
     </style>
 </head>
 <body>
-      <div class="wrapper">
+    <div class="wrapper">
+        <div class="left-sidebar">
+            <div class="ad-space">
+                <a href="https://www.amazon.com/Vintage-Sixties-Designs-Hand-Drawn-Coloring/dp/B0F6NHCFX7" target="_blank">
+                    <img src="sixties_ad.png" alt="Vintage Sixties Coloring Book">
+                    <p>Explore groovy 60s designs in this hand-drawn coloring book!</p>
+                </a>
+            </div>
+            <div class="ad-space">
+                <a href="https://www.amazon.com/dp/B0F2FJLVR2" target="_blank">
+                    <img src="train_ad.jpg" alt="All Aboard! 50 Coloring Vintage Trains">
+                    <p>Color 50 vintage trains from history’s rails—fun for all ages!</p>
+                </a>
+            </div>
+        </div>
         <main>
             <div class="intro">Get ready for a home run with Spin the Bat Trivia! Test your MLB knowledge with fun multiple-choice questions about iconic players, historic moments, and baseball oddities.</div>
             
@@ -532,6 +546,21 @@
                 <p>Perfect for fans of all ages, Spin the Bat Trivia lets you test your knowledge, stump your friends, or enjoy a moment of baseball nostalgia. Our interactive design—featuring a spinning bat and home plate—turns trivia into a game that's more than just facts. Share your favorite questions and answers on Twitter with a single click and join a community of enthusiasts celebrating MLB's past and present. Step up to the plate, spin the bat, and let Spin the Bat Trivia bring the excitement of baseball history straight to your screen!</p>
             </section>
         </main>
+        <div class="right-sidebar">
+            <div class="ad-space">
+                <a href="https://www.amazon.com/Art-Deco-Elegance-Patterns-Hand-Drawn/dp/B0F6NJJ1Y5" target="_blank">
+                    <img src="art_deco_ad.png" alt="Art Deco Elegance Coloring Book">
+                    <p>Discover elegant Art Deco patterns in this hand-drawn coloring book!</p>
+                </a>
+            </div>
+            <div class="ad-space">
+                <a href="https://complimentwheel.com/" target="_blank">
+                    <img src="wheel_ad.png" alt="Compliment Wheel">
+                    <p>Get a daily dose of positivity—spin for a unique compliment!</p>
+                </a>
+                <a href="https://complimentwheel.com/" target="_blank" class="ad-button">Try It Now</a>
+            </div>
+        </div>
     </div>
     <footer id="footer"></footer>
 
@@ -2271,7 +2300,7 @@ document.addEventListener("DOMContentLoaded", () => {
     difficultyButtons = document.querySelectorAll(".difficulty-btn");
     
     // Set current year in footer
-    document.getElementById("footer").innerHTML = `© ${new Date().getFullYear()} Spin the Bat Trivia. All rights reserved. Questions? Contact Us: <a href="mailto:musiknote@yahoo.com">musiknote@yahoo.com</a>`;
+    document.getElementById("footer").innerHTML = `© ${new Date().getFullYear()} Spin the Bat Trivia. All rights reserved.`;
     
     // Make fact container visible
     document.getElementById("fact-container").style.opacity = "1";
